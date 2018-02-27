@@ -1,0 +1,623 @@
+/*------------------------------------*\
+    #MAIN-HEADER
+\*------------------------------------*/
+
+.main-header{
+    @include bg-cover;
+    background-color: gray;
+    background-image: url("header-pattern.png?v=#{random();}");
+    position: fixed;
+    top:  0;
+    left: 0;
+    z-index: map-get($z-index, "header");
+    width: 100%;
+    border-bottom: solid 3px map-get($color, "black");
+}
+
+
+
+/*------------------------------------*\
+    #MOBILE-HEADER
+\*------------------------------------*/
+
+.mobile-header{
+    @include flex;
+    align-items: center;
+    color: map-get($color, "white");
+
+    @include mq($desktopBreakpoint){
+        display: none;
+    }
+}
+
+
+.mobile-header__padding{
+    padding: 1.5rem;
+  	cursor: pointer;
+}
+
+
+.mobile-header__menu-icon{
+    @include close;
+    @include close-absolute;
+
+    // Close icon. Fades in when nav is toggled.
+    &:before{
+        @include trans(opacity);
+        opacity: 0;
+    }
+
+    // Fades out when nav is toggled.
+    .menu-icon__line{
+        @include trans(opacity);
+    }
+}
+
+
+.mobile-header__left,
+.mobile-header__right{
+    width: 20%;
+}
+
+
+.mobile-header__center{
+    width: 60%;
+    text-align: center;
+}
+
+
+.mobile-header__right{
+    text-align: right;
+}
+
+
+
+/*------------------------------------*\
+    #MOBILE-HEADER
+\*------------------------------------*/
+
+.mobile-header{
+    @include flex;
+    align-items: center;
+    color: map-get($color, "white");
+
+    @include mq($desktopBreakpoint){
+        display: none;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #MOBILE-NAV
+\*------------------------------------*/
+
+.mobile-nav{
+    @include sans-serif-book;
+    @include drawer(100%);
+    @include drawer-dir(left, 100%);
+    z-index: map-get($z-index, "header") - 1; // Go below header
+    text-transform: uppercase;
+    font-size: 86%;
+
+    .social-media{
+        @include serif-italic;
+        text-transform: none;
+        font-size: 115%;
+        margin-top: 10rem;
+
+        .mobile-nav__link{
+            padding: 0.8rem 2rem;
+        }
+    }
+
+    @include mq($desktopBreakpoint){
+        display: none;
+    }
+}
+
+
+.mobile-nav__inner{
+    position: relative;
+    height: 100%;
+}
+
+
+.mobile-nav__item{
+    width: 50%;
+    position: relative;
+}
+
+
+.mobile-nav__logo{
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.mobile-nav__dropdown-summary{
+    position: relative;
+    @include arrow;
+    @include arrow-right;
+
+    &:after{
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+.mobile-nav__link{
+    display: block;
+    padding: 1rem 2rem;
+}
+
+
+.mobile-nav__dropdown,
+.mobile-nav__dropdown-summary:after{
+    @include trans(opacity);
+    transition-delay: 0.15s;
+    opacity: 0;
+}
+
+
+.mobile-nav__dropdown{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background-color: map-get($color, "black-30");
+    color: map-get($color, "white");
+
+    // css trick to cover the space above and below the dropdown.
+    //  change the background-color to see what i mean.
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        top:    -100vh;
+        bottom: -100vh;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+
+html.mobile-nav--toggled{
+
+    .mobile-header__menu-icon{
+
+        &:before{
+            opacity: 1;
+        }
+
+        .menu-icon__line{
+            opacity: 0;
+        }
+    }
+
+    .mobile-nav__dropdown,
+    .mobile-nav__dropdown-summary:after{
+        opacity: 1;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #DESKTOP-NAV
+\*------------------------------------*/
+
+.desktop-nav{
+    display: none;
+    color: map-get($color, "white");
+    position: relative;
+    background: inherit;
+
+    @include mq($desktopBreakpoint){
+        display: block;
+    }
+}
+
+
+.desktop-nav__inner{
+    @include flex;
+    @include flex-center;
+}
+
+
+.desktop-nav__item{
+    @include sans-serif-bold;
+    @include text-style-3;
+
+    &:nth-last-of-type(1){
+
+        .desktop-nav__link{
+            margin-right: 0;
+        }
+    }
+}
+
+
+.desktop-nav__link{
+    @include trans;
+    display: block;
+    padding: 0.7rem 0;
+    margin-right: 2.5rem;
+    border-bottom: solid 2px transparent;
+
+    &:hover,
+    &:focus,
+    &.desktop-nav__link--active{
+        border-bottom-color: currentColor;
+    }
+}
+
+
+.desktop-nav__link--in-dropdown{
+    opacity: 0.6;
+    padding: 1.2rem 0 1rem 0;
+
+    &:hover,
+    &.desktop-nav__link--active{
+        opacity: 1;
+    }
+}
+
+
+.desktop-nav__item--has-dropdown{
+
+    &:hover{
+
+        .desktop-nav__dropdown{
+            transform: translateY(100%);
+        }
+    }
+}
+
+
+.desktop-nav__dropdown{
+    @include trans("transform");
+    @include flex;
+    @include flex-center;
+    position: absolute;
+    left:   0;
+    right:  0;
+    bottom: 0;
+    background-color: map-get($color, "black");
+    z-index: -1;
+
+    .desktop-nav__link--in-dropdown{
+        margin-right: 2.5rem !important;
+        &:nth-last-of-type(1){
+            margin-right: 0;
+        }
+    }
+}
+
+
+.desktop-nav__dropdown--active{
+    transform: translateY(100%);
+}
+
+
+
+
+/*------------------------------------*\
+    #DESKTOP-HEADER
+\*------------------------------------*/
+
+.desktop-header{
+    @include sans-serif-bold;
+    @include text-style-3;
+    display: none;
+    color: map-get($color, "white");
+    padding: 3rem 0 1.5rem 0;
+    background: inherit;
+
+    @include mq($desktopBreakpoint){
+        display: block;
+    }
+}
+
+
+.desktop-header__inner{
+    @include flex;
+    @include page-max-width;
+}
+
+
+.desktop-header__left,
+.desktop-header__right,
+.desktop-header__center{
+    width: 33.33%;
+}
+
+
+.desktop-header__center{
+    text-align: center;
+}
+
+
+.desktop-header__right{
+    @include flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+.desktop-header__item{
+    padding: 0.5rem 1.8rem;
+}
+
+
+.desktop-header__search{
+    position: relative;
+}
+
+
+.desktop-header__search-input{
+    @include sans-serif-book;
+    @include trans;
+    transform: translateZ(0);
+    width: 0;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-align: left;
+
+    @include mq($desktopBreakpoint){
+        background-color: map-get($color, "white");
+        padding: 0.3rem 1rem;
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+        width: 18rem;
+
+        // Adjust the position so it appears center within the submit.
+        top: -0.2rem;
+        right: -0.4rem;
+    }
+}
+
+
+.desktop-header__search-submit{
+    z-index: 1;
+    position: relative;
+}
+
+
+.desktop-header__search--expanded{
+    color: map-get($color, "black-40");
+
+    .desktop-header__search-input{
+        width: 12rem;
+
+        @include mq($desktopBreakpoint){
+            width: 18rem;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    #MINI-CART
+\*------------------------------------*/
+
+.mini-cart{
+    // @extend .hidden-scrollbar;
+    @include trans(transform);
+    @inclde allow-y-scroll;
+    position: fixed;
+    top: 0;
+    right: -#{$miniCartWidth};
+    width: $miniCartWidth;
+    border: solid 0.1rem map-get($color, "gray-20");
+    z-index: map-get($z-index, "overlay") + 1;
+    background-color: map-get($color, "white");
+    max-width: 100%;
+    box-shadow: -2px 2px 6px 0 rgba(0,0,0,0.1);
+    bottom: 0px;
+    border-right: none;
+
+    @include mq("tablet"){
+        max-height: 530px;
+    }
+}
+
+
+.mini-cart__form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.mini-cart__inner{
+    height: 100%;
+}
+
+
+.mini-cart__overlay{
+    @include cover;
+    position: fixed;
+    z-index: map-get($z-index, "overlay");
+    display: none;
+}
+
+
+.mini-cart__close{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8rem;
+    box-sizing: content-box;
+}
+
+
+.mini-cart__header{
+    border-bottom: solid 0.1rem map-get($color, "gray-20");
+    padding: 1rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+
+.mini-cart__body{
+    // @extend .hidden-scrollbar;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: auto;
+}
+
+
+.mini-cart__product{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: solid 1px map-get($color, "gray-40");
+    padding: 2.5rem 2rem;
+
+    &:nth-child(1){
+        padding-top: 0;
+        border-top-color: transparent;
+    }
+}
+
+
+.mini-cart-product__remove{
+    font-size: 85%;
+    opacity: 0.8;
+    display: inline-block;
+    margin-top: 1rem;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+.mini-cart-product__col{
+    float: left;
+
+    &:nth-child(1){
+        width: 40%;
+        padding-right: map-get($spacing, "m");
+    }
+
+    &:nth-child(2){
+        width: 60%;
+    }
+}
+
+
+.mini-cart-product__image{
+    width: 100%;
+}
+
+
+.mini-cart-product__line{
+    margin-top: 0.35rem;
+
+    &:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+
+.mini-cart-product__qty{
+    padding: 0;
+}
+
+
+.mini-cart-product__price{
+    margin-top: 0.5rem;
+}
+
+
+.mini-cart-product__variants{
+    font-size: 80%;
+    opacity: 0.8;
+    margin-top: -0.3rem;
+}
+
+
+.mini-cart__footer{
+    padding: map-get($spacing, "m");
+    padding-top: 0;
+    margin-top: 2rem;
+    text-align: center;
+    border-top: solid 0.1rem map-get($color, "gray-20");
+}
+
+
+.mini-cart__totals{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5rem 0;
+}
+
+
+.mini-cart__subtotal-label{
+    @include sans-serif-book;
+    @include text-style-3;
+    margin-right: auto;
+}
+
+
+.mini-cart__checkout{
+    width: 100%;
+
+    @include mq('tablet'){
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.mini-cart__checkout--lower{
+    margin-top: 0.8rem;
+}
+
+
+.mini-cart__note{
+    margin-top: map-get($spacing, "m");
+
+    textarea{
+        resize: none;
+    }
+}
+
+
+.mini-cart__empty{
+    text-align: center;
+    padding: map-get($spacing, "m");
+}
+
+
+html.mini-cart--toggled{
+    // @extend .lock-scroll;
+
+    .mini-cart{
+        transform: translateX(-#{$miniCartWidth});
+    }
+
+    .mini-cart__overlay{
+        display: block;
+    }
+}

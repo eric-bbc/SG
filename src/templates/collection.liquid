@@ -1,0 +1,77 @@
+{% if collection.all_products.size > 0 %}
+
+    <div class="collection">
+
+        {% if collection.image %}
+
+            <div class="collection__banner  banner-image">
+
+                <h1 class="/banner-image__caption  sr">{{ collection.title }}</h1>
+
+                <div class="banner-image__image  object-wrap  object-wrap--banner">
+                    <div class="object" style="background-image: url('{{ collection.image.src | img_url: "2560x" }}');"></div>
+                </div>
+
+            </div>
+
+        {% endif %}
+
+        {% paginate collection.products by settings.pagination_limit %}
+
+            <div class="page-max-width">
+
+                {% comment %}
+                    Show collection title here if theres no image.
+                {% endcomment %}
+                {% unless collection.image %}
+                    <h1 class="text-size-xl  text-style-1-inline">{{ collection.title }}</h1>
+                {% endunless %}
+
+
+                {%- comment %}
+                	Filter Container
+                {% endcomment -%}
+                <div class="collection-filter-container">
+                  {% include 'filter-3' %}
+                </div>
+
+
+                {% comment %}
+                    Product loop
+                {% endcomment %}
+                <div class="collection__grid  grid  js-paginate-products">
+
+                    {% comment %}
+                        Show available products first. CURRENTLY DISABLED -> Showing all products
+                        {% assign sortedProducts = collection.products | sort: 'available' %} <-- this snippet to remove unavailable products
+                    {% endcomment %}
+                    {% assign sortedProducts = collection.products  %}
+
+                    {% for product in sortedProducts %}
+                        {% include "product--loop" %}
+                    {% endfor %}
+
+                </div>
+
+                {% include 'pagination' %}
+
+            </div>
+
+        {% endpaginate %}
+
+    </div>
+
+{% else %}
+
+    {% comment %}
+        TODO: This
+    {% endcomment %}
+    <div class="center-page-message  page-top-padding  page-padding">
+
+        <h1 class="text--l  text--style-1">{{ 'collection.empty_collection_html' | t }}</h1>
+
+        <a href="/" class="button  button--primary  button--large  button--max-width">Shop All</a>
+
+    </div>
+
+{% endif %}

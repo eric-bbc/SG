@@ -1,0 +1,30 @@
+@import "fonts.scss";      // Any font-face imports.
+
+@import "variables.scss";  // Any SASS variables.
+@import "functions.scss";  // Any SASS functions or mixins.
+
+@import "normalize.scss";  // Third party normalize.
+@import "base.scss";       // Any base element or resets or boilterplate stuff.
+
+@import "structure.scss";  // Main page structural components.
+@import "components.scss"; // Any re-usable objects or groups of styles.
+@import "typography.scss"; // Any typography related CSS.
+@import "sections.scss";   // Any shopify "sections"
+
+@import "vendor.scss";     // Any third party CSS.
+
+@import "header.scss";     // Header/Nav CSS.
+@import "footer.scss";     // Footer CSS.
+@import "product.scss";    // Product page CSS.
+@import "collection.scss"; // Collection page CSS.
+@import "form-actuals.scss";  // Non-reusable forms.
+@import "search.scss";     // Search page CSS.
+@import "blog.scss";       // Blog/Article page CSS.
+@import "accounts.scss";   // Acount pages CSS.
+@import "cart.scss";       // Cart template CSS.
+
+
+/*
+NOTE:
+All developer written SCSS is here. You should run autoprefixer with the browser string: "> 1%, last 3 versions, Firefox ESR, Opera 12.1, ios_saf >= 8". With that being said this site will support the last 4 major versions of each major browser. There may be some user defined SCSS which is in custom.scss.liquid. User defined SCSS is compiled by shopify thus autoprefixing will not be applied.
+*/

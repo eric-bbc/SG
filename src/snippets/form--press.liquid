@@ -1,0 +1,64 @@
+{% capture action %}{{ shop.url }}/contact#press-form{% endcapture %}
+
+{% form 'contact', class: "form", id: "", action: action %}
+
+    <div class="posted-successfully">
+
+        <div class="form-header">
+            <h4 class="form-header__left">Press Inquires</h4>
+        </div>
+
+        <div class="form__group  text-size-m">{{ 'contact.success_html' | t }}</div>
+
+        <div class="js-press-form-toggle  form__group  form__cancel  text-hover" data-toggle='{"togglesClass": "press-form--toggled"}'>Close</div>
+
+    </div>
+
+    <div class="not-posted">
+      <div class="js-press-form-toggle  form__group  form__cancel  text-hover close-toggle" data-toggle='{"togglesClass": "press-form--toggled"}'></div>
+
+        <div class="form-header">
+            <h4 class="form-header__left">Press Inquires</h4>
+        </div>
+
+        <fieldset>
+
+            <legend>For press inquires, please complete the following form.</legend>
+
+            <input type="hidden" name="contact[type]" value="Press Inquiry">
+
+            <div class="form__group">
+                <label for="body_{{ contactFormIndex }}">Message</label>
+                <textarea id="body_{{ contactFormIndex }}" required name="contact[body]" class="input  input--small  input--gray  textarea"></textarea>
+            </div>
+
+            <div class="form__group">
+                <label for="fname_{{ contactFormIndex }}">First Name</label>
+                <input type="text" id="fname_{{ contactFormIndex }}" required name="contact[First Name]" class="input  input--small  input--gray">
+            </div>
+
+            <div class="form__group">
+                <label for="lname_{{ contactFormIndex }}">Last Name</label>
+                <input type="text" id="lname_{{ contactFormIndex }}" required name="contact[Last Name]" class="input  input--small  input--gray">
+            </div>
+
+            <div class="form__group">
+                <label for="telephone_{{ contactFormIndex }}">Telephone (Optional)</label>
+                <input type="tel" name="contact[telephone]" id="telephone_{{ contactFormIndex }}" class="input  input--small  input--gray">
+            </div>
+
+            <div class="form__group">
+                <label for="email_{{ contactFormIndex }}">Email Address</label>
+                <input type="email" required id="email_{{ contactFormIndex }}" name="contact[email]" class="input  input--small  input--gray">
+            </div>
+
+            <div class="form__group">
+                <button type="submit" class="form__cta">{{ 'contact.submit' | t }}</button>
+                <div class="form__cancel  text-hover" data-toggle='{"togglesClass": "press-form--toggled"}'>{{ 'contact.cancel' | t }}</div>
+            </div>
+
+        </fieldset>
+
+    </div>
+
+{% endform %}

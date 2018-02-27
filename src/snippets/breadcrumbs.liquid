@@ -1,0 +1,41 @@
+{% unless template == "index" or template == "cart" %}
+
+    <div class="page-padding  breadcrumbs">
+
+        <a class="breadcrumbs__item" href="/">Home</a>
+
+        {% if page %}
+            <a class="breadcrumbs__item" href="{{ page.url }}">{{ page.title }}</a>
+        {% endif %}
+
+        {% if template contains "login" %}
+            <a class="breadcrumbs__item" href="/account/login">Sign In</a>
+        {% elsif template contains "register" %}
+            <a class="breadcrumbs__item" href="/account/register">Sign Up</a>
+        {% elsif template contains "account" %}
+            <a class="breadcrumbs__item" href="/account">Account</a>
+        {% endif %}
+
+        {% if template == "blog" or template == "article" %}
+            <a class="breadcrumbs__item" href="{{ blog.url }}">Blog</a>
+        {% endif %}
+
+        {% if template == "article" %}
+            <a class="breadcrumbs__item" href="{{ article.url }}">{{ article.title }}</a>
+        {% endif %}
+
+        {% if template == "product" or template == "collection" %}
+            <a class="breadcrumbs__item" href="{{ collection.url }}">/ {{ collection.title }}</a>
+        {% endif %}
+
+        {% if template == "product" %}
+            <a class="breadcrumbs__item" href="{{ product.url }}">/ {{ product.title }}</a>
+        {% endif %}
+
+        {% if template == "search" %}
+            <a class="breadcrumbs__item" href="/search">Search</a>
+        {% endif %}
+
+    </div>
+
+{% endunless %}

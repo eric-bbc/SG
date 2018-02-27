@@ -1,0 +1,60 @@
+{% schema %}
+{
+    "name":"Instagram Feed",
+    "settings": [
+        {
+            "id":"title",
+            "type":"text",
+            "label":"Section Title"
+        },
+        {
+            "id":"ig_handle",
+            "type":"text",
+            "label":"Instagram Handle"
+        },
+        {
+            "id":"limit",
+            "type":"number",
+            "label":"Max Images To Display"
+        }
+    ],
+    "presets":[
+        {
+            "category":"Instagram Feed",
+            "name":"Instagram Feed"
+        }
+    ]
+}
+{% endschema %}
+
+<div class="section-spacing">
+
+    <div class="instafeed__outer-wrap">
+    
+        {% if section.settings.title != blank %}
+
+            <div class="instafeed__title">
+                {{ section.settings.title }}
+            </div>
+            
+        {% endif %}
+
+        <div class="instafeed__inner-wrap">
+            
+            {% if section.settings.ig_handle != blank %}
+
+                <div class="instafeed__handle">
+                    {{ section.settings.ig_handle }}
+                </div>
+
+            {% endif %}
+
+            <div id="instafeed" class="instafeed" data-limit="{{ section.settings.limit }}"></div>
+
+            <div class="js-instafeed-load  instafeed__load-more  button  button--primary">Show More</div>
+
+        </div>
+
+    </div>
+
+</div>

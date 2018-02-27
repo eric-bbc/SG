@@ -1,0 +1,74 @@
+{% schema %}
+{
+    "name":"Text Block",
+    "blocks":[
+        {
+            "name":"Text Block",
+            "type":"block",
+            "settings":[
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"Title"
+                },
+                {
+                    "id":"text",
+                    "type":"textarea",
+                    "label":"Text"
+                },
+                {
+                    "id":"cta",
+                    "type":"text",
+                    "label":"CTA"
+                },
+                {
+                    "id":"link",
+                    "type":"url",
+                    "label":"Link"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "category":"Text Block",
+            "name":"Text Block"
+        }
+    ]
+}
+{% endschema %}
+
+
+<div class="page-gutter">
+
+    <div class="page-max-width">
+
+        <div class="section-spacing">
+
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+
+                <div class="text-block" {{ block.shopify_attributes }}>
+
+                    {% if b.title != blank %}
+                        <div class="text-block__title">{{ b.title }}</div>
+                    {% endif %}
+
+                    {% if b.text != blank %}
+                        <div class="text-block__text">{{ b.text }}</div>
+                    {% endif %}
+
+                    {% if b.cta != blank and b.link != blank %}
+                        <a class="text-block__cta" href="{{ b.link }}">{{ b.cta }}</a>
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>

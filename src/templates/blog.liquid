@@ -1,0 +1,62 @@
+<div class="section">
+
+	<div class="page-max-width">
+
+        <div class="grid">
+
+            {% for article in blog.articles %}
+
+                <div class="grid__item">
+        
+                    <div class="js-article  a" data-toggle='{"togglesClass": "article-carousel--toggled", "allowEscToggle": true}' data-index="{{ forloop.index0 }}">
+
+                        <div class="object-wrap  object-wrap--3-2">
+
+                            {% comment %}
+                                Lazy loaded.
+                            {% endcomment %}
+                            {% if forloop.index > 8 %}
+                                <div class="object  object--contain" data-original="{{ article.image.src | img_url: '600x' }}"></div>
+                            {% else %}
+                                <div class="object  object--contain" style="background-image: url('{{ article.image.src | img_url: '600x' }}');"></div>
+                            {% endif %}
+                            
+                        </div>
+
+                    </div>
+
+                </div>	
+
+            {% endfor %}
+
+        </div>
+
+        <div class="article-carousel">
+
+            <div class="article-carousel__inner">
+
+                <div class="article-carousel__close  close  right-corner-click-offset" data-toggle='{"togglesClass": "article-carousel--toggled", "allowEscToggle": true}'></div>
+
+                <div class="js-slick-slider  js-article-slider  article-carousel__slider  slick-slider--white-nav  slick-slider--push-nav  slick-slider--no-dots">
+
+                    {% for article in blog.articles %}
+
+                        <div data-index="{{ forloop.index0 }}">
+
+                            <div class="object-wrap  object-wrap--article">
+                                <div class="object  object--contain  slick-lazy" data-lazy="{{ article.image.src | img_url: '600x' }}"></div>
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

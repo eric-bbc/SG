@@ -1,0 +1,133 @@
+{% comment %}
+    NOTE: This snippet depends on snippets/product--base-data.liquid.
+    Include this dependency before this snippet.
+{% endcomment %}
+
+
+{% unless namespace %}
+    {% assign namespace = "product" %}
+{% endunless %}
+
+
+<div class="{{ namespace }}__info-inner">
+
+
+    {% comment %}
+        Desktop only.
+    {% endcomment %}
+    <div class="show-at--{{ desktopBreakpoint }}">
+
+        {% comment %}
+            Product title.
+        {% endcomment %}
+        <h1 class="{{ namespace }}__title">{{ product.title }}</h1>
+
+        {% comment %}
+            Product Price
+        {% endcomment %}
+        <div class="{{ namespace }}__prices  js-product-price">{{ price }}</div>
+
+        {% comment %}
+            Product description.
+        {% endcomment %}
+        {% if hasVariant == false %}
+
+            {% if product.description.size > 0 %}
+
+                <div class="{{ namespace }}__description">
+                    <div class="rte">{{ product.description }}</div>
+                </div>
+
+            {% endif %}
+
+        {% else %}
+
+            {% comment %}
+                Variant descriptions. Stored in metafields.
+            {% endcomment %}
+            <div class="{{ namespace }}__description">
+
+                {% if product.description.size > 0 %}
+                    {{ product.description }}
+                {% else %}
+
+                    {% for variant in product.variants %}
+                        {% if variant.metafields.variant.description.size > 0 %}
+
+                            <div class="js-variant-description  rte  {% unless product.selected_or_first_available_variant.id == variant.id %}hidden{% endunless %}" data-variant-id="{{ variant.id }}">
+                                {{ variant.metafields.variant.description }}
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
+
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    {% comment %}
+        Add to cart form, variant and qty data/selection.
+    {% endcomment %}
+    <div class="product__info-max-width">
+        {% include "product--form" namespace: namespace %}
+    </div>
+
+    {% comment %}
+        Description, sizing, etc...
+    {% endcomment %}
+    <div class="product__info-max-width">
+
+        <div class="{{ namespace }}__tabs  tabs">
+
+            {% comment %}
+                Shortcuts for some pages that we use to display static product content, like shipping or size chart pages.
+            {% endcomment %}
+            {% assign tabPage1 = pages['shipping-and-returns-in-product'] %}
+
+            <ul role="tablist" class="tabs__tablist">
+
+                {% if tabPage1.content.size > 0 %}
+                    <li class="tab__summary" role="tab" aria-controls='tab-{{ tabPage1.handle }}' tabindex="0" aria-selected="true" style="cursor: pointer;">
+                        {{ tabPage1.title }}
+                    </li>
+                {% endif %}
+
+                <li class="tab__summary" role="tab" aria-controls='tab-more-info' tabindex="1" aria-selected="false" style="cursor: pointer;">
+                    More Info
+                </li>
+
+                <span class="tab__summary  js-product-here-to-help-form-toggle" aria-selected="false" data-toggle='{"togglesClass": "product-here-to-help-form--toggled", "allowEscToggle": true}' style="cursor: pointer;">Ask a question</span>
+
+            </ul>
+
+            {% if tabPage1.content.size > 0 %}
+            <div
+            class="tab__content"
+            role="tabpanel"
+            aria-hidden="false"
+            style="display: block;"
+            id='tab-{{ tabPage1.handle }}'>
+            {{ tabPage1.content }}
+          </div>
+          {% endif %}
+
+            <div
+            class="tab__content"
+            role="tabpanel"
+            aria-hidden="true"
+
+            id='tab-more-info'>
+                <li>ID: <span class="js-variant-sku">{{ product.selected_or_first_available_variant.sku }}</span></li>
+                {% section "product--more-info" %}
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,391 @@
+/*------------------------------------*\
+    #HERO-CAROUSEL
+\*------------------------------------*/
+
+.hero-carousel{
+    position: relative;
+
+    a{
+        display: block;
+    }
+}
+
+
+.hero-carousel__desktop-image{
+    display: none;
+
+    @include mq("tablet-landscape"){
+        display: block;
+    }
+}
+
+
+.hero-carousel__mobile-image{
+
+    @include mq("tablet-landscape"){
+        display: none;
+    }
+}
+
+
+.hero-carousel__title{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    position: absolute;
+    top: 50%;
+    left:  0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+
+
+/*------------------------------------*\
+    #PARTNER
+\*------------------------------------*/
+
+.partners{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    background-color: map-get($color, "white");
+    padding-top:    8rem;
+    padding-bottom: 8rem;
+    text-align: center;
+
+    &:nth-child(1){
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @include mq('tablet'){
+        padding-top:    5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+
+.partners--boutiques{
+
+    .partner-region__row{
+        margin-top: 0;
+    }
+}
+
+
+.partners__title{
+    @include text-size-l;
+    @include text-style-1(true);
+    @include text-style-2;
+    margin-bottom: 2rem;
+
+    @include mq('tablet'){
+        transform: none;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+    }
+}
+
+
+
+.partner-region{
+    margin-top: 6rem;
+    text-align: left;
+
+    &:nth-of-type(1){
+        margin-top: 0;
+    }
+
+    @include mq('tablet'){
+        margin-top: 8rem;
+    }
+}
+
+
+.partner-region__row{
+    @include flex;
+    margin-top: 4rem;
+}
+
+
+.partner-region__title{
+    @include text-style-1(true);
+    font-size: scale-font("default", "xs");
+    text-transform: uppercase;
+
+    @include mq('tablet'){
+        font-size: scale-font("default", "s");
+    }
+}
+
+
+.partner-region__partner{
+    width: 50%;
+    margin-top: 5rem;
+    padding-right: 5rem;
+
+    &:nth-child(1),
+    &:nth-child(2){
+        margin-top: 0;
+    }
+
+    @include mqMax('tablet'){
+
+        &:nth-child(even){
+            padding-right: 0;
+        }
+    }
+
+    @include mq('tablet'){
+        width: 33.33%;
+
+        &:nth-child(3){
+            margin-top: 0;
+        }
+
+        &:nth-child(3n+3){
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+.partner-maps{
+    @include fullscreen;
+    @include fade-out;
+    z-index: -1; // Go below content so its not interactable until visible.
+    background-color: map-get($color, "overlay-dark");
+}
+
+
+.partner-maps--toggled{
+    @include fade-in;
+    z-index: map-get($z-index, "overlay"); // Go above content
+}
+
+
+.partner-maps__inner{
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    visibility: hidden;
+
+    @include mq('tablet'){
+        max-width: 85rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+.partner-maps__inner--toggled{
+    visibility: visible;
+}
+
+
+.partner-maps__map-size{
+    position: relative;
+    padding-top: 75%;
+    top:  50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @include mq('tablet'){
+        padding-top: 70%;
+    }
+}
+
+
+.partner-maps__map{
+    @include cover;
+}
+
+
+
+/*------------------------------------*\
+    #BOUTIQUES
+\*------------------------------------*/
+
+.page-boutiques-container{
+        @include page-padding(padding-left);
+        @include page-padding(padding-right);
+        background-color: map-get($color, "white");
+        padding-top:    8rem;
+        padding-bottom: 8rem;
+        text-align: center;
+
+        @include mq('tablet'){
+            padding-top:    5rem;
+            padding-bottom: 5rem;
+        }
+
+    #shopify-section-boutiques{
+        .section-spacing{
+            margin-top: 0;
+        }
+    }
+}
+
+.boutiques__outer{
+    text-align: center;
+}
+
+
+.boutiques__title{
+    @include text-size-l;
+    @include text-style-1(true);
+    text-transform: uppercase;
+}
+
+
+.boutiques{
+    margin-top: 3rem;
+    text-align: left;
+
+    @include mq('tablet'){
+        @include flex;
+    }
+}
+
+
+.boutiques__boutique{
+    margin-top: 5rem;
+
+    &:nth-child(1){
+        margin-top: 0;
+    }
+
+    @include mq('tablet'){
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 2rem);
+        margin-right: 4rem;
+
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+    }
+}
+
+
+.boutique__row{
+    position: relative;
+    flex: 1;
+}
+
+
+.boutique__row--lower{
+    @include flex;
+    padding: 3rem;
+    background-color: map-get($color, "gray-45");
+}
+
+
+.boutique__line{
+    margin-top: 1.7rem;
+    display: block;
+}
+
+
+.boutique__gallery-toggle{
+    @include a;
+    @include sans-serif-book;
+    @include arrow;
+    @include arrow-inline(true);
+    @include arrow-right(true);
+    @include text-style-3;
+    position: absolute;
+    right:  0;
+    bottom: 0;
+    padding: 1.6rem 2rem;
+    z-index: 1;
+    color: map-get($color, "white");
+}
+
+
+.boutique__name{
+    text-transform: uppercase;
+}
+
+
+.boutique__spacer{
+    width: 1.5rem;
+    height: 1px;
+    background-color: currentColor;
+}
+
+
+.boutique__info-col{
+
+    @include mq('tablet'){
+        padding-right: 2rem;
+        width: 50%;
+    }
+
+
+    .boutique__hours {
+      font-size: 1vw;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      @include mqMax('tablet'){
+        font-size: 3vw !important;
+      };
+
+    }
+}
+
+
+
+.boutique__map-col{
+    display: none;
+    position: relative;
+
+    @include mq('tablet'){
+        display: block;
+        width: 50%;
+    }
+}
+
+
+.boutique__map{
+    @include cover;
+}
+
+
+
+.boutique-gallery{
+    @include trans("opacity, visibility");
+    @include fullscreen;
+    background-color: map-get($color, "overlay-dark");
+    opacity: 0;
+    visibility: hidden;
+
+    img{
+        max-width: 75%;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+
+    .slick-dots{
+        left:  0;
+        right: 0;
+        text-align: center;
+        bottom: -5rem;
+    }
+}
+
+
+.boutique-gallery__inner{
+    @include vertical-center;
+    max-width: 100rem;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+.boutique-gallery--toggled{
+    opacity: 1;
+    visibility: visible;
+}

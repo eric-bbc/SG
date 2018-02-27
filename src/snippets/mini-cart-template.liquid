@@ -1,0 +1,151 @@
+{% comment %}
+    This snippet provides the default handlebars.js templates for
+    the ajax cart plugin. Use the raw liquid tags to keep the
+    handlebar.js template tags as available hooks.
+
+    When the cart is empty, there is a template that is shown.
+    Template is located in snippets/header.liquid
+{% endcomment %}
+
+<script id="MiniCartTemplate" type="text/template">
+
+    <div class="mini-cart__inner">
+
+        <form action="/cart" method="post" class="mini-cart__form" novalidate>
+
+            <header class="mini-cart__header">
+
+                <div class="text--m  text--style-1">
+                    My shopping bag
+                    (<span class=js-cart-count>{% raw %}{{itemCount}}{% endraw %}</span>)
+                </div>
+
+                <div class="js-mini-cart-close" data-toggle='{"togglesClass": "mini-cart--toggled", "allowEscToggle": true, "method": "remove"}'>
+                    {% include "close-svg" namespace: "mini-cart" fill: "#000" %}
+                </div>
+
+            </header>
+
+            {% raw %}
+
+            <div class="mini-cart__body">
+
+                {{#items}}
+
+                    <div class="mini-cart__product  mini-cart-product" data-line="{{line}}" data-id="{{id}}">
+
+                        <div class="mini-cart-product__col">
+
+                            <a href="{{url}}">
+                                <img src="{{img}}" alt="{{name}}" class="mini-cart-product__image">
+                            </a>
+
+                        </div>
+
+                        <div class="mini-cart-product__col">
+
+                            <a href="{{url}}" class="mini-cart-product__title  mini-cart-product__line">{{name}}</a>
+
+                            {{#if variation}}
+                                <div class="mini-cart-product__variants">
+                                    <div class="mini-cart-product__line">{{variation}}</div>
+                                </div>
+                            {{/if}}
+
+                            <div class="mini-cart-product__price  mini-cart-product__line">{{{price}}}</div>
+
+                            <div class="mini-cart-product__line">
+                                Qty:
+                                <input type="number" name="updates[]" class="js-cart-qty  input  mini-cart-product__qty" value="{{itemQty}}" data-id="{{id}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*" max="10" min="1" autocomplete="off">
+                            </div>
+
+                            <a href="/cart/change?line={{line}}&amp;quantity=0" class="js-cart-remove  mini-cart-product__remove" data-line="{{line}}">Remove</a>
+
+                        </div>
+
+                    </div>
+
+                {{/items}}
+
+            </div>
+
+            {% endraw %}
+
+
+            <footer class="mini-cart__footer">
+
+                {% comment %}<div class="mini-cart__note">
+                    <label class="label" for="note">{{ 'cart.gift_note' | t }}</label>
+                    <textarea id="note" name="note" class="input  textarea">{{ cart.note }}</textarea>
+                </div>{% endcomment %}
+
+                <div class="mini-cart__totals">
+
+                    <div class="mini-cart__subtotal-label">
+                        {{ 'cart.sub_total' | t }}
+                    </div>
+
+                    {% raw %}
+                        <div class="mini-cart__subtotal">{{totalPrice}}</div>
+                    {% endraw %}
+
+                </div>
+
+                <button type="submit" class="button  button--primary  button--full-width  mini-cart__checkout" name="checkout">{{ 'cart.checkout' | t }}</button>
+
+                {% if additional_checkout_buttons %}
+                    <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
+                {% endif %}
+
+                <script>
+                  $('.mini-cart__checkout').on('click', function(e) {
+                    fbq('track', 'InitiateCheckout')
+                  })
+                </script>
+
+            </footer>
+
+        </form>
+
+    </div>
+
+</script>
+
+
+{% comment %}
+    Mini cart empty markup.
+    Will be appended to the .mini-cart when it's empty.
+{% endcomment %}
+<div class="js-empty-mini-cart-html" hidden>
+
+    <header class="mini-cart__header">
+
+        <div class="text--m  text--style-1">
+            My shopping bag (0)
+        </div>
+
+        <div data-toggle='{"togglesClass": "mini-cart--toggled", "allowEscToggle": true, "method": "remove"}'>
+            {% include "close-svg" namespace: "mini-cart" fill: "#000" %}
+        </div>
+
+    </header>
+
+
+    <div class="mini-cart__body  mini-cart__empty">
+        <div>{{ "cart.item_count_html" | t: count: 0 }}</div>
+    </div>
+
+</div>
+
+
+{% comment %}
+    {{#properties}}
+        {{#each this}}
+
+            {{#if this}}
+                <li>{{@key}}: {{this}}</li>
+            {{/if}}
+
+        {{/each}}
+    {{/properties}}
+{% endcomment %}

@@ -1,0 +1,17 @@
+{% if settings.enable_banner and settings.banner_text != blank %}
+
+    <div class="main-header__banner  banner" role="banner" style="background-color: {{ settings.banner_bg_color }};  color: {{ settings.banner_text_color }}">
+
+         {% if settings.banner_link != blank %}
+            <a href="{{ settings.banner_link }}">
+        {% endif %}
+        
+        {{ settings.banner_text }}
+
+        {% if settings.banner_link != blank %}
+            </a>
+        {% endif %}
+
+    </div>
+
+{% endif %}

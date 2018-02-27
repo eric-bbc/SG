@@ -1,0 +1,87 @@
+{% comment %}
+    Define the product image size.
+{% endcomment %}
+{% unless imgSize %}
+    {% assign imgSize = "1280x" %}
+{% endunless %}
+
+
+{% comment %}
+    Define default namespace, if namespace param is missing.
+{% endcomment %}
+{% unless namespace %}
+    {% assign namespace = "single-product" %}
+{% endunless %}
+
+
+{% comment %}
+    Get the selected variant's color.
+{% endcomment %}
+{% assign colorOptionIndex1 = settings.color_option_index | plus: 1 %}
+{% capture colorOption %}option{{ colorOptionIndex1 }}{% endcapture %}
+{% assign selectedVariantColor = product.selected_variant[colorOption] %}
+
+
+{% comment %}
+    Determine when we should start lazyloading if the lazyload param is true.
+    @example
+    {% include "product--images" lazyload: true %}
+{% endcomment %}
+{% unless lazyLoadAfter %}
+    {% assign lazyLoadAfter = 2 %}
+{% endunless %}
+
+
+{% comment %}
+    Toggle fullscreen attrs if needed.
+{% endcomment %}
+{% if togglesFullscreen and isGiftCard == false %}
+    {% assign fullscreenAttrs = ' data-toggle="html" data-toggle-class="product-fullscreen-gallery--toggled" data-allow-esc="true"' %}
+{% endif %}
+
+
+{% comment %}
+    Loop thru images
+{% endcomment %}
+{% for image in product.images %}
+
+    {% comment %}
+        Add alt text to the images.
+    {% endcomment %}
+    {% assign alt = image.alt %}
+    {% assign altHandle = alt | handle %}
+    <script type="text/javascript">
+      console.log("{{ image.src }}");
+    </script>
+    {% unless altHandle == "color" %}
+
+        <div data-handle="{{ altHandle }}" data-color="{{ alt }}" class="{% if product.selected_variant %}{% if alt == selectedVariantColor %}slick-slide--filter{% endif %}{% endif %}">
+
+            <div class="object-wrap  object-wrap--product-image">
+
+                {% if lazyload and forloop.index > lazyLoadAfter %}
+
+                    <figure
+                    data-lazy="{{ image.src | img_url: imgSize, format: 'pjpg' }}"
+                    class="{{ namespace }}__image  object  slick-lazy image-zoom"
+                    data-zoom="{{ image.src | img_url: '2560x', format: 'pjpg'  }}"
+                    {% if togglesFullscreen %}{{ fullscreenAttrs }} data-fs-src="{{ image.src | img_url: '2560x', format: 'pjpg' }}"{% endif %}></figure>
+
+                {% else %}
+
+                    <figure
+                    style="background-image: url('{{ image.src | img_url: imgSize, format: 'pjpg' }}');"
+                    class="{{ namespace }}__image  object slick-lazy image-zoom"
+                    data-zoom="{{ image.src | img_url: '2560x', format: 'pjpg' }}"
+                    {% if togglesFullscreen %}{{ fullscreenAttrs }} data-fs-src="{{ image.src | img_url: '2560x', format: 'pjpg' }}"{% endif %}></figure>
+
+                {% endif %}
+                <p class="zoomMsg rte">Roll to Zoom</p>
+
+            </div>
+
+        </div>
+
+    {% endunless %}
+
+{% endfor %}

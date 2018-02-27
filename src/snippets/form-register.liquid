@@ -1,0 +1,63 @@
+<div class="account__form  page-horizontal-gutter  sign-up">
+
+    {% form 'create_customer', class: "block-input-form" %}
+
+        <fieldset>
+
+            <legend class="account-form__legend">{{ "accounts.sign_up_title" | t }}</legend>
+
+            {% comment %}
+                First name field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_first_name">{{ 'accounts.first_name_field_label' | t }}</label>
+                <input required type="text" name="customer[first_name]" id="customer_first_name" {% if autofocus %}autofocus{% endif %} value="{{ form.first_name }}">
+            </div>
+
+            {% comment %}
+                Last name field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_last_name">{{ 'accounts.last_name_field_label' | t }}</label>
+                <input required type="text" name="customer[last_name]" id="customer_last_name" value="{{ form.last_name }}">
+            </div>
+
+            {% comment %}
+                Email field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_email">{{ 'accounts.email_field_label' | t }}</label>
+                <input required type="email" name="customer[email]" id="customer_email" value="{{ form.email }}">
+            </div>
+
+            {% comment %}
+                Password field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_password">{{ 'accounts.create_password_field' | t }}</label>
+                <input required type="password" name="customer[password]" id="customer_password">
+            </div>
+
+            {% comment %}
+                Show form errors.
+            {% endcomment %}
+            {% if form.errors %}
+                <div class="message  message--error">{{ form.errors | default_errors }}</div>
+            {% endif %}
+
+            <div class="mt-m  button-group">
+
+                <button type="submit" class="button  button--primary">{{ "accounts.sign_up_button" | t }}</button>
+
+                {% comment %}
+                    Provide sign up alternative.
+                {% endcomment %}
+                <a href="/account/login/" class="button  button--white">{{ 'accounts.sign_in_button' | t }}</a>
+
+            </div>
+
+        </fieldset>
+
+    {% endform %}
+
+</div>

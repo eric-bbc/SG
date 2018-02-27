@@ -1,0 +1,61 @@
+{% assign colLength = 3 %}
+
+<footer class="main-footer">
+
+    <div class="main-footer__inner">
+
+        <div class="main-footer__row">
+
+            <div class="main-footer__col">
+
+                <div>
+                    <span class="a  main-footer__link  js-contact-form-toggle" data-toggle='{"togglesClass": "contact-form--toggled", "allowEscToggle": true}'>E-Concierge</span>
+                </div>
+
+                <div>
+                    <span class="a  main-footer__link  js-press-form-toggle" data-toggle='{"togglesClass": "press-form--toggled", "allowEscToggle": true}'>Press Inquiries</span>
+                </div>
+
+                <div>
+                    <span class="a  main-footer__link  js-shipping-modal-toggle" data-toggle='{"togglesClass": "shipping-modal--toggled", "allowEscToggle": true}'>Shipping & Returns</span>
+                </div>
+
+                <div>
+                    <span class="a  main-footer__link  js-privacy-modal-toggle" data-toggle='{"togglesClass": "privacy-modal--toggled", "allowEscToggle": true}'>Privacy</span>
+                </div>
+
+                {% for link in linklists.footer.links limit: colLength %}
+                    <div>
+                        <a href="{{ link.url }}" class="main-footer__link">{{ link.title }}</a>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="main-footer__col">
+
+                {% for link in linklists.footer.links offset: colLength, limit: colLength %}
+                    <div>
+                        <a href="{{ link.url }}" class="main-footer__link">{{ link.title }}</a>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="main-footer__col  main-footer__col--sm">
+                {% include "social-media" instagram: true, facebook: true, class: "main-footer__link main-footer__link--sm" %}
+            </div>
+
+            <div class="main-footer__col  main-footer__col--newsletter">
+                {% include "form--newsletter-klav-footer" %}
+            </div>
+
+        </div>
+
+        <div class="main-footer__copyright">
+            &copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+.page-gutter{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+}
+
+
+.page-top-gutter{
+    @include page-top-gutter;
+}
+
+
+.page-bottom-gutter{
+    @include page-bottom-gutter;
+}
+
+
+.page-max-width{
+    @include page-max-width;
+}
+
+
+.page-content{
+    @include trans("opacity, visibility", "medium");
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.2s;
+}

@@ -1,0 +1,4421 @@
+{
+  "current": {
+    "enable_banner": true,
+    "banner_text": "<p>All orders ship free overnight!</p>",
+    "banner_link": "shopify://collections/all",
+    "banner_bg_color": "#000000",
+    "banner_text_color": "#ffffff",
+    "enable_modal": true,
+    "modal_image": "shopify://shop_images/Mobile_2_2048x_4908f415-cff9-44a8-82c1-446bd007d1ff.jpg",
+    "modal_title": "You first",
+    "modal_copy": "We would be delighted to have you in our address book. Please confirm your details below and we will keep you updated.",
+    "store_1_image_1": "shopify://shop_images/19031_CST_SidneyGarber_0137_R1_1_e7906f21-e97e-414a-a577-051b0fe3a0cf.jpg",
+    "store_1_image_2": "shopify://shop_images/19031_CST_SidneyGarber_0059_R1_1_f3832e6e-d14d-410d-8183-7e30ee785e40.jpg",
+    "store_1_image_3": "shopify://shop_images/19031_CST_SidneyGarber_0154_R1_1_d878cccb-1e70-474b-9d7d-14dcb4fcba61.jpg",
+    "store_1_image_4": "shopify://shop_images/19031_CST_SidneyGarber_0086_R1_1_be2e2d49-40e6-4116-82a9-b2a5d8cc44ed.jpg",
+    "store_1_image_5": "shopify://shop_images/19031_CST_SidneyGarber_0024_R1_1_2840c027-2a99-43c4-a50a-afe8a4945c68.jpg",
+    "store_1_image_6": "shopify://shop_images/19031_CST_SidneyGarber_0014_R1_1.jpg",
+    "store_1_image_7": "shopify://shop_images/19031_CST_SidneyGarber_0091_R1_1_25ca1056-d973-475e-aea9-8f06093fc77a.jpg",
+    "store_2_image_1": "shopify://shop_images/Sidney_Garber_Chicago_Store_1_7e1ad1b5-6469-4053-8f54-6b18a91a50ab.jpg",
+    "store_2_image_2": "shopify://shop_images/Sidney_Garber_Chicago_Store_2_bcf75975-b80c-430a-86e0-18c823e45d2b.jpg",
+    "store_2_image_3": "shopify://shop_images/Sidney_Garber_Chicago_Store_6_d68dd870-257c-492b-a7b7-45d6633ca7b3.jpg",
+    "store_2_image_4": "shopify://shop_images/Sidney_Garber_Chicago_Store_5_2ab07022-a115-4e12-b253-60dc677ac043.jpg",
+    "store_2_image_5": "shopify://shop_images/Sidney_Garber_Chicago_Store_4_c4c28f9f-7ffe-4e7b-a9df-5485268a7884.jpg",
+    "store_2_image_6": "shopify://shop_images/Sidney_Garber_Chicago_Store_3_aa72a11b-fc1a-4752-ad74-c5711f22928d.jpg",
+    "store_2_image_7": "",
+    "pagination_limit": 25,
+    "hide_sold_out_products": false,
+    "recent_products_limit": 4,
+    "show_qty": true,
+    "color_option_index": "0",
+    "instagram_url": "https://www.instagram.com/sidneygarber/",
+    "facebook_url": "https://www.facebook.com/SidneyGarber/",
+    "twitter_url": "",
+    "pinterest_url": "",
+    "youtube_url": "",
+    "newsletter_form_action": "//sidneygarber.us15.list-manage.com/subscribe/post?u=a190444dfb2ceb1d0568cb442&amp;id=b95229d4d1",
+    "og_description": "",
+    "og_image": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify://shop_images/rsz_1rsz_sidney-garber_logo_1.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f2f2f2",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman'",
+    "checkout_accent_color": "#bbbbbb",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#000000",
+    "contact_email": "contactus@edllc.com",
+    "banner_bg_image": "",
+    "enable_modal_newsletter": true,
+    "related_articles_limit": 3,
+    "enable_blog_search": true,
+    "account_banner_image": "",
+    "enable_modal_as_banner": false,
+    "products_per_row": 4,
+    "enable_collection_filters": true,
+    "show_all_colors_tag": "exclude-color",
+    "enable_size_chart": true,
+    "size_chart_page": "",
+    "enable_shipping_chart": true,
+    "shipping_chart_page": "",
+    "mini_cart_quick_checkout": false,
+    "enable_newsletter_banner": true,
+    "newsletter_banner_text": "Join ED mailing list",
+    "enable_instafeed": true,
+    "search_page_grid_image": "",
+    "related_products_limit": 9,
+    "mailchimp_form_action": "//edbyellen.us15.list-manage.com/subscribe/post?u=e8137b26a4b8bb53d70b34efd&amp;id=71fa17e667",
+    "preselect_variant": false,
+    "show_color_swatches": false,
+    "show_related_products": true,
+    "nav_left_limit": 2,
+    "nav_linklist_1": "",
+    "nav_image_1": "",
+    "nav_link_1": "",
+    "nav_linklist_2": "",
+    "nav_image_2": "",
+    "nav_link_2": "",
+    "nav_linklist_3": "",
+    "nav_image_3": "",
+    "nav_link_3": "",
+    "tumblr_url": "",
+    "contact_phone": "012-345-6789",
+    "body_color": "#0a152e",
+    "use_websafe_fonts": false,
+    "base_font": "Impact, Charcoal, Helvetica, Arial, sans-serif",
+    "bold_font": "'Times New Roman', Times, serif",
+    "sans_serif_font": "Verdana, Helvetica, Arial, sans-serif",
+    "serif_font": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+    "use_custom_fonts": true,
+    "primary_button_bg": "#0a152e",
+    "primary_button_color": "#ffffff",
+    "nav_linklist": "shop",
+    "nav_image": "shopify://shop_images/RYOMIKAmob.jpg",
+    "enable_collection_nav": true,
+    "show_breadcrumbs": false,
+    "show_product_filters": true,
+    "show_article_filters": false,
+    "alt_font": "'Courier New', Courier, monospace",
+    "body_font": "'Courier New', Courier, monospace",
+    "home_sort_by": "created_at",
+    "checkout_use_header_image": false,
+    "checkout_logo": "checkout_logo.png",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "enable_newsletter_modal": true,
+    "newsletter_copy": "Sign up for our newsletter to stay informed on the latest vintage t-shirts.",
+    "home_pattern_1": 0,
+    "home_pattern_2": 0,
+    "home_pattern_3": 0,
+    "newsletter_modal_title": "Welcome to Chapel",
+    "home_pattern": "2, 5,6",
+    "home_hero_image_1_link": "",
+    "home_hero_image_2_link": "",
+    "home_hero_image_3_link": "",
+    "home_hero_image_4_link": "",
+    "show_related_articles": true,
+    "filter_1_enabled": false,
+    "filter_1_keyword": "",
+    "filter_2_enabled": false,
+    "filter_2_keyword": "",
+    "product_image_ratio": "3-2",
+    "hide_prices_on_collection": true,
+    "enable_home_hero_image_1": true,
+    "home_hero_image_1_title": "eryrtry",
+    "home_hero_image_1_pos": "65% 50%",
+    "enable_home_hero_image_2": false,
+    "home_hero_image_2_title": "Line Series 2",
+    "home_hero_image_2_pos": "",
+    "enable_home_hero_image_3": false,
+    "home_hero_image_3_title": "",
+    "home_hero_image_3_pos": "",
+    "enable_home_hero_image_4": false,
+    "home_hero_image_4_title": "Line Series",
+    "home_hero_image_4_pos": "",
+    "home_hero_image_1_button": "Shop",
+    "home_hero_image_2_button": "Shop",
+    "home_hero_image_3_button": "",
+    "home_hero_image_4_button": "",
+    "instagram_handle": "thecartorialist",
+    "about_top_row_text": "<p><i>\r\nWhen I sit down to create, I don’t know what I will end up drawing or painting... but I do know that my work always comes from a happy place. It starts with me and a pen and an image or feeling that inspires me. I’m drawn to the imperfections of a person or place- for those imperfections are what make things more interesting and beautiful.</i></p>",
+    "about_bottom_row_text": "<p>A native New Yorker, t-shirt and jeans enthusiast, and former producer on the Chelsea Lately Show, Carly Kuhn’s a serious artist who doesn’t take herself too seriously. A self-proclaimed “happy person,” her work reflects and inspires just that; not the mindless, bubble-gum happy, but the happy that you find in lines drawn across a page in just the right way that they bring a mini world to life, a world you want to take home with you and make your own.</p>\r\n<p>\r\nThough known for her fashion illustrations that became an Instagram sensation, the magic of Kuhn’s work lies in her ability to gracefully turn the subtle and ordinary into the alluring and evocative. She shows us different angles, fresh perspectives and often provides a peek into a private world or a secret moment. Whether it’s the turn of a head from behind, the soft curve of a back, or simply a turtleneck pulled over a woman’s face, it’s always delightfully unexpected. Her work encourages us to look differently at what’s around us and to take notice. It’s a style and sensibility that marries the realness of New York with the ease of California, an aesthetic that informs her life and everything she touches. She’s done work for Dior, Capitol Records, Prada, Glossier, Elle, L'Officiel Italia, and jewelry brand Alexis Bittar and can count Rachel Zoe, Mark Ruffalo, Jeremy Scott and Sarah Jessica Parker as fans.\r\n</p>",
+    "show_product_banner": true,
+    "product_banner": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus sed quasi molestias vero quas optio vel nostrum, repudiandae, vitae perferendis excepturi animi, quam quidem! Dolores reprehenderit quam blanditiis repellat nemo?",
+    "show_journal_intro_text": true,
+    "journal_intro_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa illo magni, architecto, sunt quia veritatis, atque saepe aliquid maiores officia distinctio fugit nostrum sequi non facilis odit. Perferendis, maxime sit.",
+    "color_body_bg": "#ffffff",
+    "color_borders": "#dddddd",
+    "color_primary": "#f45b4f",
+    "color_button_primary_text": "#ffffff",
+    "color_secondary": "#bbbbbb",
+    "color_button_secondary_text": "#ffffff",
+    "color_body_text": "#333333",
+    "color_footer_social_link": "#555555",
+    "type_base_family": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "type_base_size": "16px",
+    "type_header_family": "Google_Cabin_500_sans",
+    "type_header_size": "32px",
+    "type_accent_family": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "type_accent_size": "16px",
+    "logo_use_image": false,
+    "logo_max_width": "450",
+    "nav_below_logo": true,
+    "left_aligned_logo": false,
+    "show_header_lines": true,
+    "favicon_enable": false,
+    "header_message": "",
+    "header_search_enable": true,
+    "footer_blog_enable": true,
+    "footer_blog": "news",
+    "footer_quicklinks_enable": true,
+    "footer_quicklinks_linklist": "footer",
+    "footer_second_menu_enable": false,
+    "footer_second_menu": "",
+    "footer_social_enable": true,
+    "footer_contact_enable": false,
+    "footer_contact_text": "",
+    "footer_newsletter_enable": false,
+    "footer_show_methods_of_payment": true,
+    "show_footer_lines": true,
+    "home_section_1": "featured-products",
+    "home_section_2": "home-content",
+    "home_section_3": "",
+    "slider_home_auto": true,
+    "slider_home_show_dots": false,
+    "slider_home_rate": "7000",
+    "slider_home_transition": "slide",
+    "slide_1": true,
+    "slide_1_link": "",
+    "slide_1_alt": "",
+    "slide_2": true,
+    "slide_2_link": "",
+    "slide_2_alt": "",
+    "slide_3": false,
+    "slide_3_link": "",
+    "slide_3_alt": "",
+    "slide_4": false,
+    "slide_4_link": "",
+    "slide_4_alt": "",
+    "slide_5": false,
+    "slide_5_link": "",
+    "slide_5_alt": "",
+    "slide_6": false,
+    "slide_6_link": "",
+    "slide_6_alt": "",
+    "home_featured_products": "frontpage",
+    "home_featured_products_num": "3",
+    "home_featured_products_row_num": "3",
+    "home_featured_products_show_heading": false,
+    "home_page_content": "frontpage",
+    "home_page_show_heading": true,
+    "product_quantity_enable": true,
+    "product_image_zoom_type": "lightbox",
+    "product_thumbnails_position": "below",
+    "product_related_enable": true,
+    "collections_show_sale_circle": true,
+    "collections_show_sold_out_circle": true,
+    "collections_sort_enable": true,
+    "collections_tags_enable": true,
+    "collections_products_per_row": "3",
+    "collections_rows": "4",
+    "cart_notes_enable": false,
+    "cart_enable_ajax": true,
+    "social_twitter_link": "https://twitter.com/shopify",
+    "social_facebook_link": "https://www.facebook.com/shopify",
+    "social_pinterest_link": "https://www.pinterest.com/shopify",
+    "social_google_plus_link": "",
+    "social_instagram_link": "https://instagram.com/shopify",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "social_rss_link": "",
+    "social_sharing_products": true,
+    "social_sharing_blog": true,
+    "social_sharing_count": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "share_fancy": true,
+    "share_google": true,
+    "sections": {
+      "hero-carousel": {
+        "type": "hero-carousel",
+        "blocks": {
+          "1491441175699": {
+            "type": "Slide",
+            "settings": {
+              "image": "",
+              "mobile_image": "",
+              "title": "Pet Collection",
+              "title_alignment": "left",
+              "link": "http://petsmart.com/edellendegeneres"
+            }
+          }
+        },
+        "block_order": [
+          "1491441175699"
+        ],
+        "settings": {}
+      },
+      "1492621240192": {
+        "type": "instafeed",
+        "settings": {
+          "title": "Stay Connected",
+          "ig_handle": "@sidneygarber",
+          "limit": 9
+        }
+      },
+      "product--related": {
+        "type": "product--related",
+        "blocks": {
+          "1492715433368": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-9-mm-rolling-bracelets",
+              "related_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1492715442626": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-9-mm-rolling-bracelets",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1492715449387": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-9-mm-rolling-bracelets",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493670219684": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-9-mm-rolling-bracelets",
+              "related_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1493670480720": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet",
+              "related_product": "wrap-around"
+            }
+          },
+          "1493670515808": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1493670541089": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1493670569978": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493670703803": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-9mm-rolling-bracelets",
+              "related_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1493670728325": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-9mm-rolling-bracelets",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493676709084": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-9mm-rolling-bracelets",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493676742467": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-9mm-rolling-bracelets",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493677140081": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet-1",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493677172519": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet-1",
+              "related_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1493677193234": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet-1",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493677215317": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelet-1",
+              "related_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1493677604663": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "12mm-tri-color-rolling-bracelets",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493677631663": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "12mm-tri-color-rolling-bracelets",
+              "related_product": "golden-cuff"
+            }
+          },
+          "1493677657661": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "12mm-tri-color-rolling-bracelets",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1493678455730": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-12-mm-rolling-bracelets",
+              "related_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1493678489143": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-12-mm-rolling-bracelets",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493678515060": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-12-mm-rolling-bracelets",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493678546222": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-12-mm-rolling-bracelets",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493678624440": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-12-mm-rolling-bracelets",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493678873368": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-12-mm-rolling-bracelets",
+              "related_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1493678893750": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-12-mm-rolling-bracelets",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1493678920310": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-12-mm-rolling-bracelets",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493688364509": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "domed-cuff-1",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1493688446206": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "domed-cuff-1",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1493688467433": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "domed-cuff-1",
+              "related_product": "wrap-around"
+            }
+          },
+          "1493688492028": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "domed-cuff-1",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493688530669": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-domed-cuff",
+              "related_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1493688559103": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-domed-cuff",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493688600417": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-domed-cuff",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493688625114": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-domed-cuff",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493688668479": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-domed-cuff",
+              "related_product": "scribble-band-1"
+            }
+          },
+          "1493688691307": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-domed-cuff",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1493688712432": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-domed-cuff",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493688732554": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-domed-cuff",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493689195140": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wave-bracelet",
+              "related_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1493689280496": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wave-bracelet",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493689301460": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wave-bracelet",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493689324182": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wave-bracelet",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493689488707": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-high-polish-wave-bracelet",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493689513540": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-high-polish-wave-bracelet",
+              "related_product": "wave-bracelet"
+            }
+          },
+          "1493689539596": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-high-polish-wave-bracelet",
+              "related_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1493697524228": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493693680882": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "golden-cuff",
+              "related_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1493693701215": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "golden-cuff",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493693723564": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "golden-cuff",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493693760326": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "golden-cuff",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493693789002": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "il-serpente",
+              "related_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1493693817203": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "il-serpente",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493693858551": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "il-serpente",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493693894687": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "il-serpente",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1495167573425": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-that-move",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493694283722": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-that-move",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493694374507": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-that-move",
+              "related_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1493694415346": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-that-move",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493694449973": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-feathers-that-move",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493694484464": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-feathers-that-move",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493694525955": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-feathers-that-move",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493694553735": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-feathers-that-move",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493694738783": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wave-bracelet",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493694782202": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wave-bracelet",
+              "related_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1493694821742": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wave-bracelet",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493694847203": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wave-bracelet",
+              "related_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1493694883729": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-polish-finish-wave-bracelet",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493694914072": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-polish-finish-wave-bracelet",
+              "related_product": "rose-gold-wave-bracelet"
+            }
+          },
+          "1493694939576": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-polish-finish-wave-bracelet",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493694978872": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-polish-finish-wave-bracelet",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1493695015256": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-feathers-that-move",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493695047567": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-feathers-that-move",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493695070913": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-feathers-that-move",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493695113243": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-feathers-that-move",
+              "related_product": "rose-gold-wave-bracelet"
+            }
+          },
+          "1493695141531": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493695168260": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1493695200403": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings",
+              "related_product": "rolling-bracelet-1"
+            }
+          },
+          "1493695232929": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings",
+              "related_product": "wrap-around"
+            }
+          },
+          "1493695286125": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings-1",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493695311147": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings-1",
+              "related_product": "yellow-gold-9-mm-rolling-bracelets"
+            }
+          },
+          "1493695343977": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings-1",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1493695376086": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-plume-earrings-1",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493695410223": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-plume-earrings",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1493695431102": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-plume-earrings",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493695447239": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-plume-earrings",
+              "related_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1493695520164": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-plume-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493695608695": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-long-knot-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495167118907": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-long-knot-earrings",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493696191435": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-long-knot-earrings",
+              "related_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1493696222118": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-long-knot-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493696273394": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-long-knot-earrings",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493696330209": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-long-knot-earrings",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1495166911310": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-long-knot-earrings",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493696309519": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-long-knot-earrings",
+              "related_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1493696394678": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-long-knot-earrings",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1495166653066": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-long-knot-earrings",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493696416592": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-long-knot-earrings",
+              "related_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1493696446259": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-long-knot-earrings",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493697266792": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "petite-swirl-pave-earrings",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1493697319051": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "petite-swirl-pave-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495167807763": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "petite-swirl-pave-earrings",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1493696839708": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "petite-swirl-pave-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493697683651": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "titanium-pyramids",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493697700874": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "titanium-pyramids",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493697716728": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "titanium-pyramids",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1495167487709": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "titanium-pyramids",
+              "related_product": "black-on-black"
+            }
+          },
+          "1495167260191": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "match-stick-earrings",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1493697772917": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "match-stick-earrings",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1493697801223": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "match-stick-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493697827824": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "match-stick-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493697855391": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-necklace",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495170115947": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-necklace",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493697879363": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-necklace",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1493697964806": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "feather-necklace",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493698018209": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wrap-around",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1493698453287": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wrap-around",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1493698475663": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wrap-around",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1493698495978": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "wrap-around",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1493698514486": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wrap-around",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493698555752": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wrap-around",
+              "related_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1493698571491": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wrap-around",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1493698587307": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-wrap-around",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493698886466": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1493698904413": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "wave-bracelet"
+            }
+          },
+          "1493699031305": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1495163502463": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-high-polish-wave-bracelet",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493699237948": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493699274961": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1493699292929": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493699307000": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1493699325283": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-pink-black",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493699383771": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-pink-black",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1493699405774": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-pink-black",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1493699425611": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-pink-black",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1493699449629": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-mint-brown",
+              "related_product": "wrap-around"
+            }
+          },
+          "1493699495518": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-mint-brown",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1495171036074": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-mint-brown",
+              "related_product": "black-on-black"
+            }
+          },
+          "1493699511037": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "the-well-tailored-ring-in-mint-brown",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493699545358": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pyramid-ring",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1493699567283": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pyramid-ring",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1493699602034": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pyramid-ring",
+              "related_product": "black-on-black"
+            }
+          },
+          "1495171114586": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pyramid-ring",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1495130216362": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "11-rows-sapphire-bracelet",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495130246074": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "11-rows-sapphire-bracelet",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495130256836": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "11-rows-sapphire-bracelet",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1495130285528": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "11-rows-sapphire-bracelet",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1495130444077": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelets-1",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1495130484199": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelets-1",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1495130514347": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelets-1",
+              "related_product": "black-on-black"
+            }
+          },
+          "1495130545469": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rolling-bracelets-1",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495133408211": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "triple-coil-il-serpente-bracelet",
+              "related_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1495133437610": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "triple-coil-il-serpente-bracelet",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1495133456556": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "triple-coil-il-serpente-bracelet",
+              "related_product": "scribble-band-1"
+            }
+          },
+          "1495133493146": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "triple-coil-il-serpente-bracelet",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1495164140455": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "12mm-tri-color-rolling-bracelets",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495165614775": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-diamond-rolling-bracelet",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1495165663253": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-diamond-rolling-bracelet",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495165681242": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-diamond-rolling-bracelet",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495165720465": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "white-gold-diamond-rolling-bracelet",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1495165794329": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-petite-swirl-earrings",
+              "related_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1495165829663": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-petite-swirl-earrings",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1495165848497": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-petite-swirl-earrings",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1495165905912": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-petite-swirl-earrings",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1495166027507": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rococo-earrings",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1495166047955": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rococo-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495166064628": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rococo-earrings",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1495166082446": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rococo-earrings",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1495166333926": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-plume-earrings",
+              "related_product": "black-on-black"
+            }
+          },
+          "1495166350014": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-plume-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495166366019": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-plume-earrings",
+              "related_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1495166404622": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-plume-earrings",
+              "related_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1495166502925": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-feathers-that-move",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495166528472": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-feathers-that-move",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1495166558825": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-feathers-that-move",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495166576950": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "rose-gold-diamond-pave-feathers-that-move",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1495167351157": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "multi-drop-geometric-earrings",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1495167380399": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "multi-drop-geometric-earrings",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495167403176": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "multi-drop-geometric-earrings",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1495167422655": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "multi-drop-geometric-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495169948355": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1495170032727": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1495170056038": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "rolling-bracelet"
+            }
+          },
+          "1495170069686": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495170224608": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-wrap-around",
+              "related_product": "il-serpente"
+            }
+          },
+          "1495170252982": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-wrap-around",
+              "related_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1495170272744": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-wrap-around",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1495170309909": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "yellow-gold-wrap-around",
+              "related_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1495170460619": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "black-on-black",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1495170482370": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "black-on-black",
+              "related_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1495170511109": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "black-on-black",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495170527390": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "black-on-black",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1495170675275": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-1",
+              "related_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1495170707726": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-1",
+              "related_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1495170728788": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-1",
+              "related_product": "rose-gold-wrap-around"
+            }
+          },
+          "1495170750893": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-1",
+              "related_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1495170873753": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "ruby-wide-flexible-ring",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1495170909954": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "ruby-wide-flexible-ring",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495170928445": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "ruby-wide-flexible-ring",
+              "related_product": "golden-cuff"
+            }
+          },
+          "1495170957084": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "ruby-wide-flexible-ring",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1495171183293": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "sapphire-wide-flexible-ring",
+              "related_product": "wrap-around"
+            }
+          },
+          "1495171300634": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "sapphire-wide-flexible-ring",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1495171321480": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "sapphire-wide-flexible-ring",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1495171340270": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "sapphire-wide-flexible-ring",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1496813069391": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "honey-comb-earrings",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1496813091876": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "honey-comb-earrings",
+              "related_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1496813119264": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "honey-comb-earrings",
+              "related_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in"
+            }
+          },
+          "1496813136299": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "honey-comb-earrings",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1496814982910": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1496815001139": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in",
+              "related_product": "feather-that-move"
+            }
+          },
+          "1496815021418": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1496815062190": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "lunetta-18k-white-gold-diamond-lunetta-necklace-18in",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1496815113913": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pearl-tassel",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1496815168763": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pearl-tassel",
+              "related_product": "white-gold-diamond-rolling-bracelet"
+            }
+          },
+          "1496815205109": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pearl-tassel",
+              "related_product": "scribble-band-white-gold"
+            }
+          },
+          "1496815223492": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "pearl-tassel",
+              "related_product": "petite-swirl-pave-earrings"
+            }
+          },
+          "1496815264671": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "gloria-with-peri-pearl",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1496815288758": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "gloria-with-peri-pearl",
+              "related_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1496815313757": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "gloria-with-peri-pearl",
+              "related_product": "rolling-bracelet"
+            }
+          },
+          "1496815341402": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "gloria-with-peri-pearl",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1496815450982": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-white-gold",
+              "related_product": "rolling-bracelets-1"
+            }
+          },
+          "1496815484120": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-white-gold",
+              "related_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1496815505752": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-white-gold",
+              "related_product": "domed-cuff-1"
+            }
+          },
+          "1496815530133": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "scribble-band-white-gold",
+              "related_product": "feather-necklace"
+            }
+          },
+          "1496815639242": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "related_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1496815788917": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "related_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1496815821995": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "related_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1496815852689": {
+            "type": "related_product",
+            "settings": {
+              "associated_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "related_product": "yellow-gold-domed-cuff"
+            }
+          }
+        },
+        "block_order": [
+          "1492715433368",
+          "1492715442626",
+          "1492715449387",
+          "1493670219684",
+          "1493670480720",
+          "1493670515808",
+          "1493670541089",
+          "1493670569978",
+          "1493670703803",
+          "1493670728325",
+          "1493676709084",
+          "1493676742467",
+          "1493677140081",
+          "1493677172519",
+          "1493677193234",
+          "1493677215317",
+          "1493677604663",
+          "1493677631663",
+          "1493677657661",
+          "1493678455730",
+          "1493678489143",
+          "1493678515060",
+          "1493678546222",
+          "1493678624440",
+          "1493678873368",
+          "1493678893750",
+          "1493678920310",
+          "1493688364509",
+          "1493688446206",
+          "1493688467433",
+          "1493688492028",
+          "1493688530669",
+          "1493688559103",
+          "1493688600417",
+          "1493688625114",
+          "1493688668479",
+          "1493688691307",
+          "1493688712432",
+          "1493688732554",
+          "1493689195140",
+          "1493689280496",
+          "1493689301460",
+          "1493689324182",
+          "1493689488707",
+          "1493689513540",
+          "1493689539596",
+          "1493697524228",
+          "1493693680882",
+          "1493693701215",
+          "1493693723564",
+          "1493693760326",
+          "1493693789002",
+          "1493693817203",
+          "1493693858551",
+          "1493693894687",
+          "1495167573425",
+          "1493694283722",
+          "1493694374507",
+          "1493694415346",
+          "1493694449973",
+          "1493694484464",
+          "1493694525955",
+          "1493694553735",
+          "1493694738783",
+          "1493694782202",
+          "1493694821742",
+          "1493694847203",
+          "1493694883729",
+          "1493694914072",
+          "1493694939576",
+          "1493694978872",
+          "1493695015256",
+          "1493695047567",
+          "1493695070913",
+          "1493695113243",
+          "1493695141531",
+          "1493695168260",
+          "1493695200403",
+          "1493695232929",
+          "1493695286125",
+          "1493695311147",
+          "1493695343977",
+          "1493695376086",
+          "1493695410223",
+          "1493695431102",
+          "1493695447239",
+          "1493695520164",
+          "1493695608695",
+          "1495167118907",
+          "1493696191435",
+          "1493696222118",
+          "1493696273394",
+          "1493696330209",
+          "1495166911310",
+          "1493696309519",
+          "1493696394678",
+          "1495166653066",
+          "1493696416592",
+          "1493696446259",
+          "1493697266792",
+          "1493697319051",
+          "1495167807763",
+          "1493696839708",
+          "1493697683651",
+          "1493697700874",
+          "1493697716728",
+          "1495167487709",
+          "1495167260191",
+          "1493697772917",
+          "1493697801223",
+          "1493697827824",
+          "1493697855391",
+          "1495170115947",
+          "1493697879363",
+          "1493697964806",
+          "1493698018209",
+          "1493698453287",
+          "1493698475663",
+          "1493698495978",
+          "1493698514486",
+          "1493698555752",
+          "1493698571491",
+          "1493698587307",
+          "1493698886466",
+          "1493698904413",
+          "1493699031305",
+          "1495163502463",
+          "1493699237948",
+          "1493699274961",
+          "1493699292929",
+          "1493699307000",
+          "1493699325283",
+          "1493699383771",
+          "1493699405774",
+          "1493699425611",
+          "1493699449629",
+          "1493699495518",
+          "1495171036074",
+          "1493699511037",
+          "1493699545358",
+          "1493699567283",
+          "1493699602034",
+          "1495171114586",
+          "1495130216362",
+          "1495130246074",
+          "1495130256836",
+          "1495130285528",
+          "1495130444077",
+          "1495130484199",
+          "1495130514347",
+          "1495130545469",
+          "1495133408211",
+          "1495133437610",
+          "1495133456556",
+          "1495133493146",
+          "1495164140455",
+          "1495165614775",
+          "1495165663253",
+          "1495165681242",
+          "1495165720465",
+          "1495165794329",
+          "1495165829663",
+          "1495165848497",
+          "1495165905912",
+          "1495166027507",
+          "1495166047955",
+          "1495166064628",
+          "1495166082446",
+          "1495166333926",
+          "1495166350014",
+          "1495166366019",
+          "1495166404622",
+          "1495166502925",
+          "1495166528472",
+          "1495166558825",
+          "1495166576950",
+          "1495167351157",
+          "1495167380399",
+          "1495167403176",
+          "1495167422655",
+          "1495169948355",
+          "1495170032727",
+          "1495170056038",
+          "1495170069686",
+          "1495170224608",
+          "1495170252982",
+          "1495170272744",
+          "1495170309909",
+          "1495170460619",
+          "1495170482370",
+          "1495170511109",
+          "1495170527390",
+          "1495170675275",
+          "1495170707726",
+          "1495170728788",
+          "1495170750893",
+          "1495170873753",
+          "1495170909954",
+          "1495170928445",
+          "1495170957084",
+          "1495171183293",
+          "1495171300634",
+          "1495171321480",
+          "1495171340270",
+          "1496813069391",
+          "1496813091876",
+          "1496813119264",
+          "1496813136299",
+          "1496814982910",
+          "1496815001139",
+          "1496815021418",
+          "1496815062190",
+          "1496815113913",
+          "1496815168763",
+          "1496815205109",
+          "1496815223492",
+          "1496815264671",
+          "1496815288758",
+          "1496815313757",
+          "1496815341402",
+          "1496815450982",
+          "1496815484120",
+          "1496815505752",
+          "1496815530133",
+          "1496815639242",
+          "1496815788917",
+          "1496815821995",
+          "1496815852689"
+        ],
+        "settings": {}
+      },
+      "about": {
+        "type": "about",
+        "blocks": {
+          "1493048787425": {
+            "type": "section",
+            "settings": {
+              "image": "shopify://shop_images/00010_178.jpg",
+              "title": "About Sidney Garber",
+              "text": "Sidney Garber loved beauty, grace, and elegance. The son of a watchmaker, he launched his own jewelry store in 1946 when he was still in his 20s. His daughter Brooke stood behind the counter as a little girl. By the time Brooke was a teenager, Sidney Garber was an elegant boutique on Michigan Avenue in Chicago.\r\n\r\nSidney Garber was known for his extraordinary eye. He brought great rigor and attention to detail as he worked with unique artisans abroad to create the jewelry he sold exclusively. He instilled in Brooke that same love of design, detail, and fine execution as she traveled with him to the great ateliers in Milan and Paris. Sidney remained deeply involved in the business until well into his late 80s.\r\n\r\nIn 2008, Brooke Garber Neidich inherited Sidney Garber Fine Jewelry. Today, she continues her father’s tradition. Times have changed since that first store opened in 1946. Today, Brooke gives all her profits to not-for-profit organizations dedicated to children’s mental health, education, the arts, human rights, and the environment. In 2015 she was elected to the CFDA The Council of Fashion Designers of America, Inc. The CFDA, founded in 1962, is an exclusive group of America’s foremost fashion, jewelry, and accessory designers . Membership in the CFDA is by election and invitation-only."
+            }
+          },
+          "1493050081097": {
+            "type": "section",
+            "settings": {
+              "image": "",
+              "title": "Our Commitment",
+              "text": "Sidney Garber is committed to high ethical standards and is devoted to implementing, and maintaining responsible business practices in every facet of our business as a fine jewelry brand and retailer.\r\n\r\nWe are committed to protecting the human rights of all individuals in the supply chain. We only work with partners who are similarly committed to human rights, ethics, and social and environmental responsibility.\r\n\r\nWe also adhere to, and train our employees on the Kimberly Process, an international initiative to end the trade of “conflict diamonds” – rough diamonds used by rebel movements to finance wars against legitimate governments.\r\n\r\nThe personal values of Brooke Garber Neidich guide our Company in carrying out these initiatives responsibly. This strong philanthropic heritage has allowed Sidney Garber to become the social and ethical leader we are today."
+            }
+          },
+          "1493672593790": {
+            "type": "section",
+            "settings": {
+              "image": "",
+              "title": "Responsible Jewelry Council",
+              "text": "Sidney Garber is a member of the Responsible Jewelry Council (RJC), a not-for-profit, standards-setting and certification organization focused specifically on the jewelry supply chain. With more than 850 member companies, the RJC is widely accepted as the most significant proponent of responsible business practices in the jewelry industry. Such business practices emphasize respect for human rights, ethics, and the environment by establishing socially, and ethically responsible guidelines for member companies to follow. \r\n\r\nThe RJC has also established a certification system to verify that member companies follow the directives, and initiatives of the organization. Our support of the RJC helps us carry forward our vision for being an ethical and socially responsible leader in the industry.\r\n<br>"
+            }
+          }
+        },
+        "block_order": [
+          "1493048787425",
+          "1493050081097",
+          "1493672593790"
+        ],
+        "settings": {}
+      },
+      "partners": {
+        "type": "partners",
+        "blocks": {
+          "1493052967222": {
+            "type": "partner",
+            "settings": {
+              "title": "A'maree's",
+              "is_boutique": false,
+              "region": "California",
+              "partner_address": "2241 West Coast Highway\nNewport Beach, CA 92663",
+              "partner_phone": "949-642-4423"
+            }
+          },
+          "1493053976278": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "California",
+              "partner_address": "77 O'Farrell Street\r\nSan Francisco, CA 94108",
+              "partner_phone": "415-268-3500"
+            }
+          },
+          "1493053171901": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "California",
+              "partner_address": "9570 Willshire Boulevard\r\nBeverly Hills, CA 90212",
+              "partner_phone": "310-276-440"
+            }
+          },
+          "1493668938367": {
+            "type": "partner",
+            "settings": {
+              "title": "Just One Eye",
+              "is_boutique": false,
+              "region": "California",
+              "partner_address": "7000 Romaine Street\r\nLos Angeles, CA 90038",
+              "partner_phone": "1-888-563-6858"
+            }
+          },
+          "1493668859330": {
+            "type": "partner",
+            "settings": {
+              "title": "The Row",
+              "is_boutique": false,
+              "region": "California",
+              "partner_address": "8440 Melrose Place\r\nLos Angeles, CA 90038",
+              "partner_phone": "310-853-1900"
+            }
+          },
+          "1493669409847": {
+            "type": "partner",
+            "settings": {
+              "title": "Seaside Luxe at the Hualalai Resort",
+              "is_boutique": false,
+              "region": "Hawaii",
+              "partner_address": "100 Kaupulehu Drive\r\nKona, Hawaii 96740",
+              "partner_phone": "844-295-0390"
+            }
+          },
+          "1493054025207": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "Illinois",
+              "partner_address": "15 East Oak Street\r\nChicago, IL 60611",
+              "partner_phone": "312-587-1700"
+            }
+          },
+          "1493669063085": {
+            "type": "partner",
+            "settings": {
+              "title": "Neapolitan",
+              "is_boutique": false,
+              "region": "Illinois",
+              "partner_address": "560 Chestnut Street\r\nWinnetka, IL 60093",
+              "partner_phone": "847-441-7784"
+            }
+          },
+          "1493669155414": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "massachusetts",
+              "partner_address": "100 Huntington Avenue\r\nBoston, MA 02116",
+              "partner_phone": "617-385-3300"
+            }
+          },
+          "1493669237840": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "new york",
+              "partner_address": "660 Madison Avenue\r\nNew York, NY 10065",
+              "partner_phone": "212-826-8900"
+            }
+          },
+          "1493669370180": {
+            "type": "partner",
+            "settings": {
+              "title": "The Row",
+              "is_boutique": false,
+              "region": "new york",
+              "partner_address": "17 East 71st Street\r\nNew York, NY 10021",
+              "partner_phone": "212-755-2017"
+            }
+          },
+          "1493669330073": {
+            "type": "partner",
+            "settings": {
+              "title": "Barneys New York",
+              "is_boutique": false,
+              "region": "new york",
+              "partner_address": "101 7th Avenue\r\nNew York, NY 10011",
+              "partner_phone": "646-264-6400"
+            }
+          },
+          "1493054395258": {
+            "type": "partner",
+            "settings": {
+              "title": "Forty Five Ten",
+              "is_boutique": false,
+              "region": "Texas",
+              "partner_address": "1615 Main Street\r\nDallas, Texas 75201",
+              "partner_phone": "214-559-4510"
+            }
+          },
+          "1493128224134": {
+            "type": "partner",
+            "settings": {
+              "title": "New York",
+              "is_boutique": true,
+              "region": "New York",
+              "partner_address": "998 Madison Avenue\r\nNew York, NY 10075",
+              "partner_phone": "212-274-1111"
+            }
+          },
+          "1493128330192": {
+            "type": "partner",
+            "settings": {
+              "title": "Chicago",
+              "is_boutique": true,
+              "region": "Chicago",
+              "partner_address": "118 East Delaware Place\r\nChicago, IL 60611",
+              "partner_phone": "312-944-5225"
+            }
+          }
+        },
+        "block_order": [
+          "1493052967222",
+          "1493053976278",
+          "1493053171901",
+          "1493668938367",
+          "1493668859330",
+          "1493669409847",
+          "1493054025207",
+          "1493669063085",
+          "1493669155414",
+          "1493669237840",
+          "1493669370180",
+          "1493669330073",
+          "1493054395258",
+          "1493128224134",
+          "1493128330192"
+        ],
+        "settings": {}
+      },
+      "product--more-info": {
+        "type": "product--more-info",
+        "blocks": {
+          "1493301467958": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18K White Gold</li>\r\n<li>Pearl and Diamond Rondelle Multi Row</li>\r\n<li>Pearl Tassel and Diamond Cap</li>\r\n<li>2.65ct</li>"
+            }
+          },
+          "1493681434032": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>118K White Gold </li>\r\n<li>792 diamonds, 23.1ct</li>"
+            }
+          },
+          "1493681513283": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rolling-bracelet",
+              "text": "<li>18K White Gold</li>\r\n<li>3 Band 9 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493681575807": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "domed-cuff-1",
+              "text": "<li>18K White Gold</li>\r\n<li>Size 52MM x 41MM (Petite) </li>\r\n<li>Size 56MM x 45MM (Regular) </li>"
+            }
+          },
+          "1493681625833": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rolling-bracelets-1",
+              "text": "<li>18K White Gold</li>\r\n<li> 3 Band 12 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493681679684": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18 kt wg bracelet</li>\r\n<li>58 chalcedony stones, 289.06 carats</li>"
+            }
+          },
+          "1493681743019": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt rose gold</li>\r\n<li>moonstone and brown quartz</li>\r\n<li>flexible cuff bracelet</li>"
+            }
+          },
+          "1493681828345": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "12mm-tri-color-rolling-bracelets",
+              "text": "<li>18K White, Yellow, and Rose Gold</li>\r\n<li>3 Band 12MM </li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493681874574": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "wave-bracelet",
+              "text": "<li>18K Yellow Gold Matte Finish </li>\r\n<li>Size 17 cm</li>"
+            }
+          },
+          "1493681927696": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "golden-cuff",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>Size 15 cm</li>"
+            }
+          },
+          "1493681982969": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "il-serpente",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>Double Headed Il Serpente Bracelet with Ruby Eyes</li>"
+            }
+          },
+          "1493682063998": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rolling-bracelet-1",
+              "text": "<li>18K White, Yellow, and Rose Gold</li>\r\n<li>3 Band 9 MM </li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493682401285": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-12-mm-rolling-bracelets",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>3 Band 12 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493682448261": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-12-mm-rolling-bracelets",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>3 Band 12 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493685685571": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-9-mm-rolling-bracelets",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>3 Band 9 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493685787326": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-9mm-rolling-bracelets",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>3 Band 9 MM</li>\r\n<li>Size 16.5 cm (Medium)</li>\r\n<li>Size 17.5 cm (Large)</li>"
+            }
+          },
+          "1493685818264": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "11-rows-sapphire-bracelet",
+              "text": "<li>118K White Gold </li>\r\n<li>11 Row Bracelet, 39.58ct, 7IN</li>"
+            }
+          },
+          "1493685888061": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-domed-cuff",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>Size 52MM x 41MM (Petite) </li>\r\n<li>Size 56MM x 45MM (Regular) </li>"
+            }
+          },
+          "1493686022039": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-domed-cuff",
+              "text": "<li>18K Rose Gold</li>\r\n<li>Size 52MM x 41MM (Petite) </li>\r\n<li>Size 56MM x 45MM (Regular) </li>"
+            }
+          },
+          "1493686114939": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-wave-bracelet",
+              "text": "<li>18K Rose Gold Matte Finish </li>\r\n<li>Size 17 cm</li>"
+            }
+          },
+          "1493686166921": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18K White Gold</li>\r\n<li> Pear Shaped Aquamarines</li>\r\n<li> Round Green Tourmalines</li>\r\n<li>Asscher Cut Tourmalines</li>\r\n<li>17.5ct</li>"
+            }
+          },
+          "1493686349988": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18K Rose Gold</li>\r\n<li>Green and Brown Tourmaline Green</li>"
+            }
+          },
+          "1493687041878": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt Yellow Gold</li>\r\n<li>Mint Tourmaline ombre (13.04ct)</li>\r\n<li>Diamonds (ct)</li>"
+            }
+          },
+          "1493687128542": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "titanium-pyramids",
+              "text": "<li>18kt white gold</li>\r\n<li>4.13ct  diamonds</li>"
+            }
+          },
+          "1493687171201": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "white-gold-long-knot-earrings",
+              "text": "<li>18K White Gold</li>\r\n<li>2.14ct diamonds</li>"
+            }
+          },
+          "1493687225983": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "match-stick-earrings",
+              "text": "<li>18K White Gold</li>\r\n<li>8.23ct diamonds</li>"
+            }
+          },
+          "1493687276631": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>102 diamonds .98ct</li>"
+            }
+          },
+          "1493687340084": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "feather-that-move",
+              "text": "<li>18K White Gold</li>\r\n<li>100 diamonds .98ct</li>"
+            }
+          },
+          "1493687384621": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "text": "<li>18K Rose Gold</li>\r\n<li>102 diamonds .98ct</li>"
+            }
+          },
+          "1493687425515": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>diamonds .75ct</li>"
+            }
+          },
+          "1493687495489": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "text": "<li>18K Rose Gold</li>\r\n<li>diamonds .75ct</li>"
+            }
+          },
+          "1493687562430": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "text": "<li>18K White Gold</li>\r\n<li>diamonds .75ct</li>"
+            }
+          },
+          "1493687606819": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-long-knot-earrings",
+              "text": "<li>18K Yellow Gold</li>\r\n<li>2.14ct diamonds</li>"
+            }
+          },
+          "1493687665065": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>multi sapphire earring</li>\r\n<li>18 kt. yg</li>"
+            }
+          },
+          "1493687728309": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-long-knot-earrings",
+              "text": "<li>18K Rose Gold</li>\r\n<li>2.14ct diamonds</li>"
+            }
+          },
+          "1493687765859": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "petite-swirl-pave-earrings",
+              "text": "<li>18kt white gold</li>\r\n<li>white diamond (2.20 CT) </li>"
+            }
+          },
+          "1493687813013": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt rose gold</li>\r\n<li>white diamond (2.20 CT) </li>"
+            }
+          },
+          "1493687868304": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18K White Gold</li>\r\n<li>92 sapphires, 174.35ct </li>"
+            }
+          },
+          "1493687913775": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt white gold</li>\r\n<li>66sapphires 19.61ct </li>\r\n<li>22 diamonds .93ct </li>"
+            }
+          },
+          "1493687981824": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "feather-necklace",
+              "text": "<li>18K White Gold </li>\r\n<li>225 diamonds 4.46ct, 34IN </li>"
+            }
+          },
+          "1493688036990": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "wrap-around",
+              "text": "<li>18K White Gold </li>\r\n<li>Pave Diamond Head and Tail, .34ct, 24IN</li>"
+            }
+          },
+          "1493688119453": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-wrap-around",
+              "text": "<li>18K Rose Gold </li>\r\n<li>Pave Diamond Head and Tail, .34ct, 24IN</li>"
+            }
+          },
+          "1493689099435": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-high-polish-wave-bracelet",
+              "text": "<li>18K Yellow Gold High Polish Finish</li>\r\n<li>Size 17 cm</li>"
+            }
+          },
+          "1493689975409": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-polish-finish-wave-bracelet",
+              "text": "<li>18K Rose Gold High Polish Finish</li>\r\n<li>Size 17 cm</li>"
+            }
+          },
+          "1493699650978": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18KT Yellow Gold</li>\r\n<li>Triangular Brown Tourmaline 17.35ct</li>"
+            }
+          },
+          "1493699694279": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18KT Rose Gold</li>\r\n<li>Triangular Pink Tourmaline 16.97ct</li>"
+            }
+          },
+          "1493699919185": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt yellow gold </li>\r\n<li>cabochon amethyst 14.65ct</li>\r\n<li>59 round diamonds .31ct</li>"
+            }
+          },
+          "1493699984848": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18kt yellow gold </li>\r\n<li>pink tourmaline 9.10 ct</li>\r\n<li>48 round diamonds .39 ct </li>"
+            }
+          },
+          "1493700470731": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18 karat rose gold </li>\r\n<li>brown diamonds (6.52 ct)</li>\r\n<li>2\" (5 cm) length. Size 7 </li>"
+            }
+          },
+          "1493700540920": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "the-well-tailored-ring-in-pink-black",
+              "text": "<li>18kt white gold</li>\r\n<li>pink tourmaline (8.01 ct) </li>\r\n<li>272 black diamonds (2.64 ct)</li>\r\n<li>Size 6</li>"
+            }
+          },
+          "1493700614050": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "the-well-tailored-ring-in-mint-brown",
+              "text": "<li>18 karat rose gold</li>\r\n<li>brown diamonds (6.52 ct)</li>\r\n<li>2\" (5 cm) length</li>\r\n<li>Size 7</li>"
+            }
+          },
+          "1493700681450": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18KT White Gold</li>\r\n<li>Oval Green Sapphire 10.19 ct </li>\r\n<li>Pave Diamonds 1.19 ct </li>"
+            }
+          },
+          "1493700738599": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "pyramid-ring",
+              "text": "<li>18kt white gold</li>\r\n<li>white diamonds (3.11 ct)</li>\r\n<li>black diamonds (0.43 ct) </li>\r\n<li>Size 7</li>"
+            }
+          },
+          "1494949976264": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "triple-coil-il-serpente-bracelet",
+              "text": "<li>18K Rose Gold</li>\r\n<li>Triple Coil Il Serpente Bracelet </li>\r\n<li>Diamond Pave Head and Ruby Eyes</li>\r\n<li>59ct diamonds, .30ct rubies</li>"
+            }
+          },
+          "1494950097945": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-petite-swirl-earrings",
+              "text": "<li>118K Yellow Gold</li>"
+            }
+          },
+          "1494950154330": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rococo-earrings",
+              "text": "<li>18K Rose Gold</li>\r\n<li> Brown Diamond Button Studs</li>\r\n<li> Large Oval Brown and White Diamond Drop </li>\r\n<li>12.86ct</li>"
+            }
+          },
+          "1494950274970": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "text": "<li>18K Rose Gold </li><li>Diamond Pave Plume Earrings</li>\r\n<li> 2.96ct</li>"
+            }
+          },
+          "1494950345792": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "text": "<li>18K Rose Gold </li><li>Diamond Pave Feathers That Move Earrings</li>\r\n<li> 4.94ct</li>"
+            }
+          },
+          "1494950477732": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "multi-drop-geometric-earrings",
+              "text": "<li>Titanium Diamond Multi Drop Earrings</li>\r\n<li>5.86ct rose cut diamonds</li>\r\n<li>.85ct brilliant cut diamonds</li>"
+            }
+          },
+          "1494950557719": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>18K White Gold </li>\r\n<li>Flexible Narrow Collar Gloria Necklace</li>\r\n<li>7MM</li>"
+            }
+          },
+          "1494950671488": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "",
+              "text": "<li>Tahitian Pearls with Brown Diamond Beads </li>\r\n<li>18K White Gold Clasp</li>\r\n<li>61 pearls</li>\r\n<li>92 brown diamonds 3.27ct</li>"
+            }
+          },
+          "1494950722239": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "black-on-black",
+              "text": "<li>18K White Gold</li>\r\n<li>Black Rhodium Black Diamond Bead</li>\r\n<li>Wire wrapped, 86ct, 46IN</li>"
+            }
+          },
+          "1494950837756": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "yellow-gold-wrap-around",
+              "text": "<li>18K Yellow Gold </li>\r\n<li>Pave Diamond Head and Tail, .34ct, 24IN</li>"
+            }
+          },
+          "1495171574118": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "scribble-band-1",
+              "text": "<li>18K Rose Gold  </li>\r\n<li>Diamond Scribble Band Ring, 1.04ct</li>\r\n<li>size 6</li>"
+            }
+          },
+          "1495171668376": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "ruby-wide-flexible-ring",
+              "text": "<li>18K White Gold </li>\r\n<li>Ruby Wide Flexible Ring</li>\r\n<li>120 rubies 9.92ct</li>\r\n<li>size 6.5</li>"
+            }
+          },
+          "1495171743921": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "sapphire-wide-flexible-ring",
+              "text": "<li>18K White Gold </li>\r\n<li>Black Rhodium Sapphire Wide Flexible Ring</li>\r\n<li>120 sapphires 9.63ct</li>\r\n<li>size 6.5</li>"
+            }
+          },
+          "1495172003241": {
+            "type": "product_more_info",
+            "settings": {
+              "product": "white-gold-diamond-rolling-bracelet",
+              "text": "<li>18K White Gold </li>\r\n<li>3 Band Rolling Bracelet,</li>\r\n<li>29.06ct</li>"
+            }
+          }
+        },
+        "block_order": [
+          "1493301467958",
+          "1493681434032",
+          "1493681513283",
+          "1493681575807",
+          "1493681625833",
+          "1493681679684",
+          "1493681743019",
+          "1493681828345",
+          "1493681874574",
+          "1493681927696",
+          "1493681982969",
+          "1493682063998",
+          "1493682401285",
+          "1493682448261",
+          "1493685685571",
+          "1493685787326",
+          "1493685818264",
+          "1493685888061",
+          "1493686022039",
+          "1493686114939",
+          "1493686166921",
+          "1493686349988",
+          "1493687041878",
+          "1493687128542",
+          "1493687171201",
+          "1493687225983",
+          "1493687276631",
+          "1493687340084",
+          "1493687384621",
+          "1493687425515",
+          "1493687495489",
+          "1493687562430",
+          "1493687606819",
+          "1493687665065",
+          "1493687728309",
+          "1493687765859",
+          "1493687813013",
+          "1493687868304",
+          "1493687913775",
+          "1493687981824",
+          "1493688036990",
+          "1493688119453",
+          "1493689099435",
+          "1493689975409",
+          "1493699650978",
+          "1493699694279",
+          "1493699919185",
+          "1493699984848",
+          "1493700470731",
+          "1493700540920",
+          "1493700614050",
+          "1493700681450",
+          "1493700738599",
+          "1494949976264",
+          "1494950097945",
+          "1494950154330",
+          "1494950274970",
+          "1494950345792",
+          "1494950477732",
+          "1494950557719",
+          "1494950671488",
+          "1494950722239",
+          "1494950837756",
+          "1495171574118",
+          "1495171668376",
+          "1495171743921",
+          "1495172003241"
+        ],
+        "settings": {}
+      },
+      "1493310468881": {
+        "type": "collection",
+        "settings": {
+          "collection": "signature-styles"
+        }
+      },
+      "1493313822802": {
+        "type": "blocks",
+        "blocks": {
+          "1493313892717": {
+            "type": "block",
+            "settings": {
+              "image": "shopify://shop_images/Orange_Shimmer_Earrings_18k_yellow_gold_with_fire_opals_orange-brown_diamonds_and_diamonds_31125_505-0030Y_copy.jpg",
+              "title": "The Shimmer Earrings -",
+              "text": "brilliant oval fire opals paired with white and orange diamonds.",
+              "link": "shopify://products/shimmer-earrings",
+              "format": "format_1"
+            }
+          },
+          "1493313855536": {
+            "type": "block",
+            "settings": {
+              "image": "shopify://shop_images/Horizon_Earring_18k_rose_gold_with_mandarin_garnet_aquamarine_and_diamonds_14713000_10_900_copy.jpg",
+              "title": "The Horizon Earrings -",
+              "text": "a fresh combination of mandarin garnets and pear shaped aquamarines.",
+              "link": "shopify://products/horizon-earrings",
+              "format": "format_1"
+            }
+          }
+        },
+        "block_order": [
+          "1493313892717",
+          "1493313855536"
+        ],
+        "settings": {}
+      },
+      "1493322255553": {
+        "type": "text-block",
+        "blocks": {
+          "1493322261320": {
+            "type": "block",
+            "settings": {
+              "title": "Our Partners",
+              "text": "",
+              "cta": "View All Partners",
+              "link": "shopify://pages/our-partners"
+            }
+          }
+        },
+        "block_order": [
+          "1493322261320"
+        ],
+        "settings": {}
+      },
+      "1493389930484": {
+        "type": "articles",
+        "blocks": {
+          "1511908454386": {
+            "type": "article",
+            "settings": {
+              "use_article": false,
+              "article": "",
+              "category": "Interview",
+              "title": "Owner & Creative Director, Sidney Garber & Founder of the Child Mind Institute",
+              "image": "shopify://shop_images/Screen_Shot_2017-11-28_at_4.12.07_PM_19950c22-770c-4fad-b547-7f56da5c0deb.png",
+              "excerpt": "The New York resident co-founded (alongside renowned clinician Dr. Harold Koplewicz) the Child Mind Institute in 2008 (the same year she inherited her father’s jewelry business, Sidney Garber) to support the underserved and still-stigmatized field of mental illness.",
+              "link": "https://www.modaoperandi.com/editorial/career-files-giving-back-meet-jodie-patterson-brooke-garber-neidich-leila-janah-emily-penn?utm_source=responsys&utm_medium=email&utm_campaign=112817_Tuesday_TS_ZimmermannSwim_BE_CareerFiles_EthicalEditBanner_T&email_hash=b1c8c4d0be20eac4151e7dd1b93ce3afeee172b5b1e055cc4f3be05d5648d231&zaius_alias_email_md5=7236bf4a61cda18a28f29fcf4e367568",
+              "cta": "Read More",
+              "quote_byline": ""
+            }
+          },
+          "1495173906225": {
+            "type": "article",
+            "settings": {
+              "use_article": false,
+              "article": "",
+              "category": "Interview",
+              "title": "Flair Woman: Brooke Garber Neidich of Sidney Garber",
+              "image": "shopify://shop_images/brooke.jpg",
+              "excerpt": "For some women, it is the sum of their parts —\r\n not just their day job description, that best defines their dynamic personalities. This is the case with Brooke Garber Neidich.",
+              "link": "http://www.theflairindex.com/women/flair-woman-brooke-garber-neidich-of-sidney-garber/",
+              "cta": "Read More",
+              "quote_byline": ""
+            }
+          },
+          "1495145197845": {
+            "type": "article",
+            "settings": {
+              "use_article": false,
+              "article": "",
+              "category": "Interview",
+              "title": "Meet the Owner and Creative Director Brooke Garber Neidich",
+              "image": "shopify://shop_images/blog-sidney.jpg",
+              "excerpt": "A conversation with Brooke Garber Neidich can take any number of intriguing routes...",
+              "link": "http://www.toryburch.com/blog-post/blog-post.html?bpid=138701",
+              "cta": "Explore",
+              "quote_byline": ""
+            }
+          },
+          "1493389933776": {
+            "type": "article",
+            "settings": {
+              "use_article": false,
+              "article": "interview/meet-the-owner-and-creative-director-brooke-garber-neidich",
+              "category": "",
+              "title": "\"For me it's never a trend,  <br>its a feeling\"",
+              "image": "",
+              "excerpt": "",
+              "link": "",
+              "cta": "",
+              "quote_byline": "Brooke Garber Neidich"
+            }
+          },
+          "1495174569997": {
+            "type": "article",
+            "settings": {
+              "use_article": false,
+              "article": "",
+              "category": "Press",
+              "title": "Feature: New York Times Style Magazine",
+              "image": "shopify://shop_images/ny-times.jpg",
+              "excerpt": "Our Elegant Pastel Earrings That Welcome Spring, Green Light Earrings in 18K Rose Gold Green and Brown Tourmaline.",
+              "link": "",
+              "cta": "Read More",
+              "quote_byline": ""
+            }
+          }
+        },
+        "block_order": [
+          "1511908454386",
+          "1495173906225",
+          "1495145197845",
+          "1493389933776",
+          "1495174569997"
+        ],
+        "settings": {}
+      },
+      "product--color-variant": {
+        "type": "product--color-variant",
+        "blocks": {
+          "1493734396431": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelets-1",
+              "other_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493734536714": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelets-1",
+              "other_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493734564253": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-12-mm-rolling-bracelets",
+              "other_product": "rolling-bracelets-1"
+            }
+          },
+          "1493734672030": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-12-mm-rolling-bracelets",
+              "other_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493734697073": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-12-mm-rolling-bracelets",
+              "other_product": "rolling-bracelets-1"
+            }
+          },
+          "1493734724305": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-12-mm-rolling-bracelets",
+              "other_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1493735047350": {
+            "type": "product_color",
+            "settings": {
+              "product": "",
+              "other_product": "11-rows-sapphire-bracelet"
+            }
+          },
+          "1493735076413": {
+            "type": "product_color",
+            "settings": {
+              "product": "domed-cuff-1",
+              "other_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1493735097238": {
+            "type": "product_color",
+            "settings": {
+              "product": "domed-cuff-1",
+              "other_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493735116282": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-domed-cuff",
+              "other_product": "domed-cuff-1"
+            }
+          },
+          "1493735139388": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-domed-cuff",
+              "other_product": "rose-gold-domed-cuff"
+            }
+          },
+          "1493735173208": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-domed-cuff",
+              "other_product": "domed-cuff-1"
+            }
+          },
+          "1493735154726": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-domed-cuff",
+              "other_product": "yellow-gold-domed-cuff"
+            }
+          },
+          "1495139736276": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "other_product": "feather-that-move"
+            }
+          },
+          "1495139706258": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "other_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1495139788415": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "other_product": "feather-that-move"
+            }
+          },
+          "1495139752917": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "other_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1495139815014": {
+            "type": "product_color",
+            "settings": {
+              "product": "feather-that-move",
+              "other_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1495139830474": {
+            "type": "product_color",
+            "settings": {
+              "product": "feather-that-move",
+              "other_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1495139867022": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1495139849170": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1495139913379": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1495139899308": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1495139956786": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1495139935842": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1495140018061": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-long-knot-earrings",
+              "other_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495140031942": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-long-knot-earrings",
+              "other_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1495140069189": {
+            "type": "product_color",
+            "settings": {
+              "product": "white-gold-long-knot-earrings",
+              "other_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1495140053577": {
+            "type": "product_color",
+            "settings": {
+              "product": "white-gold-long-knot-earrings",
+              "other_product": "rose-gold-long-knot-earrings"
+            }
+          },
+          "1495140082948": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-long-knot-earrings",
+              "other_product": "white-gold-long-knot-earrings"
+            }
+          },
+          "1495140095493": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-long-knot-earrings",
+              "other_product": "yellow-gold-long-knot-earrings"
+            }
+          },
+          "1496816289013": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-wrap-around",
+              "other_product": "wrap-around"
+            }
+          },
+          "1496816309170": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-wrap-around",
+              "other_product": "rose-gold-wrap-around"
+            }
+          },
+          "1496816325929": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-wrap-around",
+              "other_product": "wrap-around"
+            }
+          },
+          "1496816343626": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-wrap-around",
+              "other_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1496816365441": {
+            "type": "product_color",
+            "settings": {
+              "product": "wrap-around",
+              "other_product": "yellow-gold-wrap-around"
+            }
+          },
+          "1496816379963": {
+            "type": "product_color",
+            "settings": {
+              "product": "wrap-around",
+              "other_product": "rose-gold-wrap-around"
+            }
+          },
+          "1497555276811": {
+            "type": "product_color",
+            "settings": {
+              "product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "other_product": "sapphire-wide-flexible-ring"
+            }
+          },
+          "1497556034986": {
+            "type": "product_color",
+            "settings": {
+              "product": "ruby-wide-flexible-ring",
+              "other_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1497555914712": {
+            "type": "product_color",
+            "settings": {
+              "product": "ruby-wide-flexible-ring",
+              "other_product": "sapphire-wide-flexible-ring"
+            }
+          },
+          "1497556062404": {
+            "type": "product_color",
+            "settings": {
+              "product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6",
+              "other_product": "ruby-wide-flexible-ring"
+            }
+          },
+          "1497556217023": {
+            "type": "product_color",
+            "settings": {
+              "product": "sapphire-wide-flexible-ring",
+              "other_product": "flex-ring-18k-white-gold-with-black-rhodium-cognac-diamond-wide-flexible-ring-7-79ct-size-6"
+            }
+          },
+          "1497556255428": {
+            "type": "product_color",
+            "settings": {
+              "product": "sapphire-wide-flexible-ring",
+              "other_product": "ruby-wide-flexible-ring"
+            }
+          },
+          "1497556780761": {
+            "type": "product_color",
+            "settings": {
+              "product": "scribble-band-white-gold",
+              "other_product": "scribble-band-1"
+            }
+          },
+          "1497556847431": {
+            "type": "product_color",
+            "settings": {
+              "product": "scribble-band-1",
+              "other_product": "scribble-band-white-gold"
+            }
+          },
+          "1497557890166": {
+            "type": "product_color",
+            "settings": {
+              "product": "wave-bracelet",
+              "other_product": "yellow-gold-high-polish-wave-bracelet"
+            }
+          },
+          "1497557979020": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-high-polish-wave-bracelet",
+              "other_product": "wave-bracelet"
+            }
+          },
+          "1497558027865": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-polish-finish-wave-bracelet",
+              "other_product": "rose-gold-wave-bracelet"
+            }
+          },
+          "1497558065585": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-wave-bracelet",
+              "other_product": "rose-gold-polish-finish-wave-bracelet"
+            }
+          },
+          "1497634476624": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-12-mm-rolling-bracelets",
+              "other_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1497634560667": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-12-mm-rolling-bracelets",
+              "other_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1497634727014": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet-1",
+              "other_product": "rolling-bracelet"
+            }
+          },
+          "1497634636991": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet-1",
+              "other_product": "yellow-gold-9-mm-rolling-bracelets"
+            }
+          },
+          "1497634678571": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet-1",
+              "other_product": "rose-gold-9mm-rolling-bracelets"
+            }
+          },
+          "1497634843915": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-9-mm-rolling-bracelets",
+              "other_product": "rolling-bracelet"
+            }
+          },
+          "1497634875777": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-9-mm-rolling-bracelets",
+              "other_product": "rose-gold-9mm-rolling-bracelets"
+            }
+          },
+          "1497634903145": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-9-mm-rolling-bracelets",
+              "other_product": "rolling-bracelet-1"
+            }
+          },
+          "1497635204475": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet",
+              "other_product": "yellow-gold-9-mm-rolling-bracelets"
+            }
+          },
+          "1497635231119": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet",
+              "other_product": "rose-gold-9mm-rolling-bracelets"
+            }
+          },
+          "1497635263282": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelet",
+              "other_product": "rolling-bracelet-1"
+            }
+          },
+          "1497635325329": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-9mm-rolling-bracelets",
+              "other_product": "rolling-bracelet"
+            }
+          },
+          "1497635362693": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-9mm-rolling-bracelets",
+              "other_product": "yellow-gold-9-mm-rolling-bracelets"
+            }
+          },
+          "1497635398688": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-9mm-rolling-bracelets",
+              "other_product": "rolling-bracelet-1"
+            }
+          },
+          "1497635610762": {
+            "type": "product_color",
+            "settings": {
+              "product": "rolling-bracelets-1",
+              "other_product": "12mm-tri-color-rolling-bracelets"
+            }
+          },
+          "1497635651803": {
+            "type": "product_color",
+            "settings": {
+              "product": "12mm-tri-color-rolling-bracelets",
+              "other_product": "rolling-bracelets-1"
+            }
+          },
+          "1497635681322": {
+            "type": "product_color",
+            "settings": {
+              "product": "12mm-tri-color-rolling-bracelets",
+              "other_product": "yellow-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1497635713526": {
+            "type": "product_color",
+            "settings": {
+              "product": "12mm-tri-color-rolling-bracelets",
+              "other_product": "rose-gold-12-mm-rolling-bracelets"
+            }
+          },
+          "1511366902991": {
+            "type": "product_color",
+            "settings": {
+              "product": "perfect-pave-button-earrings",
+              "other_product": "copy-of-perfect-pave-button-earrings"
+            }
+          },
+          "1511366925211": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-perfect-pave-button-earrings",
+              "other_product": "perfect-pave-button-earrings"
+            }
+          },
+          "1512506055272": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1512506069705": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1512506080295": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1512506108697": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1512506125519": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1512506140469": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1512506167839": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1512506184503": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1512506197312": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1512506225181": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1512506236287": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1512506247548": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1512590044859": {
+            "type": "product_color",
+            "settings": {
+              "product": "kadia-necklace",
+              "other_product": "midnight-blue-necklace"
+            }
+          },
+          "1512590065216": {
+            "type": "product_color",
+            "settings": {
+              "product": "midnight-blue-necklace",
+              "other_product": "kadia-necklace"
+            }
+          },
+          "1512592940425": {
+            "type": "product_color",
+            "settings": {
+              "product": "buckler-melange-ring",
+              "other_product": "buckler-melange-ring-1"
+            }
+          },
+          "1512592959044": {
+            "type": "product_color",
+            "settings": {
+              "product": "buckler-melange-ring-1",
+              "other_product": "buckler-melange-ring"
+            }
+          },
+          "1512595477116": {
+            "type": "product_color",
+            "settings": {
+              "product": "les-ballons-ring",
+              "other_product": "les-ballons-ring-1"
+            }
+          },
+          "1512595493325": {
+            "type": "product_color",
+            "settings": {
+              "product": "les-ballons-ring",
+              "other_product": "les-ballons-ring-2"
+            }
+          },
+          "1512672213947": {
+            "type": "product_color",
+            "settings": {
+              "product": "three-prong-ring",
+              "other_product": "copy-of-three-prong-ring-1"
+            }
+          },
+          "1512672259284": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-three-prong-ring-1",
+              "other_product": "three-prong-ring"
+            }
+          },
+          "1516219400055": {
+            "type": "product_color",
+            "settings": {
+              "product": "horizon-earrings",
+              "other_product": "copy-of-horizon-earrings"
+            }
+          },
+          "1516219451668": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-horizon-earrings",
+              "other_product": "horizon-earrings"
+            }
+          },
+          "1516219595310": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-shimmer-earrings",
+              "other_product": "shimmer-earrings"
+            }
+          },
+          "1516219620285": {
+            "type": "product_color",
+            "settings": {
+              "product": "shimmer-earrings",
+              "other_product": "copy-of-shimmer-earrings"
+            }
+          },
+          "1516219664735": {
+            "type": "product_color",
+            "settings": {
+              "product": "green-light-earrings",
+              "other_product": "green-light-earrings-1"
+            }
+          },
+          "1516219705347": {
+            "type": "product_color",
+            "settings": {
+              "product": "green-light-earrings-1",
+              "other_product": "green-light-earrings"
+            }
+          },
+          "1516737209856": {
+            "type": "product_color",
+            "settings": {
+              "product": "loop-ring",
+              "other_product": "copy-of-loop-ring"
+            }
+          },
+          "1516737252824": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-loop-ring",
+              "other_product": "loop-ring"
+            }
+          },
+          "1516738538019": {
+            "type": "product_color",
+            "settings": {
+              "product": "devri-earrings",
+              "other_product": "copy-of-devri-earrings-2"
+            }
+          },
+          "1516738559109": {
+            "type": "product_color",
+            "settings": {
+              "product": "devri-earrings",
+              "other_product": "copy-of-devri-earrings"
+            }
+          },
+          "1516738590757": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-devri-earrings-2",
+              "other_product": "devri-earrings"
+            }
+          },
+          "1516738616803": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-devri-earrings-2",
+              "other_product": "copy-of-devri-earrings"
+            }
+          },
+          "1516738661621": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-devri-earrings",
+              "other_product": "copy-of-devri-earrings-2"
+            }
+          },
+          "1516738681950": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-devri-earrings",
+              "other_product": "devri-earrings"
+            }
+          },
+          "1516819257442": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-loop-ring-1",
+              "other_product": "loop-ring"
+            }
+          },
+          "1516819278925": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-loop-ring-1",
+              "other_product": "copy-of-loop-ring"
+            }
+          },
+          "1516819316365": {
+            "type": "product_color",
+            "settings": {
+              "product": "loop-ring",
+              "other_product": "copy-of-loop-ring-1"
+            }
+          },
+          "1516819349189": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-loop-ring",
+              "other_product": "copy-of-loop-ring-1"
+            }
+          },
+          "1518544438112": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1518544476717": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1518544504806": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1518544582693": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1518544602707": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1518544630108": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-1",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1518548232475": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1518548260577": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1518548286254": {
+            "type": "product_color",
+            "settings": {
+              "product": "plume-earrings-2",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1518548335851": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "yellow-gold-plume-earrings"
+            }
+          },
+          "1518548385827": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "rose-gold-plume-earrings"
+            }
+          },
+          "1518548410791": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-plume-earrings",
+              "other_product": "yellow-gold-plume-earrings-1"
+            }
+          },
+          "1518548473823": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1518548522355": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1518548781299": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1518548806460": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1518548861333": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1518548891516": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1518548983506": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1518549006155": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-plume-earrings-1",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1518549105840": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "rose-gold-diamond-pave-plume-earrings"
+            }
+          },
+          "1518549148793": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "plume-earrings-2"
+            }
+          },
+          "1518549177638": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "plume-earrings-1"
+            }
+          },
+          "1518549213380": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-plume-earrings",
+              "other_product": "plume-earrings"
+            }
+          },
+          "1518549826061": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "other_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1518549916443": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "other_product": "feathers-that-move"
+            }
+          },
+          "1518549977299": {
+            "type": "product_color",
+            "settings": {
+              "product": "yellow-gold-feathers-that-move",
+              "other_product": "copy-of-feathers-that-move-earrings"
+            }
+          },
+          "1518550047945": {
+            "type": "product_color",
+            "settings": {
+              "product": "feather-that-move",
+              "other_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1518550077168": {
+            "type": "product_color",
+            "settings": {
+              "product": "feather-that-move",
+              "other_product": "feathers-that-move"
+            }
+          },
+          "1518550102000": {
+            "type": "product_color",
+            "settings": {
+              "product": "feather-that-move",
+              "other_product": "copy-of-feathers-that-move-earrings"
+            }
+          },
+          "1518550213677": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "other_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1518550282414": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "other_product": "feathers-that-move"
+            }
+          },
+          "1518550312233": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-feathers-that-move",
+              "other_product": "copy-of-feathers-that-move-earrings"
+            }
+          },
+          "1518550383220": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "other_product": "copy-of-feathers-that-move-earrings"
+            }
+          },
+          "1518550421064": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "other_product": "feathers-that-move"
+            }
+          },
+          "1518550453241": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "other_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1518550475720": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "other_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1518550496621": {
+            "type": "product_color",
+            "settings": {
+              "product": "rose-gold-diamond-pave-feathers-that-move",
+              "other_product": "feather-that-move"
+            }
+          },
+          "1518550545550": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-feathers-that-move-earrings",
+              "other_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1518550566117": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-feathers-that-move-earrings",
+              "other_product": "feathers-that-move"
+            }
+          },
+          "1518550586937": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-feathers-that-move-earrings",
+              "other_product": "feather-that-move"
+            }
+          },
+          "1518550620079": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-feathers-that-move-earrings",
+              "other_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1518550642446": {
+            "type": "product_color",
+            "settings": {
+              "product": "copy-of-feathers-that-move-earrings",
+              "other_product": "rose-gold-feathers-that-move"
+            }
+          },
+          "1518550909238": {
+            "type": "product_color",
+            "settings": {
+              "product": "feathers-that-move",
+              "other_product": "copy-of-feathers-that-move-earrings"
+            }
+          },
+          "1518550946274": {
+            "type": "product_color",
+            "settings": {
+              "product": "feathers-that-move",
+              "other_product": "rose-gold-diamond-pave-feathers-that-move"
+            }
+          },
+          "1518550979405": {
+            "type": "product_color",
+            "settings": {
+              "product": "feathers-that-move",
+              "other_product": "feather-that-move"
+            }
+          },
+          "1518551003247": {
+            "type": "product_color",
+            "settings": {
+              "product": "feathers-that-move",
+              "other_product": "yellow-gold-feathers-that-move"
+            }
+          },
+          "1518551032859": {
+            "type": "product_color",
+            "settings": {
+              "product": "feathers-that-move",
+              "other_product": "rose-gold-feathers-that-move"
+            }
+          }
+        },
+        "block_order": [
+          "1493734396431",
+          "1493734536714",
+          "1493734564253",
+          "1493734672030",
+          "1493734697073",
+          "1493734724305",
+          "1493735047350",
+          "1493735076413",
+          "1493735097238",
+          "1493735116282",
+          "1493735139388",
+          "1493735173208",
+          "1493735154726",
+          "1495139736276",
+          "1495139706258",
+          "1495139788415",
+          "1495139752917",
+          "1495139815014",
+          "1495139830474",
+          "1495139867022",
+          "1495139849170",
+          "1495139913379",
+          "1495139899308",
+          "1495139956786",
+          "1495139935842",
+          "1495140018061",
+          "1495140031942",
+          "1495140069189",
+          "1495140053577",
+          "1495140082948",
+          "1495140095493",
+          "1496816289013",
+          "1496816309170",
+          "1496816325929",
+          "1496816343626",
+          "1496816365441",
+          "1496816379963",
+          "1497555276811",
+          "1497556034986",
+          "1497555914712",
+          "1497556062404",
+          "1497556217023",
+          "1497556255428",
+          "1497556780761",
+          "1497556847431",
+          "1497557890166",
+          "1497557979020",
+          "1497558027865",
+          "1497558065585",
+          "1497634476624",
+          "1497634560667",
+          "1497634727014",
+          "1497634636991",
+          "1497634678571",
+          "1497634843915",
+          "1497634875777",
+          "1497634903145",
+          "1497635204475",
+          "1497635231119",
+          "1497635263282",
+          "1497635325329",
+          "1497635362693",
+          "1497635398688",
+          "1497635610762",
+          "1497635651803",
+          "1497635681322",
+          "1497635713526",
+          "1511366902991",
+          "1511366925211",
+          "1512506055272",
+          "1512506069705",
+          "1512506080295",
+          "1512506108697",
+          "1512506125519",
+          "1512506140469",
+          "1512506167839",
+          "1512506184503",
+          "1512506197312",
+          "1512506225181",
+          "1512506236287",
+          "1512506247548",
+          "1512590044859",
+          "1512590065216",
+          "1512592940425",
+          "1512592959044",
+          "1512595477116",
+          "1512595493325",
+          "1512672213947",
+          "1512672259284",
+          "1516219400055",
+          "1516219451668",
+          "1516219595310",
+          "1516219620285",
+          "1516219664735",
+          "1516219705347",
+          "1516737209856",
+          "1516737252824",
+          "1516738538019",
+          "1516738559109",
+          "1516738590757",
+          "1516738616803",
+          "1516738661621",
+          "1516738681950",
+          "1516819257442",
+          "1516819278925",
+          "1516819316365",
+          "1516819349189",
+          "1518544438112",
+          "1518544476717",
+          "1518544504806",
+          "1518544582693",
+          "1518544602707",
+          "1518544630108",
+          "1518548232475",
+          "1518548260577",
+          "1518548286254",
+          "1518548335851",
+          "1518548385827",
+          "1518548410791",
+          "1518548473823",
+          "1518548522355",
+          "1518548781299",
+          "1518548806460",
+          "1518548861333",
+          "1518548891516",
+          "1518548983506",
+          "1518549006155",
+          "1518549105840",
+          "1518549148793",
+          "1518549177638",
+          "1518549213380",
+          "1518549826061",
+          "1518549916443",
+          "1518549977299",
+          "1518550047945",
+          "1518550077168",
+          "1518550102000",
+          "1518550213677",
+          "1518550282414",
+          "1518550312233",
+          "1518550383220",
+          "1518550421064",
+          "1518550453241",
+          "1518550475720",
+          "1518550496621",
+          "1518550545550",
+          "1518550566117",
+          "1518550586937",
+          "1518550620079",
+          "1518550642446",
+          "1518550909238",
+          "1518550946274",
+          "1518550979405",
+          "1518551003247",
+          "1518551032859"
+        ],
+        "settings": {}
+      },
+      "1492617759028": {
+        "type": "hero-carousel",
+        "blocks": {
+          "1492617762109": {
+            "type": "Slide",
+            "settings": {
+              "image": "shopify://shop_images/escape_plan_HP_desktop.jpg",
+              "mobile_image": "shopify://shop_images/escape_plan_HP_mobile.jpg",
+              "title": "",
+              "title_alignment": "center",
+              "link": "shopify://collections/earrings"
+            }
+          }
+        },
+        "block_order": [
+          "1492617762109"
+        ],
+        "settings": {}
+      },
+      "boutiques": {
+        "type": "boutiques",
+        "blocks": {
+          "1519227002617": {
+            "type": "boutique",
+            "settings": {
+              "image": "shopify://shop_images/19031_CST_SidneyGarber_0137_R1_1_e7906f21-e97e-414a-a577-051b0fe3a0cf.jpg",
+              "name": "New York",
+              "hours": "Monday - Friday\n10:00 AM - 6:00 PM EST\nSaturday \n11:00 AM - 5:00 PM EST",
+              "address": "998 Madison Avenue\nNew York, NY 10075",
+              "phone": "212-274-1111"
+            }
+          },
+          "1519227452511": {
+            "type": "boutique",
+            "settings": {
+              "image": "shopify://shop_images/Sidney_Garber_Chicago_Store_1_7e1ad1b5-6469-4053-8f54-6b18a91a50ab.jpg",
+              "name": "CHICAGO",
+              "hours": "Monday – Friday\n10:00 AM – 6:00 PM CST\nSaturday\n11:00 AM – 5:00 PM CST",
+              "address": "118 East Delaware Place \nChicago, IL 60611",
+              "phone": "312-944-5225"
+            }
+          }
+        },
+        "block_order": [
+          "1519227002617",
+          "1519227452511"
+        ],
+        "settings": {}
+      },
+      "text-block": {
+        "type": "text-block",
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "1492617759028",
+      "1493313822802",
+      "1493389930484",
+      "1493310468881",
+      "1493322255553",
+      "1492621240192"
+    ]
+  },
+  "presets": {
+    "Red and black": {
+      "color_body_bg": "#ffffff",
+      "color_borders": "#dddddd",
+      "color_primary": "#f45b4f",
+      "color_button_primary_text": "#ffffff",
+      "color_secondary": "#bbbbbb",
+      "color_button_secondary_text": "#ffffff",
+      "color_body_text": "#333333",
+      "color_footer_social_link": "#555555",
+      "type_base_family": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type_base_size": "16px",
+      "type_header_family": "Google_Cabin_500_sans",
+      "type_header_size": "32px",
+      "type_accent_family": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type_accent_size": "16px",
+      "logo_use_image": false,
+      "logo_max_width": "450",
+      "nav_below_logo": true,
+      "left_aligned_logo": false,
+      "show_header_lines": true,
+      "favicon_enable": false,
+      "header_message": "",
+      "header_search_enable": true,
+      "footer_blog_enable": true,
+      "footer_blog": "news",
+      "footer_quicklinks_enable": true,
+      "footer_quicklinks_linklist": "footer",
+      "footer_second_menu_enable": false,
+      "footer_second_menu": "",
+      "footer_social_enable": true,
+      "footer_contact_enable": false,
+      "footer_contact_text": "",
+      "footer_newsletter_enable": false,
+      "newsletter_form_action": "",
+      "footer_show_methods_of_payment": true,
+      "show_footer_lines": true,
+      "home_section_1": "featured-products",
+      "home_section_2": "home-content",
+      "home_section_3": "",
+      "slider_home_auto": true,
+      "slider_home_show_dots": false,
+      "slider_home_rate": "7000",
+      "slider_home_transition": "slide",
+      "slide_1": true,
+      "slide_1_link": "",
+      "slide_1_alt": "",
+      "slide_2": true,
+      "slide_2_link": "",
+      "slide_2_alt": "",
+      "slide_3": false,
+      "slide_3_link": "",
+      "slide_3_alt": "",
+      "slide_4": false,
+      "slide_4_link": "",
+      "slide_4_alt": "",
+      "slide_5": false,
+      "slide_5_link": "",
+      "slide_5_alt": "",
+      "slide_6": false,
+      "slide_6_link": "",
+      "slide_6_alt": "",
+      "home_featured_products": "frontpage",
+      "home_featured_products_num": "3",
+      "home_featured_products_row_num": "3",
+      "home_featured_products_show_heading": false,
+      "home_page_content": "frontpage",
+      "home_page_show_heading": true,
+      "product_quantity_enable": true,
+      "product_image_zoom_type": "lightbox",
+      "product_thumbnails_position": "below",
+      "product_related_enable": true,
+      "collections_show_sale_circle": true,
+      "collections_show_sold_out_circle": true,
+      "collections_sort_enable": true,
+      "collections_tags_enable": true,
+      "collections_products_per_row": "3",
+      "collections_rows": "4",
+      "cart_notes_enable": false,
+      "cart_enable_ajax": true,
+      "social_twitter_link": "https://twitter.com/shopify",
+      "social_facebook_link": "https://www.facebook.com/shopify",
+      "social_pinterest_link": "https://www.pinterest.com/shopify",
+      "social_google_plus_link": "",
+      "social_instagram_link": "https://instagram.com/shopify",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_fancy_link": "",
+      "social_rss_link": "",
+      "social_sharing_products": true,
+      "social_sharing_blog": true,
+      "social_sharing_count": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "share_fancy": true,
+      "share_google": true,
+      "checkout_use_header_image": false,
+      "checkout_logo": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#bbbbbb",
+      "checkout_button_color": "#f45b4f",
+      "checkout_error_color": "#f45b4f"
+    }
+  }
+}

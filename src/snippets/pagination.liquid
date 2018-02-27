@@ -1,0 +1,11 @@
+<div class="paginate  js-paginate-wrap">
+
+    {% if paginate.pages > 1 %}
+
+        {% if paginate.next.is_link %}
+            <a href="{{ paginate.next.url }}" class="js-paginate-load  paginate__more  button  button--primary" title="Load more products">Load More</a>
+        {% endif %}
+
+    {% endif %}
+
+</div>

@@ -1,0 +1,158 @@
+{% comment %}
+    Main header, desktop and mobile.
+{% endcomment %}
+<header class="main-header">
+
+    {% include 'site-banner' %}
+
+    {% comment %}
+        Mobile only header items
+    {% endcomment %}
+    <div class="main-header__mobile  mobile-header">
+
+        {% comment %}
+            Mobile menu toggle
+        {% endcomment %}
+        <div class="mobile-header__left">
+
+            <div class="mobile-header__padding" data-toggle='{"togglesClass": "mobile-nav--toggled", "allowEscToggle": true}'>
+
+                <div class="mobile-header__menu-icon  menu-icon">
+                    <div class="menu-icon__line"></div>
+                    <div class="menu-icon__line"></div>
+                    <div class="menu-icon__line"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mobile-header__center">
+            <a href="{{ shop.url }}">
+                {% include 'logo-horizontal.svg' %}
+            </a>
+        </div>
+
+        <div class="mobile-header__right">
+            <div class="mobile-header__padding" data-toggle='{"togglesClass": "mini-cart--toggled", "allowEscToggle": true}'>
+                <span class="fa  fa-shopping-bag"></span>
+            </div>
+        </div>
+
+    </div>
+
+    {% comment %}
+        Desktop only header items
+    {% endcomment %}
+    <div class="main-header__desktop  desktop-header">
+
+        <div class="desktop-header__inner">
+
+            {% comment %}
+                Spacer
+            {% endcomment %}
+            <div class="desktop-header__left" role="presentation"></div>
+
+            <div class="desktop-header__center">
+                <a href="{{ shop.url }}">
+                    {% include 'logo-horizontal.svg' class: "logo-horizontal-size--large" %}
+                </a>
+            </div>
+
+            <div class="desktop-header__right">
+
+                <div class="desktop-header__item">
+
+                    {% if customer %}
+                        <a href="/account/">{{ customer.first_name }}</a>
+                    {% else %}
+                        <a href="/account/login/">Sign In</a>
+                    {% endif %}
+
+                </div>
+
+                <div class="desktop-header__item">
+                    <span class="js-product-here-to-help-form-toggle" data-toggle='{"togglesClass": "product-here-to-help-form--toggled", "allowEscToggle": true}'>Help</span>
+                </div>
+
+                <div class="desktop-header__item">
+
+                    <form action="/search" class="desktop-header__search  js-header-search" role="search">
+
+                        <input type="text" autocomplete="off" class="desktop-header__search-input  js-header-search-input" placeholder="Search Products" name="q">
+
+                        <button type="submit" class="desktop-header__search-submit  js-header-search-submit  a">
+                            <span class="fa  fa-search"></span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="desktop-header__item  js-mini-cart-open" data-toggle='{"togglesClass": "mini-cart--toggled", "allowEscToggle": true, "method": "add"}'>
+                    <span class="fa  fa-shopping-bag"></span>
+                </div>
+
+                <!-- <div class="desktop-header__item wishlist_link">
+                  {% include 'iwish_v2' with 'iwishlink' %}
+                </div> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% comment %}
+        Desktop nav links
+    {% endcomment %}
+    <nav class="desktop-nav">
+        <div class="desktop-nav__inner">
+            {% include "main-nav" namespace: "desktop-nav" %}
+        </div>
+    </nav>
+</header>
+
+
+{% comment %}
+    Mobile nav menu
+{% endcomment %}
+<nav class="mobile-nav  js-header-offset" data-offset-prop="top">
+    <div class="mobile-nav__inner">
+
+        <div class="mobile-nav__item  mobile-nav__link">
+            <!-- {% include 'logo-vertical.svg' class: "mobile-nav__logo" %} -->
+            {% include 'logo-vertical-2' class: "mobile-nav__logo" %}
+
+        </div>
+
+        {% include "main-nav" namespace: "mobile-nav" %}
+
+        <form action="/search" class="mobile-nav__item  mobile-nav__link  desktop-header__search  js-header-search" role="search">
+
+            <input type="text" autocomplete="off" class="desktop-header__search-input  js-header-search-input" placeholder="Search Products" name="q">
+
+            <button type="submit" class="desktop-header__search-submit  js-header-search-submit  a">
+                <span class="fa  fa-search"></span>
+            </button>
+
+        </form>
+
+        {% include 'social-media' instagram: true, facebook: true, class: "mobile-nav__link" %}
+
+    </div>
+</nav>
+
+
+{% comment %}
+    Mini cart
+{% endcomment %}
+<aside class="mini-cart" data-money-format="{{ shop.money_format }}"></aside>
+
+<div class="mini-cart__overlay" data-toggle='{"togglesClass": "mini-cart--toggled"}'></div>
+
+
+{% comment %}
+    Mini cart handlebars template
+{% endcomment %}
+{% include "mini-cart-template" %}

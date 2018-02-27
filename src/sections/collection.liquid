@@ -1,0 +1,46 @@
+{% schema %}
+{
+    "name":"Collection",
+    "settings":[
+        {
+            "type": "collection",
+            "label": "Collection",
+            "id": "collection",
+            "info": "Limited to 3 products"
+        }
+    ],
+    "presets":[
+        {
+            "category":"Collection",
+            "name":"Collection"
+        }
+    ]
+}
+{% endschema %}
+
+{% assign collection = collections[section.settings.collection] %}
+
+
+{% if collection.products.size > 0 %}
+
+    <div class="section-block  section-spacing">
+
+        <h1 class="section-block__title">{{ collection.title }}</h1>
+
+        <div class="grid" data-grid-max="3">
+
+            {% comment %}
+                Show available products first.
+                {% assign sortedProducts = collection.products | sort: 'available' %}
+            {% endcomment %}
+            {% assign sortedProducts = collection.products %}
+
+            {% for product in sortedProducts limit: 3 %}
+                 {% include "product--loop" lazyload: true %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endif %}

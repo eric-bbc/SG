@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    #FAMILIES
+\*------------------------------------*/
+
+.sans-serif-book{
+    @include sans-serif-book;
+}
+
+
+.sans-serif-bold{
+    @include sans-serif-bold;
+}
+
+
+.serif{
+    @include serif;
+}
+
+
+.serif-italic{
+    @include serif-italic;
+}
+
+
+.serif-semibold-italic{
+    @include serif-semibold-italic;
+}
+
+
+
+/*------------------------------------*\
+    #STYLES
+\*------------------------------------*/
+
+.text-style-1{
+    @include text-style-1;
+}
+
+
+.text-style-1-inline{
+    @include text-style-1(true);
+}
+
+
+.text-style-2{
+    @include text-style-2;
+}
+
+
+
+.section-title{
+    @include section-title;
+}
+
+
+
+.first-letter{
+
+    &:first-letter{
+        font-size: 450%;
+        line-height: 0.3;
+        float: left;
+        padding-right: 0.3rem;
+        margin-top: 1.9rem;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #SIZES
+\*------------------------------------*/
+
+.text-size-default{
+    @include text-size-default;
+}
+
+
+.text-size-xs{
+    @include text-size-xs;
+}
+
+
+.text-size-s{
+    @include text-size-s;
+}
+
+
+.text-size-m{
+    @include text-size-m;
+}
+
+
+.text-size-l{
+    @include text-size-l;
+}
+
+
+.text-size-xl{
+    @include text-size-xl;
+}

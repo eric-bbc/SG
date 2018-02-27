@@ -1,0 +1,24 @@
+<form action="{{ settings.newsletter_form_action | replace: 'post?', 'post-json?' }}" method="post" class="js-mc-form  {{ formClass }}">
+
+    <fieldset>
+
+        <div class="inline-form">
+
+            {% unless legend == false %}
+                <legend class="legend">Stay in touch.</legend>
+                <div class="legend-description">{{ settings.modal_copy }}</div>
+            {% endunless %}
+
+            <input type="email" required name="EMAIL" class="input  input--small" id="{{ emailID }}" placeholder="{{ 'newsletter.email_field' | t }}" autocomplete="off">
+
+            <button type="submit" name="subscribe" class="button  button--small  button--white  button--has-arrow">
+                {{ 'newsletter.subscribe' | t }}
+            </button>
+
+        </div>
+
+    </fieldset>
+
+    <div class="message" aria-live="assertive" role="status"></div>
+
+</form>

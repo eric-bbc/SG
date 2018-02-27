@@ -1,0 +1,57 @@
+<div class="account__form  sign-in">
+
+    {% form 'customer_login', class: "block-input-form" %}
+
+        <fieldset>
+
+            <legend class="account-form__legend">{{ "accounts.sign_in_title" | t }}</legend>
+
+            {% comment %}
+                Email field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_email">{{ 'accounts.email_field_label' | t }}</label>
+                <input required type="email" name="customer[email]" id="customer_email" {% if autofocus %}autofocus{% endif %} value="{{ form.email }}">
+            </div>
+
+            {% comment %}
+                Password field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer[password]">{{ 'accounts.password_field_label' | t }}</label>
+                <input required type="password" name="customer[password]">
+            </div>
+
+            {% comment %}
+                Forgot password form toggle.
+            {% endcomment %}
+            <div class="mt-m  mb-m  a  js-forgot-password" data-toggle='{"togglesClass": "forgot-password--toggled", "allowEscToggle": true}'>{{ "accounts.forgot_password_toggle" | t }}</div>
+
+            {% comment %}
+                Show form errors.
+            {% endcomment %}
+            {% if form.errors %}
+                <div class="mb-m  message  message--error" role="status">{{ form.errors | default_errors }}</div>
+            {% endif %}
+
+            <div class="button-group">
+
+                <button type="submit" class="button  button--primary">{{ "accounts.sign_in_button" | t }}</button>
+
+                {% comment %}
+                    Provide sign up alternative.
+                {% endcomment %}
+                <a href="/account/register/" class="button  button--white">{{ 'accounts.sign_up_button' | t }}</a>
+
+            </div>
+
+        </fieldset>
+
+    {% endform %}
+
+    {% comment %}
+        Show forgot password form.
+    {% endcomment %}
+    {% include "form-forgot-password" %}
+
+</div>

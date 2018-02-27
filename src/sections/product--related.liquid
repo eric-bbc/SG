@@ -1,0 +1,73 @@
+{% schema %}
+{
+    "name":"Related Products",
+    "blocks":[
+        {
+            "name":"Related Product",
+            "type":"related_product",
+            "settings":[
+                {
+                    "type": "product",
+                    "id": "associated_product",
+                    "label": "Product"
+                },
+                {
+                    "type": "product",
+                    "id": "related_product",
+                    "label": "Related Product For Above"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+{% assign CURRENT_PRODUCT_HANDLE = product.handle %}
+{% assign count = 0 %}
+
+
+{% comment %}
+    Get related product count to determine whether to show section or not.
+{% endcomment %}
+{% for block in section.blocks %}
+
+    {% assign b = block.settings %}
+
+    {% if CURRENT_PRODUCT_HANDLE == b.associated_product %}
+        {% assign count = count | plus: 1 %}
+        {% break %}
+    {% endif %}
+
+{% endfor %}
+
+
+{% if count > 0 %}
+
+    <section class="related-products__outer">
+
+        <div class="page-max-width  related-products">
+            
+            <h3 class="related-products__title">
+                {{ 'product.related_products' | t }}
+            </h3>
+
+            <div class="grid">
+
+                {% for block in section.blocks %}
+
+                    {% assign b = block.settings %}
+
+                    {% if CURRENT_PRODUCT_HANDLE == b.associated_product %}
+                        {% assign relatedProduct = all_products[b.related_product] %}
+                        {% include "product--loop" lazyload: true, product: relatedProduct %}
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endif %}

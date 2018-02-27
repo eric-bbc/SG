@@ -1,0 +1,118 @@
+{% unless namespace %}
+    {% assign namespace = "product" %}
+{% endunless %}
+
+
+{% comment %}
+    Show other colors.
+{% endcomment %}
+{% section "product--color-variant" %}
+
+
+{% comment %}
+    Check if we have variants before showing any options. We do this to avoid showing the "default title" variant. hasVariant variable is set in snippets/product--base-data.liquid.
+{% endcomment %}
+<div {% unless hasVariant %}hidden{% endunless %}>
+
+    {% comment %}
+        Get swatches
+    {% endcomment %}
+    {% assign swatches = "" %}
+
+    {% for image in product.images %}
+
+        {% assign altHandle = image.alt | handle %}
+
+        {% if altHandle == "color" %}
+            {% assign imgUrl = image.src | img_url: '125x', format: 'pjpg' %}
+            {% assign swatches = swatches | append: imgUrl | append: "," %}
+        {% endif %}
+
+    {% endfor %}
+
+    {% assign swatches = swatches | split: "," %}
+
+
+    {% for option in product.options_with_values %}
+
+
+        {% comment %}
+            Determine if it's a color option.
+        {% endcomment %}
+        {% assign isColorOption = false %}
+        {% assign optionHandle = option.name | handle %}
+
+        {% if optionHandle contains "color" %}
+            {% assign isColorOption = true %}
+        {% endif %}
+
+
+        {% comment %}
+            Get the option index, either 1,2,3.
+        {% endcomment %}
+        {% assign optionIndex = 1 %}
+
+        {% if product.options[forloop.index0] == option.name %}
+            {% assign optionIndex = forloop.index %}
+        {% endif %}
+
+
+        {% comment %}
+            Only show this once per option.
+        {% endcomment %}
+        {% unless usedOptions contains option.name %}
+            <div class="{{ namespace }}__option-group  options  {% if isColorOption %}options--block{% endif %}">
+        {% endunless %}
+
+        <div class="options__label">{{ option.name }}:</div>
+
+        <div class="options__option-list" role="radiogroup">
+
+            {% for value in option.values %}
+
+                <span
+                role="radio"
+                tabindex="0"
+                data-option="option{{ optionIndex }}"
+                data-value="{{ value }}"
+                data-product-handle="{{ product.handle }}"
+                data-is-color="{{ isColorOption }}"
+                class="js-product-option  options__option  {% if isColorOption %}options__option--swatch{% endif %}">
+                    <span class="{% if isColorOption %}options__option-swatch-label{% endif %}">{{ value }}</span>
+                </span>
+
+           {% endfor %}
+
+       </div>
+
+        {% comment %}
+           Only show this once per option.
+        {% endcomment %}
+        {% unless usedOptions contains option.name %}
+           </div>
+        {% endunless %}
+
+
+        {% comment %}
+           Capture the used options so we only show option.name once per option.
+        {% endcomment %}
+        {% capture usedOptions %}{{ usedOptions }} {{ option.name }}{% endcapture %}
+
+    {% endfor %}
+
+    {% comment %}
+        Set background-images for options.
+    {% endcomment %}
+    <script>
+
+        {% for swatch in swatches %}
+
+            $("[data-product-handle='{{ product.handle }}'][data-is-color='true']")
+            .eq({{ forloop.index0 }})
+            .prepend("<img src='{{ swatch }}' alt=''>");
+
+        {% endfor %}
+
+    </script>
+
+</div>

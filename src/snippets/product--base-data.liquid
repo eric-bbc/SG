@@ -1,0 +1,102 @@
+{% comment %}
+    Define default namespace, if namespace param is missing.
+{% endcomment %}
+{% unless namespace %}
+    {% assign namespace = "product" %}
+{% endunless %}
+
+
+{% comment %}
+    Get the product image.
+{% endcomment %}
+{% assign featImage = product.images[0] %}
+
+
+{% comment %}
+    Determine if we have variants.
+{% endcomment %}
+{% assign hasVariant = false %}
+
+{% if product.selected_or_first_available_variant.title != "Default Title" %}
+    {% assign hasVariant = true %}
+{% endif %}
+
+
+{% comment %}
+    Check if the product is on da sale.
+{% endcomment %}
+{% assign isSale = false %}
+
+{% if product.price < product.compare_at_price %}
+    {% assign isSale = true %}
+{% endif %}
+
+
+{% comment %}
+    Set the product's url.
+{% endcomment %}
+{% assign url = product.url | within: collection %}
+
+
+{% comment %}
+    Check if the product is on da sold out.
+{% endcomment %}
+{% assign productSoldOut = false %}
+{% assign variantSoldOut = false %}
+
+{% unless product.available %}
+    {% assign productSoldOut = true %}
+{% endunless %}
+
+{% unless product.selected_or_first_available_variant.available %}
+    {% assign variantSoldOut = true %}
+{% endunless %}
+
+
+{% comment %}
+    Get price.
+{% endcomment %}
+{% if isSale == false %}
+
+    {% comment %}
+        Regular price.
+    {% endcomment %}
+    {% capture price %}
+        <span class="{{ namespace }}__price">
+            {{ product.price | money | remove: ".00" }}
+        </span>
+    {% endcapture %}
+
+{% else %}
+
+    {% comment %}
+        Sale price
+    {% endcomment %}
+    {% capture price %}
+
+        <del class="{{ namespace }}__price  {{ namespace }}__price--compare-at">
+            {{ product.compare_at_price | money | remove: ".00" }}
+        </del>
+
+        <ins class="{{ namespace }}__price  {{ namespace }}__price--on-sale">
+            {{ product.price | money | remove: ".00" }}
+        </ins>
+
+    {% endcapture %}
+
+{% endif %}
+
+{% comment %}
+    Sold out price
+{% endcomment %}
+{% if productSoldOut %}
+
+    {% capture price %}
+
+        <span class="{{ namespace }}__price  {{ namespace }}__price--unavailable">
+            {{ 'product.sold_out' | t }}
+        </span>
+
+    {% endcapture %}
+
+{% endif %}

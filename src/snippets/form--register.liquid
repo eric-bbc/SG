@@ -1,0 +1,74 @@
+<div class="account-form">
+
+    {% form 'create_customer' %}
+
+        <div>
+
+            <fieldset>
+
+                <legend class="account-form__legend
+                ">{{ "accounts.sign_up_title" | t }}</legend>
+
+                <div class="relative">
+
+                    <input type="text" name="customer[first_name]" id="first-name" class="input-group__input  input-group__item" required {% if autofocus %}autofocus{% endif %} value="{{ form.first_name }}">
+
+                    <label for="first-name" class="input-group__label">{{ "accounts.first_name_field" | t }}</label>
+
+                </div>
+
+                <div class="relative">
+
+                    <input type="text" name="customer[last_name]" id="last-name" class="input-group__input  input-group__item" required value="{{ form.last_name }}">
+
+                    <label for="last-name" class="input-group__label">{{ "accounts.last_name_field" | t }}</label>
+
+                </div>
+
+                <div class="relative">
+
+                    <input type="email" name="customer[email]" id="email" class="input-group__input  input-group__item" required value="{{ form.email }}">
+
+                    <label for="email" class="input-group__label">{{ "accounts.email_field" | t }}</label>
+
+                </div>
+
+                <div class="relative">
+
+                    <input type="text" id="password" class="input-group__input  input-group__item" required>
+
+                    <label for="password" class="input-group__label">{{ "accounts.create_password_field" | t }}</label>
+
+                </div>
+
+                {% comment %}
+                    NOTE: Trick chrome to not enabling autofill.
+                    It looks for keywords that suggest a login (email/password field combination).
+                    So if we remove those keywords until it's needed it's ok. Probably best to keep autofill, but client prefers design integrity.
+                {% endcomment %}
+                <script>
+                    $("#password, #email, #first-name, #last-name")
+                    .one("focus", function(){
+                        $("#password")
+                        .attr("name", "customer[password]")
+                        .attr("type", "password");
+                    });
+                </script>
+
+                {% if form.errors %}
+                    <div class="message  message--error">{{ form.errors | default_errors }}</div>
+                {% endif %}
+
+                <button type="submit" class="button  button--primary  button--large  input-group__item">{{ "accounts.sign_up_button" | t }}</button>
+
+            </fieldset>
+
+            <div class="or">Or</div>
+
+            <a href="/account/login/" class="button  button--large  button--secondary  input-group__item  input-group__item--small">Sign In</a>
+
+        </div>
+
+    {% endform %}
+
+</div>

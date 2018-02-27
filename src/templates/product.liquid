@@ -1,0 +1,201 @@
+{% assign desktopBreakpoint = "mobile-landscape" %}
+
+
+{% comment %}
+    Include some base data handling.
+{% endcomment %}
+{% include "product--base-data" %}
+
+
+{% comment %}
+    Check if the current product is a gift card.
+    The page is slightly different for gift cards.
+{% endcomment %}
+{% if product.handle contains 'gift-card' %}
+    {% assign isGiftCard = true %}
+{% else %}
+    {% assign isGiftCard = false %}
+{% endif %}
+
+
+{% comment %}
+    Begin product data
+{% endcomment %}
+<div class="product  js-product" data-product-handle="{{ product.handle }}">
+
+    <div class="product__inner">
+
+        {% comment %}
+            Product title, Mobile only.
+        {% endcomment %}
+        <div class="hide-at--{{ desktopBreakpoint }}">
+            <h1 class="product__title">{{ product.title }}</h1>
+        </div>
+
+
+        {% comment %}
+            Product images
+        {% endcomment %}
+        <div class="product__gallery">
+          <div class="show-at--{{ desktopBreakpoint }} breadcrumbs">
+            {% include 'breadcrumbs' %}
+          </div>
+            <div class="js-slick-slider  slick-slider--push-nav">
+                {% include "product--images" lazyload: true, togglesFullscreen: true, imgSize: "2048x" %}
+            </div>
+        </div>
+
+
+        {% comment %}
+            Product Price, Mobile only.
+        {% endcomment %}
+        <div class="hide-at--{{ desktopBreakpoint }}  product__info-max-width">
+
+            {% comment %}
+                Product Price
+            {% endcomment %}
+            <div class="{{ namespace }}__prices  js-product-price">{{ price }}</div>
+
+
+            {% comment %}
+                Product description.
+            {% endcomment %}
+            {% if hasVariant == false %}
+
+                {% if product.description.size > 0 %}
+                    <div class="product__description">
+                        <div class="rte">{{ product.description }}</div>
+                    </div>
+                {% endif %}
+
+            {% else %}
+
+                {% comment %}
+                    Variant descriptions. Stored in metafields.
+                {% endcomment %}
+                <div class="product__description">
+
+                    {% if product.description.size > 0 %}
+                        {{ product.description }}
+                    {% else %}
+
+                        {% for variant in product.variants %}
+                            {% if variant.metafields.variant.description.size > 0 %}
+
+                                <div class="js-variant-description  {% unless product.selected_or_first_available_variant.id == variant.id %}hidden{% endunless %}" data-variant-id="{{ variant.id }}">
+                                    {{ variant.metafields.variant.description }}
+                                </div>
+
+                            {% endif %}
+                        {% endfor %}
+
+                    {% endif %}
+
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        {% comment %}
+            Product Info
+        {% endcomment %}
+        <div class="product__info">
+            {% include "product--info" %}
+        </div>
+
+    </div>
+
+    {% comment %}
+        Fullscreen image.
+        TODO: Set proper el toggle class attrs.
+    {% endcomment %}
+    {% unless isGiftCard %}
+
+        <div class="product-zoom" hidden>
+
+            <div data-toggle="html" data-toggle-class="product-zoom--toggled">
+                {% include "close-svg" namespace: "product-zoom", fill: "white", padded: true %}
+            </div>
+
+            {% comment %}
+                The src of this image will be updated with a higher res src of clicked image.
+            {% endcomment %}
+            <img
+            data-toggle-class="product-zoom--toggled" data-toggle="html"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" class="js-product-fullscreen-image">
+
+        </div>
+
+    {% endunless %}
+
+    {%- comment %}
+      klaviyo traacking
+    {% endcomment -%}
+    <script text="text/javascript">
+       var _learnq = _learnq || [];
+       var item = {
+         Name: {{ product.title|json }},
+         ProductID: {{ product.id|json }},
+         Categories: {{ product.collections|map:'title'|json }},
+         ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+         URL: "{{ shop.secure_url }}{{ product.url }}",
+         Brand: {{ product.vendor|json }},
+         Price: {{ product.price|money|json }},
+         CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+       };
+
+       _learnq.push(['track', 'Viewed Product', item]);
+
+       _learnq.push(['trackViewedItem', {
+         Title: item.Name,
+         ItemId: item.ProductID,
+         Categories: item.Categories,
+         ImageUrl: item.ImageURL,
+         Url: item.URL,
+         Metadata: {
+           Brand: item.Brand,
+           Price: item.Price,
+           CompareAtPrice: item.CompareAtPrice
+         }
+       }]);
+      </script>
+
+      <script text="text/javascript">
+      	var _learnq = _learnq || [];
+      	document.getElementById("AddToCart").addEventListener('click',function (){
+       		_learnq.push(['track', 'Add To Cart', item]);
+       	});
+       </script>
+
+</div>
+
+
+{% comment %}
+    Include JS for variant processing.
+{% endcomment %}
+{% include "product--option-select" %}
+
+
+{% comment %}
+    Related products
+{% endcomment %}
+{% if isGiftCard == false %}
+    {% section 'product--related' %}
+{% endif %}
+
+
+{% comment %}
+    Recently viewed
+{% endcomment %}
+{% if settings.recent_products_limit > 0  %}
+    {% include 'product--recently-viewed' %}
+{% endif %}
+
+
+{% comment %}
+    Include JSON product schema
+{% endcomment %}
+{% include "product--schema" %}

@@ -1,0 +1,27 @@
+<article class="grid__item  grid-item">
+
+    <a href="{{ article.url }}">
+
+        <div class="aspect-ratio--1-1">
+            <figure style="background-image: url('{{ article.image.src | img_url: '1280x', format: 'pjpg' }}');" title='{{ article.image.alt }}' class="aspect-ratio__object"></figure>
+        </div>
+
+        <div class="blog-article-overlay  overlay  overlay--has-hover  overlay--white  overlay--center">
+
+            <div class="blog-article-overlay__tag">
+                {{ article.tags[0] }}
+            </div>
+
+            <div class="blog-article-overlay__time">
+                {{ article.published_at | time_tag: '%b %d, %Y' }}
+            </div>
+
+            <h3 class="text--style-1  text--m">{{ article.title }}</h3>
+            <div class="blog-article__author">{{ article.author }}</div>
+            <div class="blog-article-overlay__cta">Read More</div>
+
+        </div>
+
+    </a>
+
+</article>

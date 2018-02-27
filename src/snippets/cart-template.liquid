@@ -1,0 +1,110 @@
+{% comment %}
+    This snippet provides the default handlebars.js templates for
+    the ajax cart plugin. Use the raw liquid tags to keep the
+    handlebar.js template tags as available hooks.
+{% endcomment %}
+
+<script id="FullCartTemplate" type="text/template">
+
+    <form class="cart__row" action="/cart" method="post" novalidate>
+
+        <div class="cart__col">
+
+            <div class="cart__col-title">
+                {{ 'cart.item_summary' | t }}
+            </div>
+
+            {% raw %}
+
+            <div>
+
+                {{#items}}
+
+                    <div class="cart-product" data-line="{{line}}">
+
+                        <div class="cart-product__col">
+                            <a href="{{url}}">
+                                <img src="{{img}}" alt="{{name}}" class="cart-product__image">
+                            </a>
+                        </div>
+
+                        <div class="cart-product__col">
+
+                            <a href="{{url}}" class="cart-product__title  cart-product__item">{{name}}</a>
+
+                            {{#if variation}}
+                                <div class="cart-product__item">
+                                    <div>{{variation}}</div>
+                                </div>
+                            {{/if}}
+
+                            <div class="cart-product__item  cart-product__price">{{{price}}}</div>
+
+                            <div class="cart-product__item">
+                                <span>{% endraw %}{{ "cart.quantity" | t }}{% raw %}</span>
+                                <input type="number" name="updates[]" id="updates_{{id}}" class="js-cart-qty  input  cart-product__qty" value="{{itemQty}}" data-id="{{id}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*" max="10" min="1" autocomplete="off">
+                            </div>
+
+                            <a href="/cart/change?line={{line}}&amp;quantity=0" class="js-cart-remove  cart-product__item  cart-product__remove" data-line="{{line}}">remove</a>
+
+                        </div>
+
+                    </div>
+
+                {{/items}}
+
+            </div>
+
+            {% endraw %}
+
+            <div class="cart__footer">
+                {% comment %}<label class="label" for="note">{{ 'cart.gift_note' | t }}</label>{% endcomment %}
+                <textarea placeholder="{{ 'cart.gift_note' | t }}" id="note" name="note" class="cart__note  input  input--gray  textarea  textarea--min">{{ cart.note }}</textarea>
+            </div>
+
+        </div>
+
+        <div class="cart__col">
+
+            <div class="cart__col-title">
+                {{ 'cart.order_summary' | t }}
+            </div>
+
+            <div class="cart__subtotal">
+
+                {{ 'cart.sub_total' | t }}
+
+                {% raw %}
+                    <span>{{totalPrice}}</span>
+                {% endraw %}
+
+            </div>
+
+            <div class="cart__checkout-buttons">
+
+                {% if additional_checkout_buttons %}
+                    <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
+                {% endif %}
+
+                <button type="submit" class="button  button--full-width  button--primary  cart__checkout" name="checkout">{{ 'cart.checkout' | t }}</button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</script>
+
+
+{% comment %}
+    Cart empty markup.
+    Will be appended to the .cart when it's empty.
+{% endcomment %}
+<div class="js-empty-cart-html" hidden>
+
+    <div class="cart__empty">
+        <div>{{ "cart.item_count_html" | t: count: 0 }}</div>
+    </div>
+
+</div>

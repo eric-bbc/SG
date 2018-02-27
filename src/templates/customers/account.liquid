@@ -1,0 +1,73 @@
+<section class="account">
+
+    <div class="account__inner">
+        
+        <h2 class="account__col-title">{{ 'accounts.account_overview_title' | t }}</h2>
+
+        <div class="account-orders  account__section">
+
+            <h2 class="mb-m">{{ 'accounts.order_history' | t }}</h2>
+
+            {% if customer.orders.size > 0 %}
+
+                <ul class="account-orders__list">
+
+                    {% for order in customer.orders %}
+
+                        <li class="account-order__order">
+
+                            <div class="account-order__order-num">
+                                <span>Order</span>
+                                <span>{{ order.name | link_to: order.customer_url }}</span>
+                            </div>
+
+                            <ul>
+
+                                <li class="account-orders__line">
+                                    <span>Date</span>
+                                    <span>{{ order.name | order.created_at | date: "%b %d, %Y" }}</span>
+                                </li>
+
+                                <li class="account-orders__line">
+                                    <span>Status</span>
+                                    <span data-status="{{ order.fulfillment_status | handle }}">{{ order.fulfillment_status }}</span>
+                                </li>
+
+                                <li class="account-orders__line">
+                                    <span>Total</span>
+                                    <span>{{ order.total_price | money }}</span>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            {% else %}
+
+                <div>{{ 'accounts.no_orders' | t }}</div>
+
+                <a href="{{ 'accounts.shop_now_link' | t }}" class="mt-xs  cta  account__shop-now">{{ 'accounts.shop_now' | t }}</a>
+
+            {% endif %}
+
+        </div>
+
+        <div class="account-profile  account__section">
+
+            <a href="/account/logout" class="cta  account__sign-out">{{ 'accounts.sign_out' | t }}</a>
+
+            {% comment %}{% if customer.addresses_count > 0 %}
+                <br>
+                <a href="/account/addresses" class="account__sign-out">Edit Address</a>
+            {% endif %}{% endcomment %}
+
+        </div>
+
+
+    </div>
+
+</section>

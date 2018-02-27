@@ -1,0 +1,103 @@
+{% schema %}
+{
+    "name":"Blocks",
+    "blocks":[
+        {
+            "name":"Block",
+            "type":"block",
+            "settings":[
+                {
+                    "id":"image",
+                    "type":"image_picker",
+                    "label":"Block Image"
+                },
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"Block Title"
+                },
+                {
+                    "id":"text",
+                    "type":"textarea",
+                    "label":"Block Text"
+                },
+                {
+                    "id":"link",
+                    "type":"url",
+                    "label":"Block Link"
+                },
+                {
+                    "id":"format",
+                    "type":"select",
+                    "label":"Block Format",
+                    "options": [
+                        {
+                            "value": "format_1",
+                            "label": "Large Text"
+                        },
+                        {
+                            "value": "format_2",
+                            "label": "Small Text"
+                        }
+                    ],
+                    "default": "format_1"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "category":"Blocks",
+            "name":"Blocks"
+        }
+    ]
+}
+{% endschema %}
+
+
+<div class="">
+<!-- <div class=""> -->
+
+    <div class="page-max-width  section-spacing">
+
+        <div class="blocks">
+
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+
+                <div class="blocks__block  block  block--{{ b.format }}" {{ block.shopify_attributes }}>
+
+                    {% if b.link != blank %}
+                        <a href="{{ b.link }}">
+                    {% endif %}
+
+                    {% if b.image %}
+
+                        <figure class="block__image">
+                            <img src="{{ b.image | img_url: '800x', format: 'pjpg' }}" alt="{{ b.image.alt }}">
+                        </figure>
+
+                    {% endif %}
+
+                    {% if b.title != blank %}
+                        <h2 class="block__title">{{ b.title }}</h2>
+                    {% endif %}
+
+                    {% if b.text != blank %}
+                        <div class="block__text">{{ b.text }}</div>
+                    {% endif %}
+
+                    {% if b.link != blank %}
+                        </a>
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,332 @@
+/*------------------------------------*\
+    #SLICK
+\*------------------------------------*/
+
+@import "slick-slider.scss";
+
+.slick-slider--full-height{
+    height: 100%;
+
+    .slick-track,
+    .slick-list,
+    .slick-slide{
+        height: 100%;
+    }
+}
+
+
+.slick-slider--push-nav{
+
+    .slick-prev{
+        @include mq("desktop"){
+            left: -4rem;
+        }
+    }
+
+    .slick-next{
+
+        @include mq("desktop"){
+            right: -4rem;
+        }
+    }
+}
+
+
+.slick-slider--white-nav{
+
+    .slick-prev{
+        @include arrow-left(true);
+    }
+
+    .slick-next{
+        @include arrow-right(true);
+    }
+}
+
+
+// Intended to be used in conjunction with .slick-slider--push-nav.
+.slick-slider--push-in{
+    margin: 0 8rem;
+
+    @include mq($desktopBreakpoint){
+        margin: 0 8rem;
+    }
+}
+
+
+.slick-slider--offset-dots{
+
+    @include mqMax('tablet'){
+
+        .slick-dots{
+            bottom: -1rem;
+        }
+    }
+}
+
+
+.slick-slider--no-nav{
+
+    .slick-arrow{
+        display: none !important;
+    }
+}
+
+
+.slick-slider--no-dots{
+
+    .slick-dots{
+        display: none !important;
+    }
+}
+
+
+.slick-slide{
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+}
+
+
+.slick-dots{
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    left:  0;
+    text-align: center;
+
+    @include mq($desktopBreakpoint){
+        right:  3rem;
+        bottom: 3rem;
+        text-align: right;
+    }
+
+    li{
+        @include trans;
+        display: inline-block;
+        margin-right: 1rem;
+        border: solid 1px map-get($color, "white");
+        width:  8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(#fff,0.4);
+
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+
+        &.slick-active{
+            background-color: map-get($color, "white");
+        }
+    }
+
+    button{
+        display: none;
+    }
+}
+
+
+.slick-arrow{
+    @include a;
+    @include arrow;
+    @include vertical-center;
+    position: absolute;
+    z-index: 1;
+    outline: none; // Remove from base button styles.
+    padding: 1rem;
+}
+
+
+.slick-prev{
+    @include arrow-left;
+    @include arrow-inline(true);
+    left: 1rem;
+}
+
+
+.slick-next{
+    @include arrow-right;
+    @include arrow-inline(true);
+    right: 1rem;
+}
+
+
+
+/*------------------------------------*\
+    #FONT-AWESOME
+\*------------------------------------*/
+
+@import "font-awesome.scss";
+
+.fa{
+    font-size: 1.4rem;
+    color: inherit;
+}
+
+.fa--spaced{
+    margin-right: 1rem;
+}
+
+
+
+/*------------------------------------*\
+    #INSTAFEED
+\*------------------------------------*/
+
+.instafeed{
+    @include flex;
+}
+
+
+.instafeed__outer-wrap{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    background-color: map-get($color, "gray-45");
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+
+.instafeed__inner-wrap{
+    max-width: 60rem;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+.instafeed__title{
+    @include text-style-1(true);
+    @include text-size-l;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+
+
+.instafeed__handle{
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+
+.instafeed__item{
+    $gutter: 0.5rem;
+
+    width: calc(33.33% - #{$gutter * 2});
+    margin: 0.6rem $gutter;
+
+    @include mq('tablet'){
+        margin: 1.2rem $gutter;
+    }
+
+    .figure__image{
+        border: solid 15px #fff;
+    }
+
+    .figure__caption{
+        display: none;
+        text-align: left;
+        font-size: 90%;
+        padding-right: 0.5rem;
+        line-height: 1.3;
+
+        @include mq('tablet'){
+            display: block;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+
+.instafeed__load-more{
+    margin-top: 2.5rem;
+}
+
+/*------------------------------------*\
+    #IWISH
+\*------------------------------------*/
+
+.iwishWrapper {
+  text-align: center !important;
+  @include page-max-width;
+  .iwishTitle{
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 9px;
+    font-size: 2rem;
+  }
+  .iWishLoginNote {
+    padding: 1rem 3rem;
+  }
+}
+
+.iwishBuyBtn {
+  width: 75%;
+  @include mqMax('mobile-landscape'){
+    font-size: 1rem;
+  };
+}
+
+.iwishRemoveBtn {
+  width: 75%;
+  margin-top: 0.5rem;
+}
+
+.iwish_button {
+  width: 100%;
+  margin-top: 1rem;
+
+  .iWishLoginMsg {
+    display: none !important;
+  }
+}
+
+.iwishShareContainer {
+  text-align: center;
+}
+
+/*------------------------------------*\
+    #JqueryZOOM
+\*------------------------------------*/
+.image-zoom {
+  z-index: -1;
+}
+
+.zoomMsg {
+  display: none;
+  @include mq('desktop') {
+    display: block;
+    text-align: center;
+    z-index: 5;
+    font-family: inherit;
+  };
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+
+  .close-toggle{
+    background-color: gray;
+    position: relative;
+    top: 20px;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.dp_hint_button {
+  display: none !important;
+}

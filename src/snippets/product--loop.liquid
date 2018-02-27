@@ -1,0 +1,82 @@
+{% comment %}
+    settings the lazyload paramater to true will force all images to lazyload.
+    By default, images after {{lazyLoadAfter}} will lazy load.
+{% endcomment %}
+{% assign lazyLoadAfter = 4 %}
+
+{% if lazyload %}
+    {% assign lazyLoadAfter = 0 %}
+{% endif %}
+
+
+{% comment %}
+    Include some base data handling.
+{% endcomment %}
+{% include "product--base-data" namespace: "grid-product" %}
+
+
+{% comment %}
+    Set the image size.
+{% endcomment %}
+{% assign imgSize = "800x" %}
+
+
+{% comment %}
+    Product data.
+{% endcomment %}
+{% unless settings.hide_sold_out_products and product.available == false %}
+
+    <div class="grid-product  grid__item  grid__item--has-hover  js-paginate-product">
+
+        <a href="{{ url }}">
+
+            <div class="grid-product__image  object-wrap  object-wrap--product-image">
+
+                {% if forloop.index > lazyLoadAfter %}
+
+                    {% comment %}
+                        Product image, lazy loaded.
+                    {% endcomment %}
+                    <figure
+                    class="object  js-lazy-load"
+                    data-original="{{ featImage | img_url: imgSize, format: 'pjpg' }}"></figure>
+
+                {% else %}
+
+                    <figure
+                    class="grid-product__image  object"
+                    style="background-image: url('{{ featImage | img_url: imgSize, format: 'pjpg' }}');"></figure>
+
+                {% endif %}
+
+            </div>
+
+        </a>
+
+        <div class="grid-text">
+
+            <a href="{{ url }}">
+
+                {% comment %}
+                    Product title.
+                {% endcomment %}
+                <div class="grid-text__title">{{ product.title }}</div>
+
+
+                {% comment %}
+                    Product cta.
+                {% endcomment %}
+                <div class="grid-text__cta">{{ product.price | money_without_trailing_zeros }}</div>
+
+                {% comment %}
+                    Product price. {{ price }} is captured in snippets/product--base-data.liquid
+                    <div>{{ price }}</div>
+                {% endcomment %}
+
+            </a>
+
+        </div>
+
+    </div>
+
+{% endunless %}

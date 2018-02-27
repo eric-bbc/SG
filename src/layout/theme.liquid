@@ -1,0 +1,136 @@
+{% comment %}
+    @author Andrew Puig [andrew@blackandblackcreative.com]
+{% endcomment %}
+<!doctype html> 
+<html class="no-js  template--{{ template | handle }}" lang="en-US" dir="ltr" data-template-handle="{{ template | handle }}">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv='x-ua-compatible' content='IE=edge'>
+        <meta name="author" content="Black &amp; Black Creative">
+
+        {% include "social-meta-tags" %}
+
+        {% capture title %}{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}{% endcapture %}
+
+        {% assign title = title | strip %}
+
+        <title>{{ title }}</title>
+
+        {% if page_description %}
+            <meta name="description" content="{{ page_description }}">
+        {% endif %}
+
+        <link rel="canonical" href="{{ canonical_url }}">
+        <link rel="icon" href="{{ 'favicon.png' | asset_img_url: '64x' }}">
+
+        <link rel="stylesheet" href="{{ 'app.css' | asset_url }}">
+
+        <script src="{{ 'header-min.js' | asset_url }}"></script>
+        <script type="text/javascript" src="{{ '_jquery.zoom.min.js' | asset_url }}" defer=”defer”></script>// jquery zoom
+
+        <script type="text/javascript">
+           var _learnq = _learnq || [];
+            {% if customer %}
+              _learnq.push(['identify', {
+              '$email' : "{{customer.email}}"
+              }]);
+            {% else %}
+            {% endif %}
+
+           _learnq.push(['account', 'J4Apqv']);
+           (function () {
+           var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true;
+           b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +     'a.klaviyo.com/media/js/analytics/analytics.js';
+           var a = document.getElementsByTagName('script')[0]; a.parentNode.insertBefore(b, a);
+           })();
+      </script>
+
+
+
+        {{ content_for_header }}
+
+
+    </head>
+    <body>
+
+        {% include 'header' %}
+        {% include "modal" %}
+        {% include "shipping-modal" %}
+        {% include "privacy-modal" %}
+
+        <main class="page-content  js-header-offset">
+            {{ content_for_layout }}
+        </main>
+
+        {% include "footer" %}
+
+        <div class="form-overlay  contact-form">
+            <div class="form-overlay__inner">
+                {% include 'form--contact' contactFormIndex: 0 %}
+            </div>
+        </div>
+
+        <div class="form-overlay  press-form">
+            <div class="form-overlay__inner ">
+                {% include 'form--press' contactFormIndex: 1 %}
+            </div>
+        </div>
+
+        <div class="form-overlay  product-here-to-help-form">
+            <div class="form-overlay__inner">
+                {% include 'form--here-to-help' contactFormIndex: 2 %}
+            </div>
+        </div>
+
+        <script>
+            jQuery(function($){
+                ajaxCart.init({
+                    moneyFormat: {{ shop.money_format | json }}
+                });
+            });
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "LocalBusiness",
+                "email": "{{ shop.email }}",
+                "url": "{{ shop.url }}",
+                "logo": "https:{{ 'logo-horizontal.svg' | asset_url }}",
+                "name": "{{ shop.name }}"
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "{{ shop.url }}",
+                "name": "{{ shop.name }}",
+                "potentialAction":{
+                    "@type": "SearchAction",
+                    "target": "{{ shop.url }}/search?type=product&q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        </script>
+
+        {% if template contains 'customers' %}
+            {{ 'customer_area.js' | shopify_asset_url | script_tag }}
+        {% endif %}
+
+        {% comment %}
+            NOTE: We may need to remove this conditional if were showing the PDP template on other templates.
+        {% endcomment %}
+        {% if template contains "product" %}
+            <script defer src="{{ 'option_selection.js' | shopify_asset_url }}"></script>
+        {% endif %}
+
+    	<script defer src="{{ 'app-min.js' | asset_url }}"></script>
+
+      {% include 'iwish_v2' with 'iwishfooter' %}
+
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% comment %}
+    TODO: Handle guest checkout.
+{% endcomment %}
+<div class="account">
+
+    {% comment %}{% assign guest = false %}
+
+    {% if shop.checkout.guest_login %}
+        {% assign guest = true %}
+    {% endif %}{% endcomment %}
+
+    {% include "form-login" %}
+
+</div>

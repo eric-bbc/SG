@@ -1,0 +1,296 @@
+{% schema %}
+{
+    "name":"Boutiques",
+    "blocks":[
+        {
+            "name":"Boutique",
+            "type":"boutique",
+            "settings":[
+                {
+                    "id":"image",
+                    "type":"image_picker",
+                    "label":"Featured Image",
+                    "info":"706x529"
+                },
+                {
+                    "id":"name",
+                    "type":"text",
+                    "label":"Boutique Name"
+                },
+                {
+                    "id":"hours",
+                    "type":"textarea",
+                    "label":"Boutique Hours"
+                },
+                {
+                    "id":"address",
+                    "type":"textarea",
+                    "label":"Boutique Address"
+                },
+                {
+                    "id":"phone",
+                    "type":"text",
+                    "label":"Boutique Phone"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "category":"Boutiques",
+            "name":"Boutiques"
+        }
+    ]
+}
+{% endschema %}
+
+
+
+{% comment %}
+    Get the gallery images for each store.
+{% endcomment %}
+{% assign stores = 2 %}
+{% assign galleryImageMax = 7 %}
+
+{% assign store1ImageCount = 0 %}
+{% assign store2ImageCount = 0 %}
+
+{% for i in (1..stores) %}
+
+    {% for j in (1..galleryImageMax) %}
+
+        {% capture image %}store_{{ i }}_image_{{ j }}{% endcapture %}
+
+        {% if settings[image] %}
+
+            {% if i == 1 %}
+                {% assign store1ImageCount = store1ImageCount | plus: 1 %}
+            {% elsif i == 2 %}
+                {% assign store2ImageCount = store2ImageCount | plus: 1 %}
+            {% endif %}
+
+        {% endif %}
+
+    {% endfor %}
+
+{% endfor %}
+
+
+<div class="section-spacing  page-gutter">
+
+    <div class="page-max-width  boutiques__outer">
+
+        <h2 class="boutiques__title">Our Boutiques</h2>
+
+        <div class="boutiques">
+
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+                {% assign i = forloop.index %}
+
+                {% capture toggle %}
+                    <div class="boutique__gallery-toggle" data-index="{{ i }}">View Gallery</div>
+                {% endcapture %}
+
+                <div class="boutiques__boutique  boutique" {{ block.shopify_attributes }}>
+
+                    <div class="boutique__row">
+
+                        <div class="object-wrap  object-wrap--3-4">
+                            <div class="object" data-original="{{ b.image | img_url: '800x', format: 'pjpg' }}"></div>
+                        </div>
+
+                        {% if i == 1 and store1ImageCount > 0 %}
+                            {{ toggle }}
+                        {% elsif i == 2 and store2ImageCount > 0 %}
+                            {{ toggle }}
+                        {% endif %}
+
+                    </div>
+
+                    <div class="boutique__row  boutique__row--lower">
+
+                        <div class="boutique__info-col">
+
+                            <div class="boutique__name">{{ b.name }}</div>
+
+                            <div class="boutique__spacer  boutique__line"></div>
+
+                            {% if b.hours != blank %}
+                                <div class="boutique__hours  boutique__line">
+                                    {{ b.hours | newline_to_br }}
+                                </div>
+                            {% endif %}
+
+                            {% if b.address != blank %}
+                                <div class="boutique__address  boutique__line">
+                                    {{ b.address | newline_to_br }}
+                                </div>
+                            {% endif %}
+
+                            {% if b.phone != blank %}
+                                <a href="tel:{{ b.phone | remove: '-' }}" class="boutique__phone  boutique__line">
+                                    {{ b.phone }}
+                                </a>
+                            {% endif %}
+
+                        </div>
+
+                        <div class="boutique__map-col">
+                            <div class="boutique__map" id="map-{{ forloop.index0 }}"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    function initMap() {
+
+        {% for block in section.blocks %}
+
+            {% assign b = block.settings %}
+
+            {% if b.address != blank %}
+
+                {% assign index = forloop.index0 %}
+
+                var address = "https://maps.googleapis.com/maps/api/geocode/json?address={{ b.address | url_encode }}&key=AIzaSyCC1o0KqxWBo72i6XJxlEypOzfYsTgOtUM";
+
+                $.get(address, function( data ) {
+
+                    if(data.results.length){
+
+                        var mapID = "map-{{ index }}";
+
+                        var coords = {
+                            lat: data.results[0].geometry.location.lat,
+                            lng: data.results[0].geometry.location.lng
+                        };
+
+                        var map = new google.maps.Map(document.getElementById(mapID), {
+                            center: coords,
+                            disableDoubleClickZoom: false,
+                            gestureHandling: true,
+                            clickableIcons: false,
+                            disableDefaultUI: true,
+                            scrollwheel: false,
+                            zoom: 16,
+                            styles: [
+                                {% include 'g-map-styles.json' %}
+                            ]
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: coords,
+                            map: map
+                        });
+
+                    } else {
+                        console.warn("No results for address: {{ b.partner_address | url_encode }}");
+                    }
+
+                });
+
+            {% endif %}
+
+        {% endfor %}
+
+    }
+
+</script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFA_-GbqOkku1NCsz7piEdQaO3oOQMMd4&callback=initMap"></script>
+
+
+
+{% comment %}
+    Store 1
+{% endcomment %}
+{% if store1ImageCount > 0 %}
+
+    <div class="boutique-gallery" data-index="1">
+
+        <div class="boutique-gallery__inner">
+
+            <span data-toggle='{"togglesClass": "boutique-gallery--toggled", "toggles": ".boutique-gallery[data-index=1]"}' class="right-corner-click-offset  close"></span>
+
+            <div class="js-slick-slider  slick-slider--white-nav  slick-slider--push-nav">
+
+                {% for i in (1..galleryImageMax) %}
+
+                    {% capture image %}store_1_image_{{ i }}{% endcapture %}
+
+                    {% if settings[image] %}
+
+                        <div>
+
+                            <div class="object-wrap  object-wrap--3-4">
+                                <div class="object  object--contain  slick-lazy" data-lazy="{{ settings[image] | img_url: '800x', format: 'pjpg' }}"></div>
+                            </div>
+
+                        </div>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endif %}
+
+
+
+{% comment %}
+    Store 2
+{% endcomment %}
+{% if store2ImageCount > 0 %}
+
+    <div class="boutique-gallery" data-index="2">
+
+        <div class="boutique-gallery__inner">
+
+            <span data-toggle='{"togglesClass": "boutique-gallery--toggled", "toggles": ".boutique-gallery[data-index=2]"}' class="right-corner-click-offset  close"></span>
+
+            <div class="js-slick-slider  slick-slider--white-nav">
+
+                {% for i in (1..galleryImageMax) %}
+
+                    {% capture image %}store_2_image_{{ i }}{% endcapture %}
+
+                    {% if settings[image] %}
+
+                        <div>
+
+                            <div class="object-wrap  object-wrap--3-4">
+                                <div class="object  object--contain  slick-lazy" data-lazy="{{ settings[image] | img_url: '800x', format: 'pjpg' }}"></div>
+                            </div>
+
+                        </div>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endif %}

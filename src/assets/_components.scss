@@ -1,0 +1,1715 @@
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+/*
+NOTE: .section is not namespaced because they do not necessarily reflect related content.
+*/
+.section{
+    @include section;
+}
+
+
+.section-spacing{
+    @include section-spacing;
+}
+
+
+/*------------------------------------*\
+    #SECTION-BLOCK
+\*------------------------------------*/
+
+.section-block{
+    @include section-block;
+    @include page-max-width;
+}
+
+
+.section-block__outer{
+    @include section-block-outer;
+}
+
+
+.section-block__title{
+    @include section-block-title;
+}
+
+
+
+/*------------------------------------*\
+    #BANNER
+\*------------------------------------*/
+
+.banner{
+    @include sans-serif-book;
+    @include ellipsis-scroll;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    text-align: center;
+}
+
+
+
+/*------------------------------------*\
+    #BANNER-IMAGE
+\*------------------------------------*/
+
+.banner-image{
+    position: relative;
+}
+
+
+.banner-image__caption{
+    @include text-size-xl;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0 4rem;
+
+    @include mq('tablet'){
+        padding: 0 8rem;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+
+.logo-horizontal{
+    @include logo-horizontal;
+}
+
+
+.logo-horizontal-size{
+    @include logo-horizontal-size;
+}
+
+
+.logo-horizontal-size--large{
+    @include logo-horizontal-size-large;
+}
+
+
+.logo-vertical{
+    @include logo-vertical;
+}
+
+
+.logo-vertical-size{
+    @include logo-vertical-size;
+}
+
+
+
+/*------------------------------------*\
+    #ASPECT-RATIO-OBJECTS
+\*------------------------------------*/
+
+.object-wrap{
+    position: relative;
+}
+
+
+// Ratio for thin banner images.
+.object-wrap--banner{
+    padding-top: 27.007%;
+}
+
+
+// Ratio for product images.
+.object-wrap--product-image{
+    padding-top: 150%;
+}
+
+
+.object-wrap--article{
+    padding-top: 150%;
+
+    @include mq('mobile-landscape'){
+        padding-top: 56.25%;
+    }
+}
+
+
+.object-wrap--3-4{
+    padding-top: 75%;
+}
+
+
+.object-wrap--2-3{
+    padding-top: 66.66%;
+}
+
+
+.object-wrap--3-2{
+    padding-top: 150%;
+}
+
+
+.object-wrap--4-3{
+    padding-top: 133.333%;
+}
+
+
+.object-wrap--16-9{
+    padding-top: 56.25%;
+}
+
+
+.object-wrap--1-2{
+    padding-top: 50%;
+}
+
+
+.object-wrap--9-20{
+    padding-top: 45%;
+}
+
+
+.object{
+    @include object;
+}
+
+
+.object--repeat{
+    @include object-repeat;
+}
+
+
+.object--contain{
+    object-fit:      contain;
+    background-size: contain;
+    background-color: transparent;
+}
+
+
+.bg-cover{
+    @include bg-cover;
+}
+
+
+
+.circle{
+    border-radius: 50%;
+}
+
+
+
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+
+@include create-spacing-classes;
+
+
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+.grid{
+    @include flex;
+
+    // Pull left and right based on the grid gutter, so that the vertical gutter down the page is maintained.
+    margin-left:  -#{$gridGutter};
+    margin-right: -#{$gridGutter};
+}
+
+
+.grid__item{
+    width: calc(50% - #{$gridGutter * 2});
+    margin-left:  $gridGutter;
+    margin-right: $gridGutter;
+    margin-top: #{$gridGutter * 2};
+    overflow: hidden; // To prevent overflowing text from breaking grid.
+
+    // No top margin on first row.
+    &:nth-child(1),
+    &:nth-child(2){
+        margin-top: 0;
+    }
+
+    @include mq('mobile-landscape'){
+        width: calc(33.33% - #{$gridGutter * 2});
+
+        // No top margin on first row.
+        &:nth-child(3){
+            margin-top: 0;
+        }
+    }
+
+    // if [data-grid-max="3"] exlude below.
+    @at-root{
+
+        .grid:not([data-grid-max="3"]){
+
+            .grid__item{
+
+                @include mq('tablet-landscape'){
+                    width: calc(25% - #{$gridGutter * 2});
+
+                    // No top margin on first row.
+                    &:nth-child(4){
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (hover: hover){
+
+    .grid__item--has-hover{
+        @include trans(box-shadow);
+
+        &:hover{
+            box-shadow: 0 2px 4px rgba(#000, 0.1);
+
+            .grid-text{
+                background-color: map-get($color, "white");
+
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .grid-text{
+            @include trans(background-color);
+            position: relative;
+            padding-left:  $gridTextPadding;
+            padding-right: $gridTextPadding;
+
+            &:before{
+                @include trans(opacity);
+                content: "";
+                position: absolute;
+                height: 1px;
+                background-color: map-get($color, "gray-35");
+                left:  0;
+                right: 0;
+                top:   0;
+                max-width: 25%;
+                margin: 0 auto;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+.grid-text{
+    text-align: center;
+    padding: $gridTextPadding 0;
+}
+
+
+.grid-text__title{
+    @include text-size-m;
+    @include ellipsis;
+}
+
+
+.grid-text__cta{
+    @include sans-serif-book;
+    @include text-style-3;
+    @include arrow;
+    @include arrow-inline(true);
+    // @include arrow-right;
+    margin-top: 0.8rem;
+}
+
+
+
+/*------------------------------------*\
+    #POSITIONS
+\*------------------------------------*/
+
+.relative{
+    position: relative;
+}
+
+
+
+/*------------------------------------*\
+    #OVERLAYS
+\*------------------------------------*/
+
+.cover{
+    @include cover;
+}
+
+
+.cover--fixed{
+    @include cover-fixed;
+}
+
+
+.fullscreen{
+    @include fullscreen;
+}
+
+
+
+/*------------------------------------*\
+    #DISPLAYS
+\*------------------------------------*/
+
+.hidden{
+    display: none !important;
+}
+
+
+
+/*------------------------------------*\
+    #DRAWERS
+\*------------------------------------*/
+
+.drawer{
+    @include drawer;
+}
+
+
+.drawer--left{
+    @include drawer-dir(left);
+}
+
+
+.drawer-right{
+    @include drawer-dir(right);
+}
+
+
+
+/*------------------------------------*\
+    #RTE (RICH-TEXT-EDITOR)
+\*------------------------------------*/
+
+.rte{
+
+    h2{
+        @include text-style-1(true);
+        @include text-size-l;
+        margin-top: map-get($spacing, "l");
+    }
+
+    h3{
+        @include text-size-l;
+        margin-top: map-get($spacing, "m");
+    }
+
+    h4{
+        @include text-size-m;
+        margin-top: map-get($spacing, "m");
+    }
+
+    h5{
+        @include text-style-3;
+        margin-top: map-get($spacing, "s");
+    }
+
+    ul{
+        line-height: 1.2;
+        margin-top: map-get($spacing, "s");
+    }
+
+    p{
+        margin-top: map-get($spacing, "s");
+        max-width: 70rem;
+
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+
+.scroll-down-indicator{
+    position: absolute;
+    bottom: map-get($spacing, "m");
+    left:  0;
+    right: 0;
+    text-align: center;
+
+    &:after{
+        transform: rotate(90deg);
+    }
+}
+
+
+
+.menu-icon{
+    width: 2rem;
+}
+
+
+.menu-icon__line{
+    margin-top: 0.4rem;
+    background-color: currentColor;
+    height: 0.2rem;
+    border-radius: 2px;
+
+    &:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+
+
+.arrow{
+    @include arrow;
+}
+
+
+.arrow--left{
+    @include arrow-left;
+}
+
+
+.arrow--right{
+    @include arrow-right;
+}
+
+
+
+.close{
+    @include close;
+}
+
+
+.close-white{
+    @include close(true);
+}
+
+
+.right-corner-click{
+    @include right-corner-click;
+}
+
+
+.right-corner-click-offset{
+    @include right-corner-click(true);
+}
+
+
+
+/*------------------------------------*\
+    #LOCK-SCROLL
+\*------------------------------------*/
+
+.lock-scroll{
+    @include lock-scroll;
+}
+
+
+
+/*------------------------------------*\
+    #EVENTS
+\*------------------------------------*/
+
+.text-hover{
+    @include text-hover;
+}
+
+
+.opacity-hover{
+    @include opacity-hover;
+}
+
+
+
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+.current-color{
+    color: currentColor;
+}
+
+
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+.ttu{
+    text-transform: uppercase;
+}
+
+
+
+/*------------------------------------*\
+    #Z-INDEX
+\*------------------------------------*/
+
+.over{
+    @include over;
+}
+
+
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+.list-item{
+    display: inline-block;
+    margin-right: map-get($spacing, "s");
+
+    &:nth-last-of-type(1){
+        margin-right: 0;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #MISC
+\*------------------------------------*/
+
+.vam{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.sr{
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width:  0;
+    overflow: hidden;
+}
+
+
+
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+.full-width{
+    width: 100%;
+}
+
+
+
+/*------------------------------------*\
+    #FORMS/#INPUTS/#BUTTONS
+\*------------------------------------*/
+
+.disabled,
+[disabled]{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+
+.cta{
+    @include cta;
+}
+
+
+
+.button,
+.input{
+    padding: 1.2rem map-get($spacing, "s");
+    border: solid 1px transparent;
+
+    &--small{
+        padding-top:    0.7rem;
+        padding-bottom: 0.7rem;
+    }
+
+    &--large{
+        padding-top:    2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+
+.input{
+    @include serif-italic;
+    background-color: map-get($color, "white");
+    color: map-get($color, "black-30");
+}
+
+
+.input--gray{
+    border-color: map-get($color, "gray-35");
+}
+
+
+.textarea{
+    min-height: 12rem;
+    max-height: 20rem;
+}
+
+
+.textarea--min{
+    padding: 1.3rem;
+    min-height: auto;
+    max-height: 20rem;
+}
+
+
+.button{
+    @include sans-serif-bold;
+    @include text-style-3;
+    @include trans;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.button--full{
+    display: block;
+    width: 100%;
+}
+
+
+.button--primary{
+    background-color: map-get($color, "black");
+    color: map-get($color, "white");
+
+    &:hover{
+        background-color: map-get($color, "black-30");
+    }
+}
+
+
+.button--white{
+    background-color: map-get($color, "white");
+    color: map-get($color, "black-30");
+}
+
+
+.button--has-arrow{
+    position: relative;
+    @include arrow;
+    @include arrow-inline;
+    @include arrow-right;
+}
+
+
+
+// Makes input and submit in one line. Expects one .input and one submit .button.
+.inline-form{
+    @include flex;
+
+    .input{
+        width: 70%;
+    }
+
+    .button{
+        @include sans-serif-book;
+        // width: 30%;
+        text-align: center;
+        // border: 20px solid red;
+    }
+
+    @include mq('mobile-landscape'){
+        max-width: 35rem;
+    }
+}
+
+
+
+.legend{
+    @include sans-serif-book;
+    @include text-style-3;
+    margin-bottom: 1.3rem;
+}
+
+
+.legend-description{
+    @include text-size-s;
+    line-height: 1.25;
+    margin-bottom: 1.3rem;
+    opacity: 0.8;
+}
+
+
+
+.form{
+    padding: 2rem;
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: map-get($color, "white");
+
+    @include mq('tablet'){
+        padding: 4rem;
+    }
+}
+
+
+.form--min{
+
+    @include mq('tablet'){
+        padding: 2.5rem;
+    }
+}
+
+
+.form__group{
+    margin-top: 2.5rem;
+
+    label{
+        @include serif;
+        @include text-style-3;
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+
+    .input{
+        width: 100%;
+    }
+}
+
+
+.form__cta,
+.form__cancel{
+    @include a;
+    @include sans-serif-book;
+    @include text-style-3;
+    display: inline-block;
+}
+
+
+.form__cancel{
+    margin-left: 6rem;
+    opacity: 0.5;
+
+    @include mq('tablet'){
+        margin-left: 8rem;
+    }
+}
+
+
+.form__cta{
+    @include arrow;
+    @include arrow-inline(true);
+    @include arrow-right;
+}
+
+
+
+.form-header{
+    @include flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: solid 1px currentColor;
+    margin-bottom: 3rem;
+}
+
+
+.form-header__left{
+    @include text-size-m;
+}
+
+
+.form-header__right{
+    @include sans-serif-book;
+    @include text-style-3;
+    margin-top: 0.6rem;
+
+    @include mq('tablet'){
+        margin-top: 0;
+    }
+}
+
+
+
+.form-text__line{
+    margin-top: 2rem;
+
+    &:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+
+
+.form-contact-methods{
+    @include flex;
+    @include text-size-m;
+    border: solid 1px currentColor;
+    border-left:  none;
+    border-right: none;
+    padding: 1rem 0 0.6rem 0;
+    margin: 1.5rem 0;
+    justify-content: space-between;
+
+    .fa{
+        position: relative;
+        top: -4px;
+    }
+}
+
+
+
+.form-overlay{
+    @include trans("opacity, visibility");
+    @include fullscreen;
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    padding-top:    3rem;
+    padding-bottom: 3rem;
+    background-color: map-get($color, "overlay-dark");
+    opacity: 1;
+    visibility: hidden;
+
+    .posted-successfully{
+        display: none;
+    }
+}
+
+
+.form-overlay__inner{
+    @media (min-height: 850px){
+        @include vertical-center;
+    }
+}
+
+
+.form-overlay--success{
+    text-align: center;
+
+    .posted-successfully{
+        display: block;
+    }
+
+    .not-posted{
+        display: none;
+    }
+
+    .form__cancel{
+        margin-left: 0;
+    }
+}
+
+
+
+.block-input-form{
+
+    @include mq('mobile-landscape'){
+        max-width: 40rem;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+
+    // @include mq($desktopBreakpoint){
+    //     margin-left: 0;
+    //     margin-right: 0;
+    // }
+
+    .input{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+
+
+.field-group{
+    @include flex;
+    align-items: center;
+    border-bottom: solid 2px map-get($color, "white-20");
+    margin-top: 2rem;
+
+    label{
+        padding: 1rem 2rem 1rem 0;
+        opacity: 0.75;
+    }
+
+    input{
+        flex: 1;
+        padding: 1rem;
+        background-color: map-get($color, "white");
+        color: map-get($color, "black-30");
+    }
+}
+
+
+
+.button-group{
+
+    .button{
+        width: 100%;
+
+        &:nth-child(2){
+            margin-top: 0.8rem;
+        }
+    }
+
+    @include mq('mobile-landscape'){
+        @include flex;
+
+        .button{
+
+            &:nth-child(1){
+                width: 58%;
+                margin-right: 2%;
+            }
+
+            &:nth-child(2){
+                width: 40%;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    #SHOW-AT/#HIDE-AT
+\*------------------------------------*/
+
+@include showAt;
+@include hideAt;
+
+
+
+/*------------------------------------*\
+    #OPTIONS
+\*------------------------------------*/
+
+.options{
+    @include flex;
+    @include flex-center;
+
+    &:not(.options--block){
+
+        .options__label{
+            @include text-style-3;
+            @include sans-serif-bold;
+        }
+    }
+
+    @include mq('mobile-landscape'){
+        justify-content: flex-start;
+    }
+}
+
+
+.options--block{
+    display: block; // Override flex.
+
+    .options__label{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .options__option{
+        padding-left:  1rem;
+        padding-right: 1rem;
+
+        @include mq('mobile-landscape'){
+            padding: 0;
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+
+.options__label{
+    margin-right: 1.5rem;
+}
+
+
+.options__option-list{
+    @include flex;
+}
+
+
+.options__option{
+    @include a;
+    @include serif-italic;
+    user-select: none;
+    padding: 0.5rem 2rem;
+    display: block;
+    position: relative;
+
+    &:after{
+        @include trans(opacity);
+        content: "";
+        height: 1px;
+        position: absolute;
+        background-color: currentColor;
+        opacity: 0;
+
+        // NOTE: These values should closely match the padding values above.
+        left:  2rem;
+        right: 2rem;
+        bottom: 0.6rem;
+    }
+
+    &:hover{
+
+        &:not([aria-checked="true"]){
+
+            &:after{
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &[aria-checked="true"]{
+
+        &:after{
+            opacity: 1;
+        }
+    }
+
+    &[data-available="false"]{
+        opacity: 0.4;
+        text-decoration: line-through;
+
+        &:after{
+            opacity: 0 !important;
+        }
+    }
+}
+
+
+.options__option--swatch{
+    max-width: 7.5rem;
+
+    img{
+        @include trans(border-color);
+        border: solid 1px transparent;
+        width: 100%;
+    }
+
+    &:hover{
+
+        img{
+            border-color: map-get($color, "gray-35");
+        }
+    }
+
+    &:after{
+        display: none;
+    }
+}
+
+
+.options__option-swatch-label{
+    @include serif-italic;
+    @include ellipsis;
+    display: block;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+
+
+/*------------------------------------*\
+    #DROPDOWNS/#DETAILS
+\*------------------------------------*/
+
+/*
+NOTE: These dropdown class names are based off the HTML5 details and summary tags [http://www.w3schools.com/tags/tag_summary.asp], whose native behavior is like a dropdown. Due to no support in IE/Edge we will make our own.
+*/
+
+.details__summary{
+    @include text-style-3;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+
+    &:after{
+        @include chevron-size;
+        @include chevron-right;
+        content: "";
+        position: absolute;
+        right: -1rem;
+        top: 50%;
+        // logically should be translateY(-50%), but it appears off center, so adjust to some magic number.
+        transform: translateY(-68%) translateX(100%);
+    }
+
+    &[data-selected]{
+
+        &:before{
+            content: attr(data-selected);
+        }
+    }
+}
+
+
+.details__content{
+    display: none;
+    padding-top: 1rem;
+    box-shadow: 0 2px 4px rgba(#000, 0.1);
+    border: solid 0.1rem map-get($color, "gray-35");
+}
+
+
+.details__item{
+    @include a;
+    padding: 0.7rem 0;
+    display: block;
+    border-bottom: dotted 1px map-get($color, "gray-30");
+
+    &[data-text]{
+
+        &:before{
+            content: attr(data-text);
+        }
+    }
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+.details--open{
+
+    .details__summary{
+
+        &:after{
+            @include chevron-down;
+        }
+    }
+
+    .details__content{
+        display: block;
+    }
+}
+
+
+.details--abs{
+    position: relative;
+
+    .details__content{
+        position: absolute;
+        left:   0;
+        right:  0;
+        background-color: map-get($color, "white");
+        z-index: 1;
+        padding: 2rem;
+        min-width: 22rem;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+.tabs__tablist{
+    white-space: nowrap;
+
+    @include mqMax('tablet-landscape'){
+        display: grid;
+    }
+}
+
+
+.tab__summary{
+    @include sans-serif-book;
+    @include text-style-3;
+    @include trans(opacity);
+    display: inline-block;
+    margin-right: 2rem;
+    opacity: 0.5;
+
+    &:nth-last-child(1){
+        margin-right: 0;
+    }
+
+    &[aria-selected="true"]{
+        @include sans-serif-bold;
+        opacity: 1;
+    }
+
+    @include mq('mobile-landscape'){
+        margin-right: 3rem;
+    }
+    @include mqMax('tablet-landscape'){
+        padding-top: 3%;
+    }
+}
+
+
+.tab__content{
+    display: none;
+    padding-top: 2.5rem;
+    max-width: 65rem;
+}
+
+
+
+/*------------------------------------*\
+    #TEXT-COL
+\*------------------------------------*/
+
+/*
+.text-col is a column which should consist of an image, text and a title.
+*/
+
+.text-col{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    background-color: map-get($color, "white");
+    padding-top:    2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    @include mq('tablet'){
+        text-align: left;
+    }
+}
+
+
+.text-col__image{
+    margin-top: map-get($spacing, "s");
+
+    img{
+        width: 100%;
+    }
+}
+
+
+
+.text-col__text{
+    margin-top: map-get($spacing, "m");
+    text-align: left;
+    max-width: 70rem;
+
+    @include mq('tablet'){
+        font-size: scale-font("default", "xs");
+    }
+}
+
+
+.text-col__title,
+.text-col__text{
+
+    @include mq('tablet'){
+        margin-top: map-get($spacing, "l");
+    }
+}
+
+
+
+/*------------------------------------*\
+    #TEXT-BLOCK
+\*------------------------------------*/
+
+.text-block{
+    text-align: center;
+}
+
+
+.text-block__title{
+    @include text-size-l;
+    @include text-style-1(true);
+    text-transform: uppercase;
+}
+
+
+.text-block__text{
+    margin: 2.5rem auto 3.5rem auto;
+    max-width: 65rem;
+}
+
+
+.text-block__cta{
+    @include sans-serif-book;
+    @include text-style-3;
+    @include arrow;
+    @include arrow-inline(true);
+    @include arrow-right;
+    margin-top: 2.5rem;
+    display: block;
+}
+
+
+
+/*------------------------------------*\
+    #ADDRESS
+\*------------------------------------*/
+
+.address__line{
+    display: block;
+}
+
+
+.address__address,
+.address__title,
+.address__map-toggle{
+    margin-bottom: 1.5rem;
+}
+
+
+.address__map-toggle{
+    @include cta;
+}
+
+
+.address__title{
+    font-size: 86%;
+    text-transform: uppercase;
+    line-height: 1.25;
+
+    @include mq('tablet'){
+        font-size: 90%;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #SOCIAL-MEDIA
+\*------------------------------------*/
+
+.social-media{
+
+}
+
+
+.social-media__item{
+    display: block;
+}
+
+
+
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+.blocks{
+    @include flex;
+
+    @include mqMax('tablet'){
+        @include page-padding(padding-left);
+        @include page-padding(padding-right);
+    }
+}
+
+
+.blocks__block{
+    width: 50%;
+    @include mqMax('mobile-landscape'){
+      width: 100%;
+    }
+}
+
+
+.block{
+    text-align: center;
+
+    @include mq('tablet'){
+        padding: 5rem 7rem;
+        padding-bottom: 0;
+    }
+
+}
+
+
+.block--format_1{
+
+    .block__text{
+        @include text-size-l;
+        @include mqMax('tablet'){
+          font-size: 1.7rem;
+        }
+    }
+}
+
+
+.block__title{
+    @include text-size-l;
+    margin-top: 2rem;
+}
+
+
+.block__text{
+    margin-top: 1rem;
+    max-width: 30rem;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+
+/*------------------------------------*\
+    #ARTICLE
+\*------------------------------------*/
+
+.article-block{
+    @include flex;
+    align-items: center;
+    padding: 2.3rem;
+    border: solid 0.4rem map-get($color, "gray-45");
+
+    &__image{
+        width: 40%;
+    }
+
+    &__text{
+        width: 60%;
+        padding: 0 3rem;
+    }
+}
+
+
+// This assumes the image is missing.
+.article-block--full{
+    display: block;
+
+    .article-block__text{
+        @include flex;
+        @include cover;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.article-text{
+    $marginTop: 3rem;
+    text-align: center;
+
+    &__blog{
+        @include sans-serif-bold;
+        text-transform: uppercase;
+        font-size: 75%;
+        line-height: 1;
+        display: inline-block;
+
+        &:after{
+            content: "";
+            display: block;
+            background-color: map-get($color, "gray-35");
+            width: 100%;
+            height: 1px;
+            margin: 2rem auto;
+            max-width: 75%;
+        }
+    }
+
+    &__title,
+    &__excerpt{
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title{
+        font-size: scale-font("l", "xs");
+        line-height: 1.35;
+    }
+
+    &__excerpt{
+        margin-top: $marginTop;
+        font-size: 107%;
+    }
+
+    &__cta{
+        @include a;
+        @include sans-serif-bold;
+        @include arrow;
+        @include arrow-inline(true);
+        @include arrow-right;
+        margin-top: $marginTop;
+        text-transform: uppercase;
+        font-size: 75%;
+        display: block;
+    }
+}
+
+
+.article-text--quote{
+    @include serif-italic;
+
+    .article-text__title{
+        font-size: scale-font("l", "m");
+        line-height: 1.1;
+    }
+}
+
+
+.article-text__byline{
+    text-align: right;
+    margin-top: 1.5rem;
+
+    &:before{
+        content: "- ";
+    }
+}
+
+
+/*------------------------------------*\
+    #MODAL
+\*------------------------------------*/
+
+.modal{
+    @include trans("opacity, visibility");
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    @include fullscreen;
+    @include flex;
+    @include flex-center;
+    background-color: map-get($color, "overlay-dark");
+    opacity: 0; //SWITCH
+    visibility: hidden; //SWTICH
+
+    form{
+        margin-top: 3rem;
+    }
+
+    .close{
+      background-color: #898989;
+      padding: 0.5rem;
+      position: absolute;
+
+        @include mqMax('tablet'){
+          position: sticky;
+        }
+
+        // @include mq('tablet'){
+         //     transform: translateX(115%);
+        // }
+    }
+
+    .inline-form{
+        max-width: 100%;
+    }
+
+    .input,
+    .button{
+        background-color: map-get($color, "gray-45");
+        text-align: left;
+    }
+}
+
+
+.modal--toggled{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal__inner{
+    width: 100%;
+    position: relative;
+    max-width: 60rem;
+    background-color: map-get($color, "white");
+    margin: 0 auto;
+    border: solid 8px map-get($color, "overlay-dark");
+    outline: solid 1px map-get($color, "white");
+}
+
+
+.modal__row{
+
+    @include mq('tablet'){
+        @include flex;
+        align-items: center;
+    }
+}
+
+
+.modal__logo{
+    margin-bottom: 3rem;
+}
+
+
+.modal__col{
+    text-align: center;
+
+    &:nth-child(2){
+        padding: 2rem;
+    }
+
+    @include mq('tablet'){
+
+        &:nth-child(1){
+            width: 40%;
+        }
+
+        &:nth-child(2){
+            width: 60%;
+        }
+    }
+}
+
+
+.modal__title{
+    @include text-size-xl;
+    line-height: 1;
+
+    &:after{
+        content: "";
+        display: block;
+        width: 1.5rem;
+        background-color: map-get($color, "black");
+        margin: 1.5rem auto;
+        height: 1px;
+    }
+}
+
+
+.modal__copy{
+    margin-top: 1rem;
+}
+
+.shipping-modal {
+  @extend .rte ;
+  transition: none;
+  .modal__inner{
+    .right-corner-click-offset {
+      position: sticky;
+    }
+    .modal__col {
+      @include page-padding(padding-left);
+      @include page-padding(padding-right);
+      width: 100%;
+      text-align: center;
+
+    }
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
+.privacy-modal {
+  @extend .shipping-modal;
+}
+
+.site-modal {
+  .close {
+    background-color: rgba(0,0,0,0);
+    padding: 1.5rem;
+    @include mqMax($desktopBreakpoint){
+      background-color: #898989;
+      padding: 0;
+      position: absolute;
+    };
+  }
+}

@@ -1,0 +1,24 @@
+{% comment %}
+    About template. Use actual template selector and remove conditionals here once theme is made live.
+{% endcomment %}
+{% if page.handle == "about-sidney-garber" %}
+    
+    <div>
+        <h1 class="sr">{{ page.title }}</h1>
+        {% section "about" %}
+    </div>
+
+{% elsif page.handle == "our-partners" %}
+
+    <div>
+        <h1 class="sr">{{ page.title }}</h1>
+        {% section "partners" %}
+    </div>
+
+{% else %}
+
+    <div class="page-top-gutter  page-bottom-gutter  page-gutter  rte">
+        {{ page.content }}
+    </div>
+
+{% endif %}

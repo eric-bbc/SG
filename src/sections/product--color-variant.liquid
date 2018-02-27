@@ -1,0 +1,91 @@
+{% schema %}
+{
+    "name":"Product Color",
+    "blocks":[
+        {
+            "name":"Product Color",
+            "type":"product_color",
+            "settings":[
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Main Product"
+                },
+                {
+                    "type": "product",
+                    "id": "other_product",
+                    "label": "Other Color Of Above Product"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+{% assign CURRENT_PRODUCT_HANDLE = product.handle %}
+{% assign count = 0 %}
+
+
+{% comment %}
+    Get other product count to determine whether to show section or not.
+{% endcomment %}
+{% for block in section.blocks %}
+
+    {% assign b = block.settings %}
+
+    {% if CURRENT_PRODUCT_HANDLE == b.product %}
+        {% assign count = count | plus: 1 %}
+    {% endif %}
+
+{% endfor %}
+
+
+{% if count > 0 %}
+
+    <div class="product__option-group  options options--block">
+
+        <div class="options__label">Also available in:</div>
+
+        <div class="options__option-list" role="radiogroup">
+
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+
+                {% if CURRENT_PRODUCT_HANDLE == b.product %}
+
+                    {% assign otherColor = all_products[b.other_product] %}
+                    {% assign colorTitle = "" %}
+
+                    {% comment %}
+                        Use the product's color tag as the color display.
+                    {% endcomment %}
+                    {% for tag in otherColor.tags %}
+                        {% if tag contains "color-" %}
+                            {% assign colorTitle = tag | remove: "color-" %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <a href="{{ otherColor.url }}">
+
+                        <span
+                        title="{{ otherColor.title }}"
+                        role="radio"
+                        tabindex="0"
+                        class="options__option  options__option--swatch">
+                            <img src="{{ otherColor.images[0] | img_url: '125x', format: 'pjpg' }}" alt="{{ otherColor.images[0].alt }}">
+                            <span class="options__option-swatch-label">{{ colorTitle }}</span>
+                        </span>
+
+                    </a>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endif %}

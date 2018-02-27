@@ -1,0 +1,11 @@
+{% capture searchIcon %}<i class="material-icons">search</i>{% endcapture %}
+
+<div class="search-overlay">
+
+    <div data-toggle="html" data-toggle-class="search-overlay--toggled">
+        {% include "close-svg" fill: "white" namespace: "search-overlay", padded: true %}
+    </div>
+
+    {% include "form--search" namespace: "search-overlay" buttonText: searchIcon, placeholder: "Search products, pages or articles" %}
+
+</div>

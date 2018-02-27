@@ -1,0 +1,38 @@
+<div class="account__form  activate-account">
+
+    {% form 'activate_customer_password', class: "block-input-form" %}
+
+        <fieldset>
+
+            <legend class="account-form__legend">{{ 'accounts.activate_account_title' | t }}</legend>
+
+            {% comment %}
+                Password field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_password">{{ 'accounts.reset_password_field_label' | t }}</label>
+                <input required type="password" name="customer[password]" {% if autofocus %}autofocus{% endif %} id="customer_password">
+            </div>
+
+            {% comment %}
+                Confirm password field.
+            {% endcomment %}
+            <div class="field-group">
+                <label for="customer_password_confirmation">{{ 'accounts.reset_password_conf_field_label' | t }}</label>
+                <input required type="password" name="customer[password_confirmation]" id="customer_password_confirmation">
+            </div>
+
+            {% comment %}
+                Show form errors.
+            {% endcomment %}
+            {% if form.errors %}
+                <div class="mt-m  message  message--error" role="status">{{ form.errors | default_errors }}</div>
+            {% endif %}
+
+            <button type="submit" class="mt-m  button  button--primary">{{ 'accounts.activate_account_button' | t }}</button>
+
+        </fieldset>
+
+    {% endform %}
+
+</div>

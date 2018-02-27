@@ -1,0 +1,30 @@
+{% if settings.show_qty %}
+
+    <div class="{{ namespace }}__options  options  details  details--bars details--abs  details--hover" aria-labelledby="option-{{ 'product.quantity' | t | handle }}">
+
+        <div class="options__label  details__summary  text--s" data-selected="1" id="option-{{ 'product.quantity' | t | handle }}">{{ "product.quantity" | t }}</div>
+
+        <div class="options__option-wrap  options__option-wrap--quantity  details__content  details__content--no-min">
+
+            {% comment %}
+            {% assign max = product.selected_or_first_available_variant.inventory_quantity %}
+
+            {% if product.selected_or_first_available_variant.inventory_policy == "continue" or product.selected_or_first_available_variant.inventory_quantity > 10 %}
+                {% assign max = 10 %}
+            {% endif %}
+            {% endcomment %}
+
+            {% for i in (1..5) %}
+                <div class="options__option  js-quantity-select  details__bar" aria-label="Quantity" data-qty="{{ i }}">{{ i }}</div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endif %}
+
+{% comment %}
+    Actual quantity is determined by this field which will be automatically populated and is hidden to the user.
+{% endcomment %}
+<input type="hidden" name="quantity" value="1" class="js-quantity-input">

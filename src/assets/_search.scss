@@ -1,0 +1,12 @@
+.search-template__search{
+
+    @include mqMax('tablet'){
+        // padding-top:    2rem;
+        // padding-bottom: 2rem;
+    }   
+}
+
+
+.search-template__no-results{
+    margin-bottom: 0.4rem;
+}

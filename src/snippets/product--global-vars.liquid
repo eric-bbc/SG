@@ -1,0 +1,6 @@
+{% comment %}
+    Get the color option index for products.
+{% endcomment %}
+{% capture colorOption %}option{{ settings.color_option_index | plus: 1 }}{% endcapture %}
+{% assign colorOptionIndex  = settings.color_option_index | plus: 0 %}
+{% assign prodColorOption = product.options[colorOptionIndex] | handle %}

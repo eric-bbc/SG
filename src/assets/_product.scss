@@ -1,0 +1,182 @@
+.product{
+    @include section;
+
+    @include mq($pdpBreakpoint){
+        // padding-right: 0; // Override @include section padding.
+    }
+}
+
+.breadcrumbs{
+  font-size: 90%;
+  padding-bottom: 1rem;
+}
+
+.product__inner{
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq($pdpBreakpoint){
+        @include flex;
+    }
+
+    @include mq('large-desktop'){
+        max-width: 100rem;
+    }
+}
+
+
+.product__gallery{
+
+    // NOTE: Changing may $pdpBreakpoint here may cause issues due to the consecutive media queries. Review before changing.
+    @include mq($pdpBreakpoint){
+        width: 50%;
+        padding-right: 3rem;
+    }
+
+    @include mq('tablet'){
+        padding-right: 4rem;
+    }
+}
+
+
+.product__info{
+
+    @include mq($pdpBreakpoint){
+        width: 50%;
+    }
+}
+
+
+.product__info-inner{
+
+    @include mq($pdpBreakpoint){
+        max-width: 33rem;
+        margin-left: auto;
+    }
+
+    @include mq('large-desktop'){
+        max-width: 36rem;
+    }
+}
+
+
+.product__title{
+    // @include text-style-1(true);
+    @include text-size-xl;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    @include mq($pdpBreakpoint){
+        text-align: left;
+    }
+}
+
+
+.product__prices{
+    @include serif-italic;
+    @include text-size-l;
+    text-align: center;
+    margin-top: map-get($spacing, "m");
+
+    @include mq($pdpBreakpoint){
+        text-align: left;
+    }
+}
+
+
+.product__info-max-width{
+    max-width: 85%;
+    margin-left:  auto;
+    margin-right: auto;
+
+    @include mq($pdpBreakpoint){
+        max-width: 100%;
+    }
+}
+
+
+.product__price--on-sale{
+    margin-right: 1rem;
+}
+
+
+.product__description{
+    text-align: center;
+    margin-top: map-get($spacing, "s");
+
+    @include mq($pdpBreakpoint){
+        text-align: left;
+        margin-top: map-get($spacing, "m");
+    }
+}
+
+
+.product__options{
+    text-align: center;
+
+    @include mq($pdpBreakpoint){
+        text-align: left;
+    }
+}
+
+
+.product__option-group,
+.product__add-to-cart{
+    margin-top: map-get($spacing, "m");
+}
+
+
+.product__add-to-cart{
+    // margin-bottom: map-get($spacing, "l");
+}
+
+
+.product__message{
+    margin-top: map-get($spacing, "s");
+
+    &[data-status="error"]{
+        color: map-get($color, "highlight");
+    }
+}
+
+
+.product__tabs{
+    margin-top: map-get($spacing, "l");
+}
+
+
+.product-here-to-help-form-inner{
+    display: none;
+}
+
+
+.product-here-to-help-form-inner--toggled{
+    display: block;
+}
+
+
+.selector-wrapper{
+    display: none !important;
+}
+
+
+
+.related-products__outer,
+.recently-viewed__outer{
+    @include section-block-outer;
+}
+
+
+.related-products,
+.recently-viewed{
+    @include section-block;
+}
+
+
+.related-products__title,
+.recently-viewed__title{
+    @include serif-italic;
+    @include section-block-title;
+    text-transform: capitalize;
+}

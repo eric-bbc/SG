@@ -1,0 +1,30 @@
+.article-carousel{
+    @include trans("opacity, visibility");
+    @include fullscreen;
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    background-color: map-get($color, "overlay-dark");
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.article-carousel--toggled{
+    @include lock-scroll;
+
+    .article-carousel{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.article-carousel__inner{
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-height: 550px) and (min-width: #{map-get($media-query-values, "mobile-landscape")}){
+        @include vertical-center;
+    }
+}

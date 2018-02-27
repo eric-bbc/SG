@@ -1,0 +1,84 @@
+{% assign ogTitle = "" %}
+{% assign ogDescription = "" %}
+{% assign ogImage = "" %}
+{% assign ogURL = canonical_url %}
+{% assign ogImageAlt = "" %}
+{% assign ogType = "" %}
+
+{% if template == "article" %}
+
+    {% assign ogTitle = article.title %}
+    {% assign ogDescription = article.excerpt_or_content %}
+    {% assign ogImage = article.image.src | img_url: "1000x", format: 'pjpg' %}
+    {% assign ogImageAlt = article.image.alt %}
+    {% assign ogType = "article" %}
+
+{% elsif template == "product" %}
+
+    {% comment %}
+        Get correct product image.
+    {% endcomment %}
+    {% if product.selected_or_first_available_variant.title != "Default Title" %}
+        {% assign ogImage = product.selected_or_first_available_variant.image | img_url: "1000x", format: 'pjpg' %}
+        {% assign ogImageAlt = product.selected_or_first_available_variant.image.alt %}
+    {% else %}
+        {% assign ogImage = product.featured_image | img_url: "1000x", format: 'pjpg' %}
+        {% assign ogImageAlt = product.featured_image.alt %}
+    {% endif %}
+
+    {% assign ogTitle = product.title %}
+    {% assign ogDescription = product.description %}
+    {% assign ogType = "product" %}
+
+{% elsif template == "collection" %}
+
+    {% assign ogTitle = collection.title %}
+    {% assign ogDescription = collection.description %}
+    {% assign ogImage = collection.image | img_url: "1000x", format: 'pjpg' %}
+    {% assign ogImageAlt = collection.image.alt %}
+    {% assign ogType = "product.group" %}
+
+{% else %}
+
+    {% assign ogTitle = page_title %}
+    {% assign ogDescription = settings.og_description %}
+    {% assign ogImage = settings.og_image | img_url: "1000x", format: 'pjpg' %}
+    {% assign ogImageAlt = settings.og_image.alt %}
+    {% assign ogType = "website" %}
+
+{% endif %}
+
+{% comment %}
+    Strip extra space and HTML.
+{% endcomment %}
+{% assign ogDescription = ogDescription | strip | strip_html | strip_newlines %}
+
+{% comment %}
+    If there's a missing image, revert to the default one.
+{% endcomment %}
+{% if ogImage contains "no-image" %}
+    {% assign ogImage = settings.og_image | img_url: "1000x", format: 'pjpg' %}
+{% endif %}
+
+{% comment %}
+    Prepend https: to images.
+{% endcomment %}
+{% assign ogImage = ogImage | remove: "http:" | remove: "https:" | prepend: "https:" %}
+
+
+
+{% comment %}
+    Open graph
+{% endcomment %}
+<meta property="og:type"        content="{{ ogType }}">
+<meta property="og:title"       content="{{ ogTitle }}">
+<meta property="og:description" content="{{ ogDescription }}">
+<meta property="og:image"       content="{{ ogImage }}">
+<meta property="og:url"         content="{{ ogURL }}">
+<meta property="og:site_name"   content="{{ shop.name }}">
+
+{% comment %}
+    Twitter
+{% endcomment %}
+<meta name="twitter:card"      content="summary_large_image">
+<meta name="twitter:image:alt" content="{{ ogImageAlt }}">

@@ -1,0 +1,92 @@
+{% schema %}
+{
+    "name":"About",
+    "blocks":[
+        {
+            "name":"Section",
+            "type":"section",
+            "settings":[
+                {
+                    "id":"image",
+                    "type":"image_picker",
+                    "label":"Section Image",
+                    "info": "1300x867"
+                },
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"Section Title"
+                },
+                {
+                    "id":"text",
+                    "type":"textarea",
+                    "label":"Section Text"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+{% if section.blocks.size > 0 %}
+
+    <div class="section">
+
+        <div class="page-max-width">
+
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+
+                <div class="text-col" {{ block.shopify_attributes }}>
+
+                    {% comment %}
+                        Title above image on mobile.
+                    {% endcomment %}
+                    {% if b.title != blank %}
+
+                        <div class="hide-at--tablet">
+                            <h2 class="text-style-1-inline  text-size-l  text-col__title">{{ b.title }}</h2>
+                        </div>
+
+                    {% endif %}
+
+                    {% if b.image %}
+
+                        <figure class="text-col__image">
+                            <img src="{{ b.image | img_url: '1300x', format: 'pjpg' }}" alt="{{ b.image.alt }}">
+                        </figure>
+
+                    {% endif %}
+
+                    {% comment %}
+                        Title below image on desktop.
+                    {% endcomment %}
+                    {% if b.title != blank %}
+
+                        <div class="show-at--tablet">
+                            <h2 class="text-style-1-inline  text-size-l  text-col__title">{{ b.title }}</h2>
+                        </div>
+
+                    {% endif %}
+
+                    {% if b.text != blank %}
+                        <div class="rte  first-letter  text-col__text">{{ b.text | newline_to_br }}</div>
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% else %}
+
+    {% comment %}
+        Use the page's content if theres no blocks.
+    {% endcomment %}
+    <div class="rte">{{ page.content }}</div>
+
+{% endif %}

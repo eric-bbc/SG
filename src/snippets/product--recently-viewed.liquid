@@ -1,0 +1,53 @@
+<div class="recently-viewed__outer">
+    <div
+    class="page-max-width  recently-viewed"
+    data-max-products="{{ settings.recent_products_limit }}" 
+    data-product-handle="{{ product.handle }}"
+    data-product-storage-key="{{ product.handle | replace: "-", "_" }}"></div>
+</div>
+
+
+<script id="recentlyViewedTemplate" type="text/template">
+    
+    <h3 class="recently-viewed__title">
+        {{ 'product.recent_products' | t }}
+    </h3>
+
+    {% raw %}
+
+        <div class="grid">
+
+            {{#products}}
+
+                <div class="grid-product  grid__item  grid__item--has-hover">
+
+                    <a href="{{ url }}">
+
+                        <div class="grid-product__image  object-wrap  object-wrap--product-image">
+
+                            <figure
+                            class="object  js-lazy-load"
+                            style="background-image: url('{{ featured_image }}');"></figure>
+
+                        </div>
+
+                    </a>
+
+                    <div class="grid-text">
+
+                        <a href="{{ url }}">
+                            <div class="grid-text__title">{{ title }}</div>
+                            <div class="grid-text__cta">Shop Now</div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            {{/products}}
+
+        </div>
+
+    {% endraw %}
+
+</script>

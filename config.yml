@@ -1,0 +1,7 @@
+development:
+  password: de70e39cb2e5bc9f29e4229e62e525c5
+  theme_id: "11524669491"
+  store: sidney-garber.myshopify.com
+
+ignore_files:
+     - config/settings_data.json

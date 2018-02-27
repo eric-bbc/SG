@@ -1,0 +1,111 @@
+{% schema %}
+{
+    "name":"Hero Carousel",
+    "max_blocks":6,
+    "blocks":[
+        {
+            "name":"Slide",
+            "type":"Slide",
+            "settings":[
+                {
+                    "id":"image",
+                    "type":"image_picker",
+                    "label":"Desktop Image",
+                    "info": "1456x728"
+                },
+                {
+                    "id":"mobile_image",
+                    "type":"image_picker",
+                    "label":"Mobile/Tablet Image",
+                    "info": "1406x1803"
+                },
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"Title"
+                },
+                 {
+                    "id":"title_alignment",
+                    "type":"select",
+                    "label":"Title Alignment",
+                    "options": [
+                         {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                    ],
+                    "default": "left"
+                },
+                {
+                    "type":"url",
+                    "id":"link",
+                    "label":"Link"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "category":"Hero Carousel",
+            "name":"Hero Carousel"
+        }
+    ]
+}
+{% endschema %}
+
+{% if section.blocks.size > 0 %}
+
+    <div class="page-max-width">
+
+        <div class="hero-carousel">
+
+            <div class="js-slick-slider  slick-slider--push-nav  slick-slider--offset-dots" data-slick='{"autoplay": "true"}'>
+
+                {% for block in section.blocks %}
+
+                    {% assign b = block.settings %}
+
+                    <div {{ block.shopify_attributes }}>
+
+                        {% if b.link != blank %}
+                            <a href="{{ b.link }}" {% if b.newtab %}target="_blank"{% endif %}>
+                        {% endif %}
+
+                            <div class="object-wrap  object-wrap--1-2  hero-carousel__desktop-image">
+                                <figure
+                                class="object"
+                                style="background-image: url('{{ b.image | img_url: '2560x', format: 'pjpg' }}');" title="{{ b.image.alt }}"></figure>
+                            </div>
+
+                            <div class="object-wrap  object-wrap--4-3 hero-carousel__mobile-image">
+                                <figure
+                                class="object"
+                                style="background-image: url('{{ b.mobile_image | img_url: '900x', format: 'pjpg' }}');" title="{{ b.mobile_image.alt }}"></figure>
+                            </div>
+
+                            {% if b.title != blank %}
+                                <div class='hero-carousel__title' style="text-align: {{ b.title_alignment }}">{{ b.title }}</div>
+                            {% endif %}
+
+                        {% if b.link != blank %}
+                            </a>
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+
+{% endif %}

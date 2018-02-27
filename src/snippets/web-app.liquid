@@ -1,0 +1,25 @@
+{% comment %}
+    Good reference:
+    https://gist.github.com/tfausak/2222823
+{% endcomment %}
+
+
+{% comment %}
+    Color the status bar on mobile devices
+{% endcomment %}
+<meta name="theme-color" content="#1d284f">
+<meta name="apple-mobile-web-app-status-bar-style" content="#1d284f">
+
+
+{% comment %}
+    App title
+{% endcomment %}
+<meta name="application-name" content="{{ shop.name }}">
+<meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
+
+
+{% comment %}
+    Icons
+{% endcomment %}
+<link rel="apple-touch-icon" sizes="114x114" href="{{ 'icon--114.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ 'icon--144.png' | asset_url }}">

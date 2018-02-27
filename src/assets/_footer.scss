@@ -1,0 +1,79 @@
+.main-footer{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    padding-top:    3rem;
+    padding-bottom: 3rem;
+    background-color: map-get($color, "black-30");
+    color: map-get($color, "white");
+}
+
+
+.main-footer__inner{
+    @include page-max-width;
+}
+
+
+.main-footer__row{
+    @include flex;
+}
+
+
+.main-footer__col{
+    width: 50%;
+
+    @include mq($desktopBreakpoint){
+        width: 20%;
+    }
+
+    // NOTE: Assuming $desktopBreakpoint is smaller than "large-desktop".
+    @include mq("large-desktop"){
+        width: 25%;
+    }
+}
+
+
+.main-footer__col--newsletter{
+    width: 100%;
+    margin-top: 5rem;
+
+    @include mq($desktopBreakpoint){
+        width: 40%;
+        margin-top: 0;
+    }
+
+    // NOTE: Assuming $desktopBreakpoint is smaller than "large-desktop".
+    @include mq("large-desktop"){
+        width: 25%;
+    }
+}
+
+
+.main-footer__col--sm{
+    margin-top: 2rem;
+
+    @include mq($desktopBreakpoint){
+        margin-top: 0;
+    }   
+}
+
+
+.main-footer__link{
+    @include text-hover;
+    @include sans-serif-book;
+    @include text-style-3;
+    display: inline-block;
+    padding: 0.8rem 0;
+}
+
+
+.main-footer__link--sm{
+    @include serif-italic;
+    font-size: inherit;
+    text-transform: none;
+}
+
+
+.main-footer__copyright{
+    margin-top: 3rem;
+    font-size: smaller;
+}

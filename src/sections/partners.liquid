@@ -1,0 +1,357 @@
+{% schema %}
+{
+    "name":"Partners",
+    "blocks":[
+        {
+            "name":"Partner",
+            "type":"partner",
+            "settings":[
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"Partner/Boutique Name"
+                },
+                {
+                    "id":"is_boutique",
+                    "type":"checkbox",
+                    "label":"Boutique",
+                    "default": false
+                },
+                {
+                    "id":"region",
+                    "type":"text",
+                    "label":"Region"
+                },
+                {
+                    "id":"partner_address",
+                    "type":"textarea",
+                    "label":"Partner Address"
+                },
+                {
+                    "id":"partner_phone",
+                    "type":"text",
+                    "label":"Partner Phone"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+
+
+{% comment %}
+    NOTE: Boutique regions are seperate from partner regions.
+    NOTE: Boutiques are partners share the same classes.
+{% endcomment %}
+{% if section.blocks.size > 0 %}
+
+
+
+    {% comment %}
+        Get each partner region.
+    {% endcomment %}
+    {% capture partnerRegions %}{% endcapture %}
+
+    {% for block in section.blocks %}
+
+        {% assign b = block.settings %}
+
+        {% if b.region != blank and b.is_boutique == false %}
+            {% capture partnerRegions %}{{ partnerRegions }}{% unless forloop.first %},{% endunless %}{{ b.region }}{% endcapture %}
+        {% endif %}
+
+    {% endfor %}
+
+    {% comment %}
+        Split the partner regions into a unique array.
+    {% endcomment %}
+    {% assign partner_regions_arr = partnerRegions | split: "," | uniq %}
+    {% assign partner_regions_arr_size = partner_regions_arr | size %}
+
+
+
+    {% comment %}
+        Get each boutique region.
+    {% endcomment %}
+    {% capture boutiqueRegions %}{% endcapture %}
+
+    {% for block in section.blocks %}
+
+        {% assign b = block.settings %}
+
+        {% if b.region != blank and b.is_boutique %}
+            {% capture boutiqueRegions %}{{ boutiqueRegions }},{{ b.region }}{% endcapture %}
+        {% endif %}
+
+    {% endfor %}
+
+
+    {% comment %}
+        Split the boutique regions into a unique array.
+    {% endcomment %}
+    {% assign boutique_regions_arr = boutiqueRegions | remove_first: "," | split: "," | uniq %}
+    {% assign boutique_regions_arr_size = boutique_regions_arr | size %}
+
+
+
+    {% comment %}
+        Get both partner/boutique regions.
+    {% endcomment %}
+    {% capture regions %}{% endcapture %}
+
+    {% for block in section.blocks %}
+
+        {% assign b = block.settings %}
+
+        {% if b.region != blank %}
+            {% capture regions %}{{ regions }},{{ b.region }}{% endcapture %}
+        {% endif %}
+
+    {% endfor %}
+
+    {% comment %}
+        Split the regions into a unique array.
+    {% endcomment %}
+    {% assign regions_arr = regions | remove_first: "," | split: "," | uniq %}
+
+
+
+    <div class="section">
+    
+        <div class="page-max-width">
+
+            {% if partner_regions_arr_size > 0 %}
+                
+                <div class="partners">
+
+                    <h2 class="partners__title  ttu">Our Partners</h2>
+                
+                    {% comment %}
+                        Loop thru the partner regions.
+                    {% endcomment %}
+                    {% for region in partner_regions_arr %}
+
+                        <div class="partner-region">
+
+                            <h3 class="partner-region__title">{{ region }}</h3>
+
+                            <div class="partner-region__row">
+                        
+                                {% for block in section.blocks %}
+
+                                    {% assign b = block.settings %}
+
+                                    {% comment %}
+                                        Get the blocks whose region matches that of a partner region.
+                                    {% endcomment %}
+                                    {% if b.region == region and b.is_boutique == false %}
+
+                                    <div class="partner-region__partner  address" {{ block.shopify_attributes }}>
+                                        
+                                        <div class="address__inner">
+
+                                            {% if b.title != blank %}
+                                                <div class="address__title  address__line">{{ b.title }}</div>
+                                            {% endif %}
+
+                                            {% if b.partner_address != blank %}
+
+                                                <div class="address__address  address__line">{{ b.partner_address | strip_html | newline_to_br }}</div>
+
+                                                <div class="address__map-toggle  address__line  js-partner-map-toggle" data-map-index="{{ forloop.index0 }}">Map</div>
+                                            {% endif %}
+
+                                            {% if b.partner_phone != blank %}
+                                                <a class="address__phone address__line" href="tel:{{ b.partner_phone | remove: "-" }}">
+                                                    {{ b.partner_phone }}
+                                                </a>
+                                            {% endif %}
+
+                                        </div>
+
+                                    </div>
+                                        
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+
+            {% comment %}
+                Make sure we have boutiques.
+            {% endcomment %}
+            <div class="partners  partners--boutiques">
+
+                <h2 class="partners__title  section-title  serif-italic">Our Boutiques</h2>
+
+                {% comment %}
+                    Loop thru the boutique regions.
+                {% endcomment %}
+                <div class="partner-region">
+
+                    <h3 class="partner-region__title">{{ region }}</h3>
+
+                    <div class="partner-region__row">
+                
+                        {% for block in section.blocks %}
+
+                            {% assign b = block.settings %}
+
+                            {% if b.is_boutique %}
+
+                            <div class="partner-region__partner  address" {{ block.shopify_attributes }}>
+                                
+                                <div class="address__inner">
+
+                                    {% if b.title != blank and b.title != region %}
+                                        <div class="address__title  address__line">{{ b.title }}</div>
+                                    {% endif %}
+
+                                    {% if b.partner_address != blank %}
+
+                                        <div class="address__address  address__line">{{ b.partner_address | strip_html | newline_to_br }}</div>
+                                    
+                                        <div class="address__map-toggle  address__line  js-partner-map-toggle" data-map-index="{{ forloop.index0 }}">Map</div>
+
+                                    {% endif %}
+
+                                    {% if b.partner_phone != blank %}
+                                        <a class="address__phone address__line" href="tel:{{ b.partner_phone | remove: "-" }}">
+                                            {{ b.partner_phone }}
+                                        </a>
+                                    {% endif %}
+
+                                </div>
+
+                            </div>
+                            
+                        {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    {% comment %}
+        Create the google map markup where the maps will live.
+    {% endcomment %}
+    <div class="partner-maps  js-partner-maps">
+
+        {% for region in regions_arr %}
+            {% for block in section.blocks %}
+
+                {% assign b = block.settings %}
+
+                {% if b.region == region %}
+
+                    <div class="partner-maps__inner">
+
+                        <div class="partner-maps__map-size">
+
+                            <span class="partner-maps__close  right-corner-click-offset  close"></span>
+
+                            <div id="map-{{ forloop.index0 }}" class="partner-maps__map  js-partner-map" data-map-index="{{ forloop.index0 }}"></div>    
+                                
+                        </div>
+
+                    </div>
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+
+
+
+    {% comment %}
+        Script to init a google map for each boutique/partner address.
+    {% endcomment %}
+    <script>
+
+        function initMap() {
+
+            {% for region in regions_arr %}
+                {% for block in section.blocks %}
+
+                    {% assign b = block.settings %}
+
+                    {% if b.region == region and b.partner_address != blank %}
+
+                        {% assign index = forloop.index0 %}
+
+                        var address = "https://maps.googleapis.com/maps/api/geocode/json?address={{ b.partner_address | url_encode }}&key=AIzaSyCC1o0KqxWBo72i6XJxlEypOzfYsTgOtUM";
+
+                        $.get(address, function( data ) {
+
+                            if(data.results.length){
+
+                                var mapID = "map-{{ index }}";
+
+                                var coords = {
+                                    lat: data.results[0].geometry.location.lat,
+                                    lng: data.results[0].geometry.location.lng
+                                };
+
+                                var map = new google.maps.Map(document.getElementById(mapID), {
+                                    center: coords,
+                                    disableDoubleClickZoom: false,
+                                    gestureHandling: true,
+                                    clickableIcons: false,
+                                    disableDefaultUI: true,
+                                    scrollwheel: false,
+                                    zoom: 18,
+                                    styles: [
+                                        {% include 'g-map-styles.json' %}
+                                    ]
+                                });
+                            
+                                var marker = new google.maps.Marker({
+                                    position: coords,
+                                    map: map
+                                });
+
+                            } else {
+                                console.warn("No results for address: {{ b.partner_address | url_encode }}");
+                            }
+
+                        });
+                                        
+
+                    {% endif %}
+                    
+                {% endfor %}
+            {% endfor %}
+        }
+
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFA_-GbqOkku1NCsz7piEdQaO3oOQMMd4&callback=initMap"></script>
+
+{% else %}
+
+    {% comment %}
+        Use the page's content if theres no blocks.
+    {% endcomment %}
+    <div class="rte">{{ page.content }}</div>
+
+{% endif %}

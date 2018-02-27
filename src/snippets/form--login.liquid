@@ -1,0 +1,72 @@
+<div class="account-form">
+
+    {% form 'customer_login' %}
+
+        <div>
+
+            <fieldset>
+
+                <legend class="account-form__legend">{{ "accounts.sign_in_title" | t }}</legend>
+
+                <div class="relative">
+
+                    <input
+                    type="email"
+                    name="customer[email]"
+                    id="customer_email"
+                    class="input-group__input  input-group__item"
+                    required
+                    {% if autofocus %}autofocus{% endif %}
+                    value="{{ form.email }}">
+
+                    <label for="customer_email" class="input-group__label">{{ "accounts.email_field" | t }}</label>
+
+                </div>
+
+                <div class="relative">
+
+                    <input
+                    type="text"
+                    id="customer_password"
+                    required
+                    class="input-group__input  input-group__item">
+
+                    <label for="customer_password" class="input-group__label">{{ "accounts.password_field" | t }}</label>
+
+                    {% comment %}
+                        NOTE: Trick chrome to not enabling autofill.
+                        It looks for keywords that suggest a login (email/password field combination).
+                        So if we remove those keywords until it's needed it's ok. Probably best to keep autofill, but client prefers design integrity.
+                    {% endcomment %}
+                    <script>
+                        $("#customer_password, #customer_email")
+                        .one("focus", function(){
+                            $("#customer_password")
+                            .attr("name", "customer[password]")
+                            .attr("type", "password");
+                        });
+                    </script>
+
+                </div>
+
+                <small class="js-forgot-password  input-group__item  input-group__item--small  a" data-toggle-class="forgot-password--toggled" data-toggle="html">{{ "accounts.forgot_password" | t }}</small>
+
+                {% if form.errors %}
+                    <div class="message  message--error" role="status">{{ form.errors | default_errors }}</div>
+                {% endif %}
+
+                <button type="submit" class="input-group__item  button  button--primary  button--large">{{ "accounts.sign_in_button" | t }}</button>
+
+            </fieldset>
+
+            <div class="or">Or</div>
+
+            <a href="/account/register/" class="button  button--large  button--secondary  input-group__item  input-group__item--small">Register</a>
+
+        </div>
+
+    {% endform %}
+
+</div>
+
+{% include "form--forgot-password" %}

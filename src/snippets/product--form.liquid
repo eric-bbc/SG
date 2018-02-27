@@ -1,0 +1,106 @@
+{% comment %}
+    Add to cart form
+{% endcomment %}
+<form action="/cart/add" method="post">
+
+
+    {% comment %}
+        Display the variants.
+    {% endcomment %}
+    <div class="{{ namespace }}__options">
+        {% include "product--options" %}
+    </div>
+
+
+    <select name="id" id="productSelect" hidden>
+
+        {% for variant in product.variants %}
+
+            {% if variant.available %}
+
+                <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">
+                    {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+
+            {% else %}
+                <option disabled="disabled">
+                    {{ variant.title }} - Sold Out
+                </option>
+            {% endif %}
+
+        {% endfor %}
+
+    </select>
+
+
+
+    {% comment %}
+        Get proper button value.
+    {% endcomment %}
+    {% capture value %}{{ 'product.add_to_cart' | t }}{% endcapture %}
+
+
+    {% comment %}
+        Set default button status.
+    {% endcomment %}
+    {% assign disabled = false %}
+
+    {% if hasVariant %}
+
+        {% if product.selected_variant %}
+
+            {% comment %}
+                Selected variant with more than 1 option.
+            {% endcomment %}
+            {% if product.options.size > 1 %}
+                {% capture value %}{{ 'product.select_options' | t: option: product.options[1] }}{% endcapture %}
+                {% assign disabled = true %}
+            {% endif %}
+
+            {% if product.selected_variant.available == false %}
+                {% capture value %}{{ 'product.variant_sold_out' | t }}{% endcapture %}
+                {% assign disabled = true %}
+            {% endif %}
+
+        {% else %}
+            {% comment %}
+                No variant selected.
+            {% endcomment %}
+            {% capture value %}{{ 'product.select_options' | t: option: product.options[0] }}{% endcapture %}
+
+            {% assign disabled = true %}
+
+        {% endif %}
+
+    {% endif %}
+
+    {% if productSoldOut %}
+        {% capture value %}{{ 'product.sold_out' | t }}{% endcapture %}
+
+    {% endif %}
+
+
+    {% comment %}
+        Add to cart button.
+    {% endcomment %}
+    <div class="js-status-msg  status-msg">
+
+        <input
+        id="AddToCart"
+        type="submit"
+        class="js-add-to-cart  button  button--primary  button--large  button--full  {{ namespace }}__add-to-cart"
+        name="add"
+        value="{{ value }}"
+        data-default-value="{{ 'product.add_to_cart' | t }}"
+        aria-live="assertive"
+        {%- comment %}
+        {% if disabled %}disabled{% endif %}
+        	This is a foo
+        {% endcomment -%}
+        >
+
+        <div class="js-form-status  product__message  message  message--error" role="status"></div>
+
+    </div>
+
+</form>

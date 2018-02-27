@@ -1,0 +1,43 @@
+{% comment %}
+    Reset used for each product.
+{% endcomment %}
+{% assign used = "" %}
+{% assign excluded = false %}
+
+{% comment %}
+    Based on a tag on the product, we will exclude showing variants.
+    NOTE: We will also exclude if theres active filters. We do this because if the user filters by white colors and we show all the color variants, other colors will show and likely confuse the user.
+{% endcomment %}
+{% if product.tags contains settings.show_all_colors_tag %}
+    {% assign excluded = true %}
+{% endif %}
+
+{% if current_tags %}
+
+    {% for tag in current_tags %}
+
+        {% if tag contains "color-" %}
+            {% assign excluded = true %}
+        {% endif %}
+
+    {% endfor %}
+
+{% endif %}
+
+{% if prodColorOption contains "color" and excluded == false %}
+
+    {% for variant in product.variants %}
+
+        {% unless used contains variant[colorOption] %}
+
+            {% include 'product--loop' scope: variant, scopeString: "variant" %}
+
+            {% capture used %}{{ used }} {{ variant[colorOption] }}{% endcapture %}
+
+        {% endunless %}
+
+    {% endfor %}
+
+{% else %}
+    {% include 'product--loop' scope: product %}
+{% endif %}

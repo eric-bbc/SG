@@ -1,0 +1,90 @@
+{
+  "general": {
+    "cart": "Bag",
+    "search": "Search Products"
+  },
+  "cart": {
+    "item_count_html": "You have <span class=js-cart-count>{{ count }}<\/span> items in your bag.",
+    "close": "Close",
+    "sub_total": "Subtotal:",
+    "details": "Details:",
+    "quantity": "Qty:",
+    "item_price": "Price",
+    "checkout": "Checkout",
+    "item_summary": "Item Summary",
+    "order_summary": "Order Summary",
+    "gift_note": "Add a message"
+  },
+  "collection": {
+    "empty_collection_html": "There are no products in this collection.",
+    "sort": "Sort by",
+    "remove_filters": "None",
+    "pagination_load_more": "Load {{ count }} more",
+    "no_filter_results_html": "No products matched your selection.<br>Try removing removing some filters."
+  },
+  "collection_overview": {
+    "title_html": "Collections <span class='fs--xs'>({{ count }})<\/span>",
+    "empty_collections_html": "There are no collections available. <a href='\/'>Return home<a>"
+  },
+  "product": {
+    "quantity": "Quantity",
+    "add_to_cart": "Add to bag",
+    "sold_out": "Connect to E-Concierge",
+    "variant_sold_out": "Option Sold Out",
+    "select_options": "Select {{ option }}",
+    "related_products": "Complete the Look",
+    "recent_products": "Recently Viewed",
+    "here_to_help_copy": "Our E-Concierge is here to assist with everything from product recommendations to delivery details and service questions. Please don’t hesitate to reach out.",
+    "here_to_help_store_info_html": "Monday – Friday 10:00am - 6:00pm EST",
+    "preorder_message": "Add to Bag",
+    "preorder_expected_date_extras": ""
+  },
+  "newsletter": {
+    "title": "Get updates from us",
+    "email_field": "Your Email",
+    "subscribe": "Join"
+  },
+  "accounts": {
+    "email_field_label": "Email",
+    "password_field_label": "Password",
+    "sign_in_button": "Sign In",
+    "sign_in_title": "Please Sign In",
+    "forgot_password_toggle": "Forgot password?",
+    "forgot_password_title": "Forgot Password",
+    "forgot_password_button": "Send reset instructions",
+    "forgot_password_form_success": "We have emailed you instructions for resetting your password.",
+    "sign_up_title": "Create an account",
+    "sign_up_button": "Create Account",
+    "first_name_field_label": "Your First Name",
+    "last_name_field_label": "Your Last Name",
+    "create_password_field": "Create a password",
+    "continue_as_guest": "Continue as guest",
+    "reset_password_title": "Reset Password",
+    "reset_password_button": "Reset Password",
+    "forgot_password_cancel": "Cancel",
+    "reset_password_field_label": "Create a new password",
+    "reset_password_conf_field_label": "Re-type new password",
+    "password_reset_success": "A reset email has been sent.",
+    "activate_account_title": "Activate your account",
+    "activate_account_button": "Activate",
+    "shop_now": "Shop Now",
+    "shop_now_link": "\/",
+    "sign_out": "Sign Out",
+    "account_overview_title": "My Account",
+    "order_history": "Order History",
+    "no_orders": "You have not placed any orders yet"
+  },
+  "search": {
+    "title_html": "Search <span class='text--m'>({{ count }})",
+    "no_results": "No results for '{{ terms }}' ",
+    "search_submit": "Search"
+  },
+  "404": {
+    "title": "Page not found"
+  },
+  "contact": {
+    "submit": "Send",
+    "cancel": "Cancel",
+    "success_html": "Thank you.<br>We have received your message and we will get back to you shortly."
+  }
+}

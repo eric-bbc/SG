@@ -1,0 +1,84 @@
+
+
+{%- comment %}
+	This is a foo
+<!-- <form id="email_signup" action="{{ settings.newsletter_form_action }}" method="POST" class="js-mc-form  {{ formClass }}"> -->
+<!-- <form id="email_signup" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate"> -->
+  <!-- <input type="hidden" name="g" value="JQwGzs">
+
+        <div class="inline-form">
+
+            {% unless legend == false %}
+                <legend class="legend">Stay in touch.</legend>
+                <div class="legend-description">{{ settings.modal_copy }}</div>
+            {% endunless %}
+
+
+              <input type="email" required name="EMAIL" class="input  input--small" id="{{ emailID }}" placeholder="{{ 'newsletter.email_field' | t }}" autocomplete="off">
+
+          <div class="success_message" style="display:none;" >
+
+          </div>
+
+            <button type="submit" name="subscribe" class="button  button--small  button--white  button--has-arrow">
+              {{ 'newsletter.subscribe' | t }}
+            </button>
+
+        </div>
+
+    </fieldset>
+
+    <div class="message" aria-live="assertive" role="status"></div>
+
+</form>
+
+
+ <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+ <script type="text/javascript">
+ console.log('Jklaviyo');
+   KlaviyoSubscribe.attachToForms('#email_signup', {
+     hide_form_on_success: true,
+     custom_succes_message: true,
+     success_message: "<p>Thank you.</p><p>If you don't see something from us, please check your spam folder.</p>",
+     success_url: "www.sidneygarber.com",
+     success: function(data) {
+       console.log(data);
+       console.log("yes");
+     }
+   });
+ </script> -->
+ {% endcomment -%}
+
+  <form id="email_signup" class=" klaviyo_bare_embed_KHLLnH" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="POST" target="_blank" novalidate="novalidate">
+    <input type="hidden" name="g" value="JQwGzs">
+    <div class="klaviyo_field_group">
+      <legend class="legend">Stay in touch.</legend>
+      <div class="legend-description">We would be delighted to have you in our address book. Please confirm your details below and we will keep you updated.</div>
+      <input type="email" name="email" class="input  input--small" id="k_id_email" placeholder="Your Email" autocomplete="off">
+      <div class="klaviyo_messages">
+        <div class="success_message" style="display:none;"></div>
+      </div>
+      <div class="klaviyo_form_actions">
+        <button type="submit" name="subscribe" class="button  button--small  button--white  button--has-arrow">
+          Join
+        </button>
+      </div>
+    </div>
+    <div class="message" aria-live="assertive" role="status"></div>
+  </form>
+
+
+  <!-- <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+   <script type="text/javascript">
+   console.log('Jklaviyo');
+     KlaviyoSubscribe.attachToForms('#email_signup', {
+       hide_form_on_success: true,
+       custom_succes_message: true,
+       success_message: "<p>Thank you.</p><p>If you don't see something from us, please check your spam folder.</p>",
+       success_url: "https://www.sidneygarber.com",
+       success: function(data) {
+         console.log(data);
+         console.log("yes");
+       }
+     });
+   </script> -->

@@ -1,0 +1,169 @@
+{% schema %}
+{
+    "name":"Article Carousel",
+    "blocks":[
+        {
+            "type": "article",
+            "name": "Article",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "label": "Use Article For Content",
+                    "id": "use_article",
+                    "info": "Select article below. The article's title, image and excerpt will be used to populate content."
+                },
+                {
+                    "type": "header",
+                    "content": "Article Content"
+                },
+                {
+                    "type": "article",
+                    "label": "Article",
+                    "id": "article"
+                },
+                {
+                    "type": "header",
+                    "content": "Custom Content"
+                },
+                {
+                    "type": "text",
+                    "label": "Category",
+                    "id": "category"
+                },
+                {
+                    "type": "text",
+                    "label": "Title",
+                    "id": "title"
+                },
+                {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "image",
+                    "info": "487x324"
+                },
+                {
+                    "type": "textarea",
+                    "label": "Excerpt",
+                    "id": "excerpt"
+                },
+                {
+                    "type": "url",
+                    "label": "Link",
+                    "id": "link"
+                },
+                {
+                    "type": "text",
+                    "label": "CTA",
+                    "id": "cta"
+                },
+                {
+                    "type": "text",
+                    "label": "Quote By",
+                    "id": "quote_byline",
+                    "info": "If present, the content will be treated as a quote."
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "category":"Article",
+            "name":"Article"
+        }
+    ]
+}
+{% endschema %}
+
+
+<div class="show-at--tablet">
+
+    <div class="section-spacing  page-gutter">
+
+        <div class="page-max-width">
+
+            <div class="js-slick-slider  slick-slider--push-nav  slick-slider--push-in  slick-slider--no-dots">
+
+                {% for block in section.blocks %}
+
+                    {% assign b = block.settings %}
+                    {% assign isQuote = false %}
+
+                    {% if b.use_article %}
+
+                        {% assign article = articles[b.article] %}
+                        {% assign articleUrlParts = article.url | split: "/" %}
+                        {% assign blogTitle = articleUrlParts[2] | capitalize %}
+                        {% assign url = article.url %}
+                        {% assign title = article.title %}
+                        {% assign excerpt = article.excerpt_or_content %}
+                        {% assign image = article.image.src | img_url: '600x' %}
+                        {% assign cta = "Read More" %}
+
+                    {% else %}
+
+                        {% assign url = b.link %}
+                        {% assign title = b.title %}
+                        {% assign blogTitle = b.category %}
+                        {% assign excerpt = b.excerpt %}
+                        {% assign image = b.image | img_url: '600x' %}
+                        {% assign cta = b.cta %}
+
+                        {% if b.quote_byline != blank %}
+                            {% assign isQuote = true %}
+                        {% endif %}
+
+                    {% endif %}
+
+                    <div>
+
+                        <div class="article-block  {% unless b.image or article.image %}article-block--full{% endunless %}">
+
+                            <figure class="article-block__image">
+
+                                <div class="object-wrap  object-wrap--2-3">
+
+                                    {% if b.image or article.image %}
+                                        <div class="object  slick-lazy" data-lazy="{{ image }}"></div>
+                                    {% endif %}
+
+                                </div>
+
+                            </figure>
+
+                            <div class="article-text  article-block__text  {%  if isQuote %}article-text--quote{% endif %}">
+
+                                <div>
+
+                                    <div class="article-text__blog">{{ blogTitle }}</div>
+
+                                    <div class="article-text__title">{{ title }}</div>
+
+                                    {% if isQuote %}
+                                        <div class="article-text__byline">{{ b.quote_byline }}</div>
+                                    {% endif %}
+
+                                    {% if excerpt != blank %}
+                                        <div class="article-text__excerpt">{{ excerpt | strip_html | truncatewords: 20, '...' }}</div>
+                                    {% endif %}
+
+                                    {% if cta != blank %}
+                                        <a href="{{ url }}" title="Read full article" class="article-text__cta" {% if b.link != blank %}target="_blank"{% endif %}>{{ cta }}</a>
+                                    {% endif %}
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

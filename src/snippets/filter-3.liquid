@@ -1,0 +1,154 @@
+{% assign gemstoneFilterPrefix = "gemstone-" %}
+{% assign materialFilterPrefix = "material-" %}
+{% assign priceFilterPrefix = "price-" %}
+
+<div class="filter-header">
+  <h1 class="filter-toggle arrow-right" >Filter</h1>
+
+  {% if current_tags %}
+  <div class="active-collection-filters collection-filter-wrapper">
+
+    <div class="reset-filter">
+      {% for tag in current_tags %}
+      {% if tag contains 'price-'%}
+      {% assign unPrefixedTag = tag %}
+      {{ unPrefixedTag | link_to_remove_tag: tag | replace: "<a", "<a class='filter-bar__tag  filter-bar__tag--inline  filter-bar__tag--remove price-tag'" }}
+      {% else %}
+
+      {% assign unPrefixedTag = tag | remove: gemstoneFilterPrefix | remove: materialFilterPrefix | replace: '-', ' '  %}
+      {{ unPrefixedTag | link_to_remove_tag: tag | replace: "<a", "<a class='filter-bar__tag  filter-bar__tag--inline  filter-bar__tag--remove'"}}
+      {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+{% endif %}
+
+{% include "sort" %}
+
+</div>
+<div class="filter-toggle-section">
+
+
+
+{% comment %}
+Price Filter
+{% endcomment %}
+{% assign priceFilters = "price-under-5000,price-5001-9999,price-10000-19999,price-20000-50000,price-over-50000" | split: "," %}
+
+<div class="collection-filter-wrapper js-dropdown-hover open">
+
+  <div class="collection-filter-trigger">Price</div>
+  <ul class="clearfix price-tags">
+    {% for tag in current_tags %}
+    {% if tag contains 'price-' %}
+    {% assign has-price = true %}
+    {%break%}
+    {% endif %}
+    {% endfor %}
+
+
+    {% for tag in priceFilters %}
+    {% if current_tags contains tag %}
+          <li class="active {{tag}}">
+            {{ tag | link_to_remove_tag: tag }}
+          </li>
+    {% else %}
+      {% if has-price %}
+      <li class="eee {{tag}}">
+          {{ tag | link_to_tag: tag }}
+        </li>
+      {% else %}
+        <li class="vvv {{tag}}">
+          {{ tag | link_to_add_tag: tag }}
+        </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+</div>
+
+{% comment %}
+MATERIAL FILTER
+{% endcomment %}
+
+<div class="collection-filter-wrapper js-dropdown-hover open">
+
+  <div class="collection-filter-trigger">Material</div>
+  <ul class="clearfix">
+    {% for tag in current_tags %}
+    {% if tag contains 'material-' %}
+    {% assign has-material = true %}
+    {%break%}
+    {% endif %}
+    {% endfor %}
+
+
+    {% for tag in collection.all_tags %}
+    {% if tag contains 'material-' %}
+    {% if current_tags contains tag %}
+    <li class="{{tag}}">
+      {{ tag | remove: "material-" | replace: '-', ' ' | link_to_remove_tag: tag }}
+    </li>
+    {% else %}
+    {% if has-material %}
+    <li class="eee {{tag}}">
+      {{ tag | remove: "material-" | replace: '-', ' ' | link_to_tag: tag }}
+    </li>
+    {% else %}
+    <li class="vvv {{tag}}">
+      {{ tag | remove: "material-" | replace: '-', ' ' | link_to_add_tag: tag }}
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+</div>
+
+
+{% comment %}
+GEMSTONE FILTER
+{% endcomment %}
+
+<div class="collection-filter-wrapper js-dropdown-hover open">
+
+  <div class="collection-filter-trigger">Gemstone</div>
+  <ul class="clearfix">
+    {% for tag in current_tags %}
+    {% if tag contains 'gemstone-' %}
+    {% assign has-gemstone = true %}
+    {%break%}
+    {% endif %}
+    {% endfor %}
+
+
+    {% for tag in collection.all_tags %}
+    {% if tag contains 'gemstone-' %}
+    {% if current_tags contains tag %}
+    <li class=" {{tag}}">
+      {{ tag | remove: "gemstone-" | replace: '-', ' ' | link_to_remove_tag: tag }}
+    </li>
+    {% else %}
+    {% if has-gemstone %}
+    <li class="eee {{tag}}">
+      {{ tag | remove: "gemstone-" | replace: '-', ' ' | link_to_tag: tag }}
+    </li>
+    {% else %}
+    <li class="vvv {{tag}}">
+      {{ tag | remove: "gemstone-" | replace: '-', ' ' | link_to_add_tag: tag }}
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+</div>
+
+</div>

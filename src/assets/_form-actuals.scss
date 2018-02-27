@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    #CONTACT/PRESS FORMS
+\*------------------------------------*/
+
+html.contact-form--toggled{
+    @include lock-scroll;
+
+    .contact-form.form-overlay{
+        opacity: 1;
+        visibility: visible;
+    }
+
+  //   .close-toggle {
+  //     cursor: pointer;
+  //     background: black;
+  //     color: white;
+  //     @include bg-cover;
+  //     content: "";
+  //
+  //     background-image: url("close.svg?v=#{random();}");
+  //
+  //     $width: 2rem;
+  //     $ratio: 1;
+  //
+  //     width:  $width;
+  //     height: #{$width * $ratio};
+  //     display: block;
+  //     margin-left:  auto;
+  //     margin-right: 0;
+  //     margin-top: -2rem;
+  // }
+}
+
+
+html.press-form--toggled{
+    @include lock-scroll;
+
+    .press-form.form-overlay{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+html.product-here-to-help-form--toggled{
+    @include lock-scroll;
+
+    .product-here-to-help-form.form-overlay{
+
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.close-toggle {
+  cursor: pointer;
+  background: black;
+  color: white;
+  @include bg-cover;
+  content: "";
+
+  background-image: url("close.svg?v=#{random();}");
+
+  $width: 2rem;
+  $ratio: 1;
+
+  width:  $width;
+  height: #{$width * $ratio};
+  display: block;
+  margin-left:  auto;
+  margin-right: 0;
+  margin-top: -2rem;
+}

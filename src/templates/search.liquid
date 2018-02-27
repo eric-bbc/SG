@@ -1,0 +1,53 @@
+<div class="section">
+
+    <h1 class="sr">Search</h1>
+
+    {% capture searchIcon %}<span class="fa  fa-search"></span>{% endcapture %}
+
+    {% comment %}
+        Search performed and no results.
+    {% endcomment %}
+    {% if search.performed and search.results == empty %}
+        <h2 class="search-template__no-results">
+            {{ "search.no_results" | t: terms: search.terms }}
+        </h2>
+    {% endif %}
+
+
+    {% comment %}
+        Always show the search form.
+    {% endcomment %}
+    {% include "form--search" namespace: "search-template" buttonText: searchIcon, placeholder: "Search Products" %}
+
+
+    {% comment %}
+        Search performed and results.
+    {% endcomment %}
+    {% if search.performed and search.results != empty %}
+
+        {% comment %}
+            Search performed and results found.
+        {% endcomment %}
+        {% paginate search.results by settings.pagination_limit %}
+
+            <div class="page-max-width">
+
+                <div class="page-top-gutter  grid">
+
+                    {% assign results = search.results %}
+
+                    {% for product in results %}
+                        {% include "product--loop" %}
+                    {% endfor %}
+
+                </div>
+
+                {% include "pagination" %}
+
+            </div>
+
+        {% endpaginate %}
+
+    {% endif %}
+
+</div>

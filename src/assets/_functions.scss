@@ -1,0 +1,970 @@
+/*------------------------------------*\
+    #STRUCTURE
+\*------------------------------------*/
+
+/*
+@description
+Returns the "padding" key from our $page map in your specified property.
+
+@param $prop {property}
+The CSS property that the value will be applied to.
+
+@example
+@include page-padding(padding-left);
+@include page-padding(padding-right);
+*/
+@mixin page-padding($prop){
+    #{$prop}: map-get($page, "padding");
+
+    @include mq($desktopBreakpoint){
+        #{$prop}: map-get($page, "padding-desktop");
+    }
+}
+
+
+@mixin page-top-gutter($prop: padding-top){
+    #{$prop}: 2rem;
+
+    @include mq($desktopBreakpoint){
+        #{$prop}: 4rem;
+    }
+}
+
+
+@mixin page-bottom-gutter($prop: padding-bottom){
+    #{$prop}: 2rem;
+
+    @include mq($desktopBreakpoint){
+        #{$prop}: 4rem;
+    }
+}
+
+
+@mixin page-max-width{
+    max-width: 110rem;
+    margin-left:  auto;
+    margin-right: auto;
+
+    @include mq('large-desktop'){
+        max-width: 125rem;
+    }
+
+    @include mq('x-large-desktop'){
+        max-width: 130rem;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+@mixin section{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    padding-top:    4rem;
+    padding-bottom: 4rem;
+    background-color: map-get($color, "gray-45");
+}
+
+
+@mixin section-block{
+    @include page-padding(padding-left);
+    @include page-padding(padding-right);
+    text-align: center;
+    border: solid 0.1rem map-get($color, "gray-40");
+    background-color: map-get($color, "gray-45");
+
+    @include mqMax('tablet'){
+        border-left:  none;
+        border-right: none;
+    }
+
+    @include mq('tablet'){
+        padding: 2.5rem;
+        padding-top: 0;
+    }
+}
+
+
+@mixin section-block-outer{
+    @include section;
+
+    @include mqMax('tablet'){
+        padding-left:  0;
+        padding-right: 0;
+    }
+}
+
+
+@mixin section-block-title{
+    @include text-style-2;
+    @include text-style-1(true);
+    @include text-size-l;
+    text-transform: uppercase;
+}
+
+
+
+@mixin section-spacing($prop: margin-top){
+    #{$prop}: 6rem;
+
+    @include mq('tablet'){
+        #{$prop}: 9rem;
+    }
+}
+
+
+
+@mixin section-title{
+    text-align: center;
+}
+
+
+
+/*
+@description
+Provides a consistent transition.
+
+@param $props {CSS property}
+Any transitionable CSS property.
+Defaults to all.
+
+@param $speed {key}
+A key in the $transition-speed map.
+Defauls to fast.
+
+@example
+@include trans; // default is all
+@include trans(padding);
+@include trans("opacity, padding");
+*/
+@mixin trans($props: all, $speed: "fast"){
+    transition-property: unquote($props);
+    transition-timing-function: ease-in-out;
+    transition-duration: map-get($transition-speed, $speed);
+}
+
+
+
+/*------------------------------------*\
+    #MEDIA-QUERIES
+\*------------------------------------*/
+
+/*
+@description
+Mixin for a basic media query from our $media-query
+map.
+
+@param {string} query
+A key in our $media-query map that we are fetching.
+
+@example
+.hello{
+    @include mq("m"){
+        color: red;
+    }
+}
+*/
+
+@mixin mq($query){
+    @if(map_has_key($media-query, $query)){
+        @media #{map-get($media-query, $query)}{
+            @content;
+        }
+    }
+}
+
+
+
+/*
+@description
+Mixin for a basic max width media query from our $media-query
+map.
+
+@param {string} query
+A key in our $media-query map that we are fetching.
+
+@example
+.hello{
+    @include mqMax("m"){
+        color: red;
+    }
+}
+*/
+
+@mixin mqMax($query){
+    @if(map_has_key($media-query-max, $query)){
+        @media #{map-get($media-query-max, $query)}{
+            @content;
+        }
+    }
+}
+
+
+
+/*
+@description
+Mixin for checking if the browser has touchevents.
+@example
+.hello{
+    @include touch{
+        opacity: 1;
+    }
+}
+*/
+
+@mixin touch{
+    $selector: &;
+
+    @at-root{
+        .touchevents{
+            #{$selector}{
+                @content;
+            }
+        }
+    }
+}
+
+
+
+@mixin cover{
+    position: absolute;
+    top:    0;
+    left:   0;
+    height: 100%;
+    width:  100%;
+}
+
+
+@mixin cover-fixed{
+    position: fixed;
+}
+
+
+
+@mixin fullscreen{
+    @include cover;
+    @include cover-fixed;
+    z-index: map-get($z-index, "overlay");
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: map-get($color, "overlay");
+}
+
+
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@mixin flex-center{
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@mixin vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+@mixin fade-out{
+    @include trans(opacity, visibility);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+@mixin fade-in{
+    @include trans(opacity, visibility);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+@mixin cta{
+    @include a;
+    @include serif-italic;
+    border-bottom: solid 1px currentColor;
+    display: inline-block;
+}
+
+
+
+@mixin placeholder{
+
+    &::-webkit-input-placeholder{
+        @content;
+    }
+
+    &:-moz-placeholder{
+        @content;
+    }
+
+    &::-moz-placeholder{
+        @content;
+    }
+
+    &:-ms-input-placeholder{
+        @content;
+    }
+}
+
+
+
+@mixin showAt{
+
+    @each $key, $value in $media-query-values{
+
+        .show-at--#{$key}{
+            display: none;
+
+            @include mq($key){
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+@mixin hideAt{
+
+    @each $key, $value in $media-query-values{
+
+        .hide-at--#{$key}{
+
+            @include mq($key){
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+@mixin z{
+    transform: translateZ(0);
+}
+
+
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+
+@mixin bg-cover{
+    background-position: 50%;
+    object-position:     50%;
+    background-size: cover;
+    object-fit:      cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@mixin object{
+    @include cover;
+    @include bg-cover;
+    background-color: map-get($color, "gray-40");
+}
+
+
+@mixin object-repeat{
+    object-fit:      initial;
+    background-size: initial;
+    background-repeat: repeat;
+}
+
+
+
+@mixin allow-y-scroll{
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+@mixin a{
+    cursor: pointer;
+}
+
+
+
+@mixin over{
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/*
+Creates spacing classes based on our $spacing map.
+Ex output:.mt-s{
+    margin-top: 3rem;
+}
+*/
+@mixin create-spacing-classes{
+
+    $props: (
+        "margin-top": "mt",
+        "margin-right": "mr",
+        "margin-bottom": "mb",
+        "padding-bottom": "pb",
+        "padding-top": "pt"
+    );
+
+    @each $key, $value in $spacing{
+
+        @each $prop, $propsVal in $props{
+
+            .#{$propsVal}-#{$key}{
+                #{$prop}: $value;
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/*
+@description: Scales an initial font size from our $font-size map.
+@param {string} $fontKey: a key in the $font-size map.
+@param {string} $scaleKey: a key in the $font-scales map.
+@returns: $fontKey value * $scaleKey value.
+@example: font-size: scale-font("xs", "m");
+          font-size: scale-font("default", "l");
+*/
+@function scale-font($fontKey, $scaleKey){
+
+    // Get the base font-size from the $font-size map.
+    $size: map-get($font-size, $fontKey);
+
+    // Get the scale amount from the $font-scales map.
+    $scale: map-get($font-scales, $scaleKey);
+
+    // Get the product of the two.
+    $product: $size * $scale;
+
+    // Return the new scaled font-size.
+    @return $product;
+}
+
+
+
+@mixin sans-serif-book{
+    font-family: 'GothamBook', sans-serif;
+}
+
+
+@mixin sans-serif-bold{
+    font-family: 'GothamBold', sans-serif;
+}
+
+
+@mixin serif{
+    font-family: 'BemboStd', serif;
+}
+
+
+@mixin serif-italic{
+    font-family: 'BemboStd-Italic', serif;
+}
+
+
+@mixin serif-semibold-italic{
+    font-family: 'BemboStd-SemiboldItalic', serif;
+}
+
+
+
+@mixin text-style-1($inline: false){
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-left:  2rem;
+    padding-right: 2rem;
+
+    @include mq('tablet'){
+        padding-left:  2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    @if($inline){
+        display: inline-block;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        background-color: map-get($color, "gray-40");
+        left:   0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+        transform: translateY(-17%);
+    }
+}
+
+
+@mixin text-style-2{
+    transform: translateY(-60%);
+}
+
+
+@mixin text-style-3{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+
+
+@mixin text-size-default{
+   font-size: map-get($font-size, "default");
+}
+
+
+@mixin text-size-xs{
+   font-size: map-get($font-size, "xs");
+
+   @include mq('tablet'){
+       font-size: scale-font("xs", "xs");
+   }
+}
+
+
+@mixin text-size-s{
+   font-size: map-get($font-size, "s");
+
+   @include mq('tablet'){
+       font-size: scale-font("s", "xs");
+   }
+}
+
+
+@mixin text-size-m{
+   font-size: map-get($font-size, "m");
+   line-height: 1.3;
+
+   @include mq('tablet'){
+       font-size: scale-font("m", "s");
+   }
+}
+
+
+@mixin text-size-l{
+   font-size: map-get($font-size, "l");
+   line-height: 1.2;
+
+   @include mq('tablet'){
+       font-size: scale-font("l", "s");
+   }
+}
+
+
+@mixin text-size-xl{
+   font-size: map-get($font-size, "xl");
+   line-height: 1.1;
+
+   @include mq('tablet'){
+       font-size: scale-font("xl", "s");
+   }
+}
+
+
+
+/*------------------------------------*\
+    #EVENTS
+\*------------------------------------*/
+
+@mixin text-hover{
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+@mixin opacity-hover{
+    @include trans(opacity);
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+
+@mixin logo-horizontal-size{
+    $width: 18rem;
+    $ratio: 0.09727536;
+    $height: $width * $ratio;
+
+    width: $width;
+    height: $height;
+    max-width: 100%;
+    display: block;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+@mixin logo-horizontal-size-large{
+    $width: 32rem;
+    $ratio: 0.09727536;
+    $height: $width * $ratio;
+
+    width: $width;
+    height: $height;
+}
+
+
+@mixin logo-horizontal{
+    display: block;
+
+    &:after{
+        @include logo-horizontal-size;
+        content: "";
+        background-image: url("logo-horizontal.svg?v=#{random();}");
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@mixin logo-vertical-size{
+    $width: 5rem;
+    $ratio: 1.044903381642512;
+    $height: $width * $ratio;
+
+    width: $width;
+    height: $height;
+    max-width: 75%;
+    display: block;
+    margin-left:  auto;
+    margin-right: auto;
+
+}
+
+
+@mixin logo-vertical{
+    display: block;
+
+    &:after{
+        @include logo-vertical-size;
+        content: "";
+        // background-image: url("logo-vertical.svg?v=#{random();}");
+        // background-size: contain;
+        // background-position: 50%;
+        // background-repeat: no-repeat;
+
+    }
+}
+
+
+
+@mixin circle{
+    border-radius: 50%;
+}
+
+
+
+@mixin chevron-size{
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width:  1.2rem;
+    height: 1.2rem;
+    display: block;
+}
+
+
+@mixin chevron-right{
+    background-image: url("dropdown-chevron-right.svg?v=#{random();}");
+}
+
+
+@mixin chevron-down{
+    background-image: url("dropdown-chevron-down.svg?v=#{random();}");
+}
+
+
+
+// Arrow background-image.
+@mixin arrow{
+    display: block;
+
+    &:before,
+    &:after{
+        @include bg-cover;
+
+        $width: 1.8rem;
+        $ratio: 0.59373;
+
+        width:  $width;
+        height: #{$width * $ratio};
+        display: block;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+}
+
+
+// Arrow background-image, treated more as an icon font.
+@mixin arrow-inline($hover: false){
+    $this: &;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before,
+    &:after{
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &:before{
+        margin-right: 1rem;
+    }
+
+    &:after{
+        margin-left: 1rem;
+    }
+
+    @if($hover){
+
+        @media (hover: hover){
+
+            &:before,
+            &:after{
+                @include trans(transform);
+            }
+
+            &:hover{
+
+                &:before{
+                    transform: translateX(-35%);
+                }
+            }
+
+            &:hover{
+
+                &:after{
+                    transform: translateX(35%);
+                }
+            }
+        }
+    }
+}
+
+
+// Left facing arrow.
+@mixin arrow-left($white: false){
+
+    &:before{
+        content: "";
+
+        @if($white){
+            background-image: url("arrow-left-white.svg?v=#{random();}");
+        } @else {
+            background-image: url("arrow-left.svg?v=#{random();}");
+        }
+    }
+}
+
+
+// Right facing arrow.
+@mixin arrow-right($white: false){
+
+    &:after{
+        content: "";
+
+        @if($white){
+            background-image: url("arrow-right-white.svg?v=#{random();}");
+        } @else {
+            background-image: url("arrow-right.svg?v=#{random();}");
+        }
+
+    }
+}
+
+
+
+// Close 'x' background-image.
+@mixin close($white: false){
+    display: block;
+    cursor: pointer;
+    &:before{
+        @include bg-cover;
+        content: "";
+
+        @if($white){
+            background-image: url("close-white.svg?v=#{random();}");
+        } @else {
+            background-image: url("close.svg?v=#{random();}");
+        }
+
+        $width: 2rem;
+        $ratio: 1;
+
+        width:  $width;
+        height: #{$width * $ratio};
+        display: block;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+}
+
+
+// Close, fills it's container's dimensions.
+@mixin close-absolute{
+    position: relative;
+
+    &:before{
+        @include cover;
+        background-size: initial;
+        object-fit:      initial;
+    }
+}
+
+
+
+@mixin right-corner-click($outer: false){
+    @include a;
+    position: inherit;
+    top:   0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(#000, 0.6);
+    z-index: 1;
+
+    @if($outer){
+
+        @include mq('desktop'){
+            background-color: transparent;
+            transform: translateX(100%);
+        }
+    }
+}
+
+
+
+@mixin drawer($width: $drawer-width){
+    @include trans(transform);
+    position: fixed;
+    top:     0;
+    bottom:  0;
+    max-width: 100%;
+    width: $width;
+    background-color: map-get($color, "white");
+    z-index: map-get($z-index, "drawer");
+}
+
+
+@mixin drawer-dir($dir, $width: $drawer-width){
+    $selector: &;
+
+    @if ($dir == "right") {
+        right: -#{$width};
+    } @else {
+        left: -#{$width};
+    }
+
+    @at-root{
+
+        // NOTE: Assuming we're using a "--toggled" modifier.
+        #{$selector}--toggled{
+
+            #{$selector}{
+
+                @if ($dir == "right") {
+                    transform: translateX(-#{$width});
+                } @else {
+                    transform: translateX($width);
+                }
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    #TEXT-CLIPPING
+\*------------------------------------*/
+
+@mixin ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@mixin ellipsis-scroll{
+    white-space: nowrap;
+    overflow-x: auto;
+    text-overflow: ellipsis;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+// Must be applied on the root.
+@mixin lock-scroll{
+    overflow: hidden;
+
+    body{
+        overflow: hidden;
+    }
+}
+
+/*------------------------------------*\
+    #FILTER
+\*------------------------------------*/
+
+/* clearfix */
+
+@mixin clearfix {
+  &:after {
+  content: "";
+  display: block;
+  clear: both;
+  }
+}
+
+@mixin invisible{
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin transition($property: all, $duration: 400ms, $function: ease-in-out, $delay:0s) {
+    transition: all 400ms ease-in-out 0s;
+}

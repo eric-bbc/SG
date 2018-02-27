@@ -1,0 +1,306 @@
+[
+  {
+    "name": "Banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Banner"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_banner",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+      {
+        "type": "url",
+        "id": "banner_link",
+        "label": "Banner Link"
+      },
+      {
+        "type": "color",
+        "id": "banner_bg_color",
+        "label": "Banner Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "banner_text_color",
+        "label": "Banner Text Color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Modal",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Modal"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_modal",
+        "label": "Enable",
+        "info": "Modal will only show to first time site visitors."
+      },
+      {
+        "type": "image_picker",
+        "id": "modal_image",
+        "label": "Modal Image"
+      },
+      {
+        "type": "text",
+        "id": "modal_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "modal_copy",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "name": "Homepage Boutique Gallery",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Store's image Gallery"
+      },
+      {
+        "type": "header",
+        "content": "Store 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_1",
+        "label": "Image 1",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_2",
+        "label": "Image 2",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_3",
+        "label": "Image 3",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_4",
+        "label": "Image 4",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_5",
+        "label": "Image 5",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_6",
+        "label": "Image 6",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image_7",
+        "label": "Image 7",
+        "info": "1120x840"
+      },
+      {
+        "type": "header",
+        "content": "Store 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_1",
+        "label": "Image 1",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_2",
+        "label": "Image 2",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_3",
+        "label": "Image 3",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_4",
+        "label": "Image 4",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_5",
+        "label": "Image 5",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_6",
+        "label": "Image 6",
+        "info": "1120x840"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image_7",
+        "label": "Image 7",
+        "info": "1120x840"
+      }
+    ]
+  },
+  {
+    "name": "Collection",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Pagination"
+      },
+      {
+        "type": "number",
+        "id": "pagination_limit",
+        "label": "Max number of products to display per page before paginating.",
+        "default": 20,
+        "info": "Max of 50."
+      },
+      {
+        "type": "header",
+        "content": "Hide Sold Out Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_sold_out_products",
+        "label": "Enable"
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Recently Viewed Products"
+      },
+      {
+        "type": "number",
+        "id": "recent_products_limit",
+        "label": "Recently viewed products limit.",
+        "info": "0 to disable, max of 50"
+      },
+      {
+        "type": "header",
+        "content": "Show Quantity Select"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_qty",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Color Option"
+      },
+      {
+        "type": "select",
+        "id": "color_option_index",
+        "label": "Color Option Order",
+        "info": "Select which option is the color option. Choosing an incorrect option may result in issues with product swatches. Please contact the developer before changing this value.",
+        "options": [
+          {
+            "value": "0",
+            "label": "0"
+          },
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          }
+        ],
+        "default": "0"
+      },
+      {
+        "type": "header",
+        "content": "Color Exclusion Tag"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Platforms"
+      },
+      {
+        "type": "text",
+        "id": "instagram_url",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "facebook_url",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "twitter_url",
+        "label": "Twitter URL"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_url",
+        "label": "Pinterest URL"
+      },
+      {
+        "type": "text",
+        "id": "youtube_url",
+        "label": "YouTube URL"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_form_action",
+        "label": "Newsletter Form Action",
+        "info": "Please ignore, unless you know what exactly this is."
+      }
+    ]
+  },
+  {
+    "name": "Open Graph Data",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "og_description",
+        "label": "Enter a description for the site that will appear when sharing this website via some social media platforms.",
+        "info": "This description will not appear on: product,article or collection pages, on those pages the description will be intelligently entered."
+      },
+      {
+        "type": "image_picker",
+        "id": "og_image",
+        "label": "Select an image that will appear when sharing this website via some social media platforms.",
+        "info": "This image will not appear on: product,article or collection pages, on those pages the image will be intelligently selected."
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+{% if settings.enable_modal %}
+
+    <aside class="site-modal  modal">
+
+        <div class="modal__inner">
+
+            <span data-toggle='{"togglesClass": "modal--toggled", "toggles": ".site-modal"}' class="right-corner-click-offset  close"></span>
+
+            <div class="modal__row">
+
+                <div class="modal__col  show-at--tablet">
+
+                    <div class="object-wrap  object-wrap--3-2">
+                        <div class="object" style="background-image: url('{{ settings.modal_image | img_url: '500x', format: 'pjpg' }}');"></div>
+                    </div>
+
+                </div>
+
+                <div class="modal__col">
+
+                  <div class="modal__logo">
+                    {% include 'logo-horizontal.svg'%}
+                  </div>
+
+                    <div class="modal__title">
+                        {{ settings.modal_title }}
+                    </div>
+
+                    <!-- <div class="modal__copy">
+                        {{ settings.modal_copy | newline_to_br }}
+                    </div> -->
+
+                    {% include "form--newsletter-klav-2"  %}
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+{% endif %}

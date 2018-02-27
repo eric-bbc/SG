@@ -1,0 +1,7 @@
+<form action="/search" class="{{ namespace }}__search  inline-form" role="search">
+
+    <input type="text" autocomplete="off" class="{{ namespace }}__search-input  input  input--white" placeholder="{{ placeholder }}" name="q" value="{% if search.results != empty %}{{ search.terms }}{% else %}{% endif %}">
+
+    <button type="submit" class="{{ namespace }}__search-submit  button  button--white">{{ buttonText }}</button>
+
+</form>
